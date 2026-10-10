@@ -1,0 +1,59 @@
+.track {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  transition: transform 1.2s var(--ease-slide);
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  background: var(--stripes);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: var(--shade);
+}
+
+.segs {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 44px;
+  left: var(--gutter);
+  display: flex;
+  gap: 10px;
+}
+
+.segsInset {
+  composes: segs;
+  inset: auto 20px 14px;
+}
+
+.seg {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 120px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: rgb(255 255 255 / 35%);
+  border-radius: 2px;
+  transition: background 0.6s ease;
+}
+
+.barOn {
+  composes: bar;
+  background: var(--white);
+}

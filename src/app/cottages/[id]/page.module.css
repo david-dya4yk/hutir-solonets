@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 620px;
+  overflow: hidden;
+  text-shadow: var(--text-shadow);
+  background: var(--media-bg);
+}
+
+.heroText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--gutter) 104px;
+  color: var(--white);
+  pointer-events: none;
+}
+
+.heroTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 112px);
+  font-weight: 400;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.section {
+  max-width: var(--max);
+  padding: clamp(88px, 10vw, 150px) var(--gutter);
+  margin: 0 auto;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.desc {
+  max-width: 48ch;
+}
+
+.icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  background: var(--text);
+  mask: var(--icon) center / contain no-repeat;
+}
+
+.price {
+  font-size: clamp(28px, 2.6vw, 38px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.per {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.book {
+  align-self: flex-start;
+  margin-top: 32px;
+}
+
+.amenTitle {
+  margin: 0 0 clamp(40px, 5vw, 64px);
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 76px);
+  font-weight: 400;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.othersSection {
+  padding: clamp(88px, 10vw, 150px) 0;
+  background: var(--second);
+}
+
+.othersHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.all {
+  height: 56px;
+  padding: 0 30px;
+}
+
+.othersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 28px;
+}
+
+.other {
+  display: block;
+  height: clamp(420px, 40vw, 560px);
+  color: var(--white);
+}
+
+.other:hover {
+  color: var(--white);
+}
+
+.otherText {
+  position: absolute;
+  right: 26px;
+  bottom: 24px;
+  left: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.otherTitle {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.otherMeta {
+  font-size: 16px;
+  color: rgb(255 255 255 / 85%);
+}

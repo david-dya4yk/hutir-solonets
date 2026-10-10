@@ -1,0 +1,256 @@
+.container {
+  max-width: var(--max);
+  padding-right: var(--gutter);
+  padding-left: var(--gutter);
+  margin: 0 auto;
+}
+
+.section {
+  composes: container;
+  padding-top: clamp(88px, 11vw, 170px);
+  padding-bottom: clamp(88px, 11vw, 170px);
+}
+
+.pageTop {
+  composes: container;
+  padding-top: clamp(150px, 16vw, 220px);
+}
+
+.soft {
+  background: var(--soft);
+}
+
+.display {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.8vw, 72px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.displayLg {
+  composes: display;
+  font-size: clamp(44px, 6vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.displayMd {
+  composes: display;
+  font-size: clamp(38px, 4.6vw, 68px);
+  line-height: 1.04;
+}
+
+.line {
+  display: block;
+}
+
+.lead {
+  margin: 0;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.body {
+  margin: 0;
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  padding: 0 34px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  white-space: nowrap;
+  cursor: pointer;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  color: var(--white);
+  background: var(--accent-hover);
+}
+
+.btnSm {
+  composes: btn;
+  height: 48px;
+  padding: 0 24px;
+  font-size: 15px;
+}
+
+.btnMd {
+  composes: btn;
+  height: 52px;
+  padding: 0 28px;
+  font-size: 15px;
+}
+
+.btnLg {
+  composes: btn;
+  height: 60px;
+  padding: 0 38px;
+}
+
+.btnBlock {
+  composes: btn;
+  width: 100%;
+  height: 62px;
+  font-size: 17px;
+}
+
+.underline {
+  padding: 0 0 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--text);
+}
+
+.textLink {
+  padding: 0;
+  font-size: inherit;
+  color: var(--text);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  text-shadow: var(--text-shadow);
+  background: var(--media-bg);
+  border-radius: var(--radius);
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+}
+
+.parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.parallaxInner {
+  position: absolute;
+  inset: -8% 0;
+}
+
+.parallaxDeep {
+  composes: parallaxInner;
+  top: -12%;
+  bottom: -12%;
+}
+
+.photo {
+  background:
+    var(--src) var(--pos, center) / cover no-repeat,
+    var(--stripes);
+}
+
+.stripes {
+  background: var(--stripes);
+}
+
+.zoom {
+  transition: transform 1.4s var(--ease);
+}
+
+.zoomHost:hover .zoom {
+  transform: scale(1.05);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--shade);
+}
+
+.shadeLight {
+  composes: shade;
+  background: rgb(10 12 12 / 30%);
+}
+
+.tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  text-shadow: none;
+  pointer-events: none;
+  background: var(--second);
+  border-radius: 999px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  padding: 5px 8px;
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: var(--ink);
+  text-shadow: none;
+  pointer-events: none;
+  background: rgb(255 255 255 / 92%);
+  border-radius: 4px;
+}
+
+.captionTopRight {
+  composes: caption;
+  inset: 110px var(--gutter) auto auto;
+}
+
+.captionTopLeft {
+  composes: caption;
+  top: 16px;
+  bottom: auto;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: currentcolor;
+  border-radius: 50%;
+}
+
+.rowList {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  font-size: 17px;
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.strong {
+  font-weight: 600;
+}

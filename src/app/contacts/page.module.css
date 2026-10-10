@@ -1,0 +1,139 @@
+.top {
+  max-width: var(--max);
+  padding: clamp(88px, 11vw, 160px) var(--gutter) 0;
+  margin: 0 auto;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: clamp(40px, 7vw, 120px);
+  align-items: start;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.introText {
+  max-width: 44ch;
+}
+
+.social {
+  transition: opacity 0.3s;
+}
+
+.social:hover {
+  opacity: 0.6;
+}
+
+.mapSection {
+  max-width: var(--max);
+  padding: clamp(72px, 9vw, 128px) var(--gutter) 0;
+  margin: 0 auto;
+}
+
+.map {
+  height: clamp(460px, 62vh, 680px);
+}
+
+.iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.card {
+  position: absolute;
+  right: clamp(16px, 3vw, 32px);
+  bottom: clamp(16px, 3vw, 32px);
+  left: clamp(16px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 440px;
+  padding: clamp(26px, 3vw, 40px);
+  text-shadow: none;
+  background: var(--second);
+  border-radius: clamp(18px, 1.8vw, 24px);
+}
+
+.cardTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.cardText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.route {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.ratingSection {
+  max-width: var(--max);
+  padding: clamp(72px, 9vw, 128px) var(--gutter) clamp(88px, 11vw, 160px);
+  margin: 0 auto;
+}
+
+.rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(32px, 4vw, 48px) 0;
+  border-top: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 40px);
+  align-items: center;
+}
+
+.big {
+  font-size: clamp(72px, 8vw, 112px);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.scoreText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stars {
+  font-size: 18px;
+  letter-spacing: 0.18em;
+}
+
+.ratingLabel {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.reviews {
+  font-size: 15px;
+}
+
+.leave {
+  height: 56px;
+  padding: 0 30px;
+}

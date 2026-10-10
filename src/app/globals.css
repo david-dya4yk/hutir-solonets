@@ -1,40 +1,55 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #304534;
+  --accent-hover: color-mix(in oklab, var(--accent) 78%, #000);
+  --second: #f7ece1;
+  --text: #45403d;
+  --ink: #111;
+  --white: #fff;
+  --soft: color-mix(in oklab, var(--second) 45%, #fff);
+  --gold-line: #e0cb8e;
+  --gold-tab: #d6c083;
+  --gold-muted: #c9b27a;
+  --close-bg: #ead8a0;
+  --error: #b3261e;
+  --footer: #2b231d;
+  --media-bg: #bebcb8;
+  --field-line: color-mix(in srgb, var(--text) 25%, transparent);
+  --field-hover: color-mix(in srgb, var(--text) 60%, transparent);
+  --text-70: color-mix(in srgb, var(--text) 70%, transparent);
+  --stripes: repeating-linear-gradient(135deg, #bebcb8 0 16px, #b8b6b2 16px 32px);
+  --shade: rgb(10 12 12 / 45%);
+  --text-shadow: 0 1px 2px rgb(0 0 0 / 35%), 0 2px 18px rgb(0 0 0 / 45%);
+  --gutter: clamp(20px, 4.5vw, 64px);
+  --max: 1440px;
+  --radius: clamp(18px, 1.8vw, 26px);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-slide: cubic-bezier(0.65, 0, 0.25, 1);
+  --font-display: var(--font-alice), serif;
+  --font-body: var(--font-didact), sans-serif;
+  --font-code: var(--font-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-  height: 100%;
+  text-size-adjust: 100%;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+html:has([data-preloader]) {
+  overflow: hidden;
 }
 
 body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+  min-height: 100vh;
   margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--second);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -42,8 +57,32 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+button {
+  color: inherit;
+}
+
+[type="date"] {
+  color-scheme: light;
+}
+
+::selection {
+  color: var(--white);
+  background: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important; /* stylelint-disable-line declaration-no-important -- reduced motion must override component motion */
+    transition-duration: 0.01ms !important; /* stylelint-disable-line declaration-no-important -- reduced motion must override component motion */
+    animation: none !important; /* stylelint-disable-line declaration-no-important -- reduced motion must override component motion */
   }
 }

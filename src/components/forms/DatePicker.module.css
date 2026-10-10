@@ -1,0 +1,179 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.field {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 54px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--field-line);
+  border-radius: 999px;
+  transition: border-color 0.3s;
+}
+
+.field:hover {
+  border-color: var(--field-hover);
+}
+
+.field:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.fieldCompact {
+  composes: field;
+  height: 56px;
+}
+
+.active {
+  border-color: var(--text);
+}
+
+.invalid {
+  border-color: var(--error);
+}
+
+.chev {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--text);
+  border-bottom: 1.5px solid var(--text);
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.35s;
+}
+
+.chevOpen {
+  composes: chev;
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.error {
+  min-height: 14px;
+  font-size: 13px;
+  color: var(--error);
+}
+
+.pop {
+  position: absolute;
+  top: 86px;
+  left: 0;
+  z-index: 30;
+  width: min(320px, calc(100vw - 48px));
+  padding: 18px;
+  text-shadow: none;
+  pointer-events: none;
+  background: var(--second);
+  border: 1px solid var(--field-line);
+  border-radius: 22px;
+  opacity: 0;
+  transform: translateY(-6px) scale(0.97);
+  transform-origin: top left;
+  transition:
+    opacity 0.25s ease,
+    transform 0.4s var(--ease);
+}
+
+.popRight {
+  right: 0;
+  left: auto;
+  transform-origin: top right;
+}
+
+.popCompact {
+  top: calc(100% + 8px);
+}
+
+.popOpen {
+  pointer-events: auto;
+  opacity: 1;
+  transform: none;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.nav {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  color: var(--text);
+  cursor: pointer;
+  background: var(--second);
+  border: 1px solid var(--field-line);
+  border-radius: 50%;
+}
+
+.navDim {
+  opacity: 0.3;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.weekday {
+  padding: 6px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.day {
+  height: 38px;
+  font-size: 14px;
+  color: var(--text);
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.dayToday {
+  composes: day;
+  border-color: var(--text);
+}
+
+.dayInRange {
+  composes: day;
+  background: color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.dayEdge {
+  composes: day;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--accent);
+}
+
+.dayDisabled {
+  composes: day;
+  color: var(--gold-muted);
+  cursor: default;
+}

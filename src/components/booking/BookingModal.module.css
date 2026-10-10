@@ -1,0 +1,145 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  transition: clip-path 750ms var(--ease-slide);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(10 12 12 / 70%);
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  max-height: 100%;
+  padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 56px);
+  overflow: auto;
+  color: var(--text);
+  pointer-events: auto;
+  background: var(--second);
+  border-radius: 28px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s ease 0.25s,
+    transform 0.6s var(--ease) 0.2s;
+}
+
+.cardShown {
+  opacity: 1;
+  transform: none;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--text);
+  cursor: pointer;
+  background: var(--close-bg);
+  border: none;
+  border-radius: 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 48px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.4vw, 52px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 18px;
+}
+
+.estimate {
+  min-height: 4px;
+  font-size: 15px;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 48px 8px 0;
+}
+
+.doneLead {
+  margin: 0;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.5;
+}
+
+.sumRow {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-size: 16px;
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.doneBtn {
+  align-self: flex-start;
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+}
+
+@media (width < 900px) {
+  .center {
+    padding: 0;
+  }
+
+  .card {
+    height: 100%;
+    border-radius: 0;
+  }
+}

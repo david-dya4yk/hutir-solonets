@@ -1,0 +1,77 @@
+.head {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 28px clamp(32px, 6vw, 120px);
+  align-items: end;
+}
+
+.groups {
+  padding-bottom: clamp(88px, 11vw, 160px);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 48px);
+  padding-top: clamp(72px, 9vw, 128px);
+}
+
+.groupHead {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.num {
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.groupTitle {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 56px 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.photo {
+  aspect-ratio: 3 / 2;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.4vw, 34px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.text {
+  max-width: 46ch;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.cta {
+  align-self: flex-start;
+  margin-top: 6px;
+}

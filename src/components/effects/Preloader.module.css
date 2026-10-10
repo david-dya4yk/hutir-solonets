@@ -1,0 +1,50 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+
+.leaving {
+  pointer-events: none;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: var(--second);
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--text);
+  text-align: center;
+  opacity: 0;
+  filter: blur(0);
+  transition:
+    opacity 0.9s ease,
+    transform 1.6s var(--ease),
+    filter 1.2s ease;
+}
+
+.contentIn {
+  opacity: 1;
+}
+
+.leaving .content {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+.brand {
+  font-size: clamp(52px, 9vw, 136px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}

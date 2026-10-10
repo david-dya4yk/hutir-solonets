@@ -1,0 +1,45 @@
+.bar {
+  position: fixed;
+  right: clamp(12px, 2vw, 24px);
+  bottom: clamp(12px, 2vw, 24px);
+  left: clamp(12px, 2vw, 24px);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+  padding: clamp(20px, 2.4vw, 28px);
+  color: var(--text);
+  background: var(--second);
+  border: 1px solid var(--field-line);
+  border-radius: 22px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.secondary {
+  height: 48px;
+  padding: 0 26px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  background: var(--second);
+  border: 1px solid var(--field-line);
+  border-radius: 999px;
+}
