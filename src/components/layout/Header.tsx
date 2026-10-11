@@ -24,10 +24,10 @@ export function Header(): ReactNode {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = menu ? "hidden" : "";
     if (!menu) {
       return undefined;
     }
+    document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent): void => {
       if (e.key === "Escape") {
         setMenu(false);

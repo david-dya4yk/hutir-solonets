@@ -78,9 +78,9 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  :not([data-preloader]),
+  ::before,
+  ::after {
     scroll-behavior: auto !important; /* stylelint-disable-line declaration-no-important -- reduced motion must override component motion */
     transition-duration: 0.01ms !important; /* stylelint-disable-line declaration-no-important -- reduced motion must override component motion */
     animation: none !important; /* stylelint-disable-line declaration-no-important -- reduced motion must override component motion */
