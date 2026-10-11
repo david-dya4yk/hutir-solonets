@@ -1,65 +1,41 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-import { markReady, prefersReducedMotion } from "@/lib/ready";
+import { markReady } from "@/lib/ready";
 
-import type { ReactNode } from "react";
+import type { AnimationEvent, ReactNode } from "react";
 
 import styles from "./Preloader.module.css";
 
-type Phase = "idle" | "in" | "out" | "done";
-
-const easeInOutCubic = (q: number): number =>
-  q < 0.5 ? 4 * q * q * q : 1 - Math.pow(-2 * q + 2, 3) / 2;
+type Phase = "waiting" | "playing" | "done";
 
 export function Preloader(): ReactNode {
-  const [phase, setPhase] = useState<Phase>("idle");
-  const bg = useRef<HTMLDivElement>(null);
+  const [phase, setPhase] = useState<Phase>("waiting");
+  const logo = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const reduced = prefersReducedMotion();
-    const timers: number[] = [];
-    let frame = 0;
-    frame = requestAnimationFrame(() => {
-      frame = requestAnimationFrame(() => {
-        setPhase("in");
-      });
-    });
-    const hold = reduced ? 200 : 2100;
-    const reveal = reduced ? 10 : 1500;
-    timers.push(
-      window.setTimeout(() => {
-        setPhase("out");
-        markReady();
-        const el = bg.current;
-        if (el !== null && !reduced) {
-          const t0 = performance.now();
-          const step = (now: number): void => {
-            const q = Math.min(1, (now - t0) / reveal);
-            const k = easeInOutCubic(q);
-            const mask = `radial-gradient(circle at 50% 50%, transparent ${(k * 120).toFixed(1)}%, #000 ${(k * 120 + 14).toFixed(1)}%)`;
-            el.style.maskImage = mask;
-            if (q < 1) {
-              frame = requestAnimationFrame(step);
-            }
-          };
-          frame = requestAnimationFrame(step);
-        }
-        timers.push(
-          window.setTimeout(() => {
-            setPhase("done");
-          }, reveal + 150),
-        );
-      }, hold),
-    );
-    return () => {
-      cancelAnimationFrame(frame);
-      timers.forEach((t) => {
-        window.clearTimeout(t);
-      });
-    };
+    if (logo.current?.complete === true) {
+      setPhase("playing");
+    }
   }, []);
+
+  useEffect(() => {
+    if (phase === "playing") {
+      markReady();
+    }
+  }, [phase]);
+
+  const start = (): void => {
+    setPhase((p) => (p === "waiting" ? "playing" : p));
+  };
+
+  const onAnimationEnd = (e: AnimationEvent<HTMLDivElement>): void => {
+    if (e.target === e.currentTarget) {
+      setPhase("done");
+    }
+  };
 
   if (phase === "done") {
     return null;
@@ -67,13 +43,28 @@ export function Preloader(): ReactNode {
 
   return (
     <div
-      className={`${styles.root} ${phase === "out" ? styles.leaving : ""}`}
-      aria-hidden="true"
+      className={`${styles.root} ${phase === "playing" ? styles.playing : ""}`}
       data-preloader=""
+      aria-hidden="true"
+      onAnimationEnd={onAnimationEnd}
     >
-      <div ref={bg} className={styles.bg} />
-      <div className={`${styles.content} ${phase === "in" ? styles.contentIn : ""}`}>
-        <span className={styles.brand}>solonєts</span>
+      <noscript>
+        <style>{"[data-preloader]{display:none}"}</style>
+      </noscript>
+      <div className={styles.window} />
+      <div className={styles.box}>
+        <Image
+          ref={logo}
+          className={styles.logo}
+          src="/logo.svg"
+          alt=""
+          width={3340}
+          height={810}
+          preload
+          unoptimized
+          onLoad={start}
+          onError={start}
+        />
       </div>
     </div>
   );
