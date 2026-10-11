@@ -1,4 +1,6 @@
-export const MONTHS = [
+import type { Locale } from "@/locales/config";
+
+const MONTHS_UK = [
   "Січень",
   "Лютий",
   "Березень",
@@ -13,7 +15,7 @@ export const MONTHS = [
   "Грудень",
 ] as const;
 
-export const MONTHS_GENITIVE = [
+const MONTHS_GENITIVE_UK = [
   "січня",
   "лютого",
   "березня",
@@ -28,7 +30,34 @@ export const MONTHS_GENITIVE = [
   "грудня",
 ] as const;
 
-export const WEEKDAYS = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"] as const;
+const MONTHS_EN = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+] as const;
+
+const MONTHS: Readonly<Record<Locale, readonly string[]>> = { uk: MONTHS_UK, en: MONTHS_EN };
+
+const MONTHS_GENITIVE: Readonly<Record<Locale, readonly string[]>> = {
+  uk: MONTHS_GENITIVE_UK,
+  en: MONTHS_EN,
+};
+
+const WEEKDAYS: Readonly<Record<Locale, readonly string[]>> = {
+  uk: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"],
+  en: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+};
+
+export const weekdays = (locale: Locale): readonly string[] => WEEKDAYS[locale];
 
 const two = (n: number): string => String(n).padStart(2, "0");
 
@@ -45,9 +74,9 @@ export const addDays = (iso: string, days: number): string => {
 export const nightsBetween = (from: string, to: string): number =>
   Math.round((Date.parse(to) - Date.parse(from)) / 86_400_000);
 
-export const longLabel = (iso: string): string => {
+export const longLabel = (locale: Locale, iso: string): string => {
   const [y = "", m = "1", d = "1"] = iso.split("-");
-  return `${String(Number(d))} ${MONTHS_GENITIVE[Number(m) - 1] ?? ""} ${y}`;
+  return `${String(Number(d))} ${MONTHS_GENITIVE[locale][Number(m) - 1] ?? ""} ${y}`;
 };
 
 export const shortLabel = (iso: string): string => {
@@ -56,18 +85,6 @@ export const shortLabel = (iso: string): string => {
   }
   const [, m = "", d = ""] = iso.split("-");
   return `${d}.${m}`;
-};
-
-export const nightsWord = (n: number): string => {
-  const a = n % 10;
-  const b = n % 100;
-  if (a === 1 && b !== 11) {
-    return "ніч";
-  }
-  if (a >= 2 && a <= 4 && (b < 10 || b >= 20)) {
-    return "ночі";
-  }
-  return "ночей";
 };
 
 export type CalendarDay = {
@@ -89,7 +106,7 @@ export const shiftMonth = (key: string, delta: number): string => {
   return `${String(d.getFullYear())}-${two(d.getMonth() + 1)}`;
 };
 
-export const buildMonth = (key: string): CalendarMonth => {
+export const buildMonth = (locale: Locale, key: string): CalendarMonth => {
   const [y = 0, m = 1] = key.split("-").map(Number);
   const lead = (new Date(y, m - 1, 1).getDay() + 6) % 7;
   const count = new Date(y, m, 0).getDate();
@@ -97,5 +114,5 @@ export const buildMonth = (key: string): CalendarMonth => {
     iso: `${key}-${two(i + 1)}`,
     day: i + 1,
   }));
-  return { title: `${MONTHS[m - 1] ?? ""} ${String(y)}`, lead, days };
+  return { title: `${MONTHS[locale][m - 1] ?? ""} ${String(y)}`, lead, days };
 };

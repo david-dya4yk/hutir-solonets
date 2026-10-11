@@ -1,5 +1,7 @@
 "use client";
 
+import { useI18n } from "@/locales/client";
+
 import { useSite } from "./context";
 
 import type { BookingOptions } from "./context";
@@ -14,13 +16,14 @@ type BookButtonProps = BookingOptions & {
 
 export function BookButton({
   className,
-  children = "Забронювати",
+  children,
   magnet = false,
   reveal = false,
   cottage,
   comment,
 }: BookButtonProps): ReactNode {
   const { openBooking } = useSite();
+  const t = useI18n();
   const options = {
     ...(cottage === undefined ? {} : { cottage }),
     ...(comment === undefined ? {} : { comment }),
@@ -35,7 +38,7 @@ export function BookButton({
         openBooking(e, options);
       }}
     >
-      {children}
+      {children ?? t("common.book")}
     </button>
   );
 }

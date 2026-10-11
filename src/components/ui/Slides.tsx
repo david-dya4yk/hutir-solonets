@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { prefersReducedMotion } from "@/lib/ready";
+import { useI18n } from "@/locales/client";
 
 import type { ReactNode } from "react";
 
@@ -17,6 +18,7 @@ type SlidesProps = {
 
 export function Slides({ labels, captionClass, shade = false, segments }: SlidesProps): ReactNode {
   const [index, setIndex] = useState(0);
+  const t = useI18n();
   const n = labels.length;
 
   useEffect(() => {
@@ -48,7 +50,7 @@ export function Slides({ labels, captionClass, shade = false, segments }: Slides
               key={label}
               type="button"
               className={styles.seg}
-              aria-label={`Фото ${String(j + 1)}`}
+              aria-label={t("slides.photo", { n: j + 1 })}
               aria-current={j === index}
               onClick={() => {
                 setIndex(j);

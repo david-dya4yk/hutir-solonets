@@ -3,17 +3,20 @@
 import { useEffect, useRef } from "react";
 
 import { BookButton } from "@/components/booking/BookButton";
-import { INSTAGRAM_URL, REVIEWS } from "@/content/site";
+import { useContent } from "@/content/ContentProvider";
+import { INSTAGRAM_URL } from "@/content/site";
 import { prefersReducedMotion } from "@/lib/ready";
+import { useI18n } from "@/locales/client";
 
 import type { ReactNode } from "react";
 
 import styles from "./Reviews.module.css";
 import ui from "@/components/ui/ui.module.css";
 
-const LOOP = [...REVIEWS, ...REVIEWS].map((r, i) => ({ ...r, key: `${r.handle}-${String(i)}` }));
-
 export function Reviews(): ReactNode {
+  const t = useI18n();
+  const { reviews } = useContent();
+  const loop = [...reviews, ...reviews].map((r, i) => ({ ...r, key: `${r.handle}-${String(i)}` }));
   const track = useRef<HTMLDivElement>(null);
   const motion = useRef({ x: 0, kick: 0, paused: false });
 
@@ -56,24 +59,21 @@ export function Reviews(): ReactNode {
     <section className={styles.section}>
       <div className={styles.head}>
         <h2 className={ui.displayMd} data-reveal="lines">
-          <span className={ui.line}>Відгуки гостей.</span>
-          <span className={ui.line}>З Instagram.</span>
+          <span className={ui.line}>{t("reviews.title1")}</span>
+          <span className={ui.line}>{t("reviews.title2")}</span>
         </h2>
         <div className={styles.side}>
           <p className={ui.lead} data-reveal="">
-            <b>Ваші моменти - наша історія.</b>
+            <b>{t("reviews.lead")}</b>
             <br />
-            Нам приємно бути частиною ваших спогадів. Діліться фото та відео з відпочинку.
-            Відзначайте
-            <span className={styles.handle}>
-              &nbsp;@hutir_solonets — і ваші найтепліші моменти зʼявляться тут.
-            </span>
+            {t("reviews.text")}
+            <span className={styles.handle}>&nbsp;{t("reviews.tag")}</span>
           </p>
           <div className={styles.controls} data-reveal="">
             <button
               type="button"
               className={styles.arrow}
-              aria-label="Назад"
+              aria-label={t("reviews.prev")}
               onClick={() => {
                 kick(-1);
               }}
@@ -83,7 +83,7 @@ export function Reviews(): ReactNode {
             <button
               type="button"
               className={styles.arrow}
-              aria-label="Далі"
+              aria-label={t("reviews.next")}
               onClick={() => {
                 kick(1);
               }}
@@ -113,7 +113,7 @@ export function Reviews(): ReactNode {
         }}
       >
         <div ref={track} className={styles.track}>
-          {LOOP.map((r) => (
+          {loop.map((r) => (
             <article key={r.key} className={styles.card}>
               <div className={styles.photo} />
               <div className={ui.shadeLight} />
