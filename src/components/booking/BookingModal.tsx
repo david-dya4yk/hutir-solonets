@@ -3,8 +3,11 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 
-import { COTTAGES, PRICE_PER_NIGHT, pad } from "@/content/site";
-import { addDays, nightsBetween, nightsWord, shortLabel } from "@/lib/dates";
+import { useContent } from "@/content/ContentProvider";
+import { PRICE_PER_NIGHT, pad } from "@/content/site";
+import { addDays, nightsBetween, shortLabel } from "@/lib/dates";
+import { useCurrentLocale, useI18n, useLocalePath } from "@/locales/client";
+import { formatPrice } from "@/locales/config";
 
 import { DatePicker } from "../forms/DatePicker";
 
@@ -29,41 +32,27 @@ type Errors = Partial<Record<"name" | "phone" | "checkin" | "checkout", string |
 
 type Picker = "in" | "out" | null;
 
-const COTTAGE_OPTIONS = [
-  { v: "any", l: "Будь-який вільний" },
-  ...COTTAGES.map((c) => ({
-    v: String(c.n),
-    l: `Будинок ${pad(c.n)} · до ${String(c.guests)} гостей`,
-  })),
-];
-
 const GUEST_OPTIONS = Array.from({ length: 12 }, (_, i) => String(i + 1));
 
-const validate = (f: Form): Errors => {
-  const er: Errors = {};
+type ErrorKey = "errName" | "errPhone" | "errCheckin" | "errCheckout" | "errOrder";
+
+const validate = (f: Form): Partial<Record<keyof Errors, ErrorKey>> => {
+  const er: Partial<Record<keyof Errors, ErrorKey>> = {};
   if (f.name.trim() === "") {
-    er.name = "Вкажіть, як до вас звертатися";
+    er.name = "errName";
   }
   if (f.phone.replace(/\D/g, "").length < 10) {
-    er.phone = "Перевірте номер телефону";
+    er.phone = "errPhone";
   }
   if (f.checkin === "") {
-    er.checkin = "Оберіть дату заїзду";
+    er.checkin = "errCheckin";
   }
   if (f.checkout === "") {
-    er.checkout = "Оберіть дату виїзду";
+    er.checkout = "errCheckout";
   } else if (f.checkin !== "" && f.checkout <= f.checkin) {
-    er.checkout = "Виїзд має бути пізніше заїзду";
+    er.checkout = "errOrder";
   }
   return er;
-};
-
-const estimateOf = (f: Form): string => {
-  if (f.checkin === "" || f.checkout === "" || f.checkout <= f.checkin) {
-    return "";
-  }
-  const n = nightsBetween(f.checkin, f.checkout);
-  return `${String(n)} ${nightsWord(n)} · орієнтовно ${(n * PRICE_PER_NIGHT).toLocaleString("uk-UA")} грн`;
 };
 
 export function BookingModal({
@@ -74,6 +63,10 @@ export function BookingModal({
   readonly onClosed: () => void;
 }): ReactNode {
   const router = useRouter();
+  const t = useI18n();
+  const locale = useCurrentLocale();
+  const lp = useLocalePath();
+  const { cottages } = useContent();
   const [shown, setShown] = useState(false);
   const [sent, setSent] = useState(false);
   const [picker, setPicker] = useState<Picker>(null);
@@ -130,18 +123,44 @@ export function BookingModal({
 
   const submit = (e: SubmitEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    const er = validate(form);
+    const keys = validate(form);
+    const er: Errors = {};
+    (Object.keys(keys) as (keyof Errors)[]).forEach((k) => {
+      const key = keys[k];
+      if (key !== undefined) {
+        er[k] = t(`booking.${key}`);
+      }
+    });
     setErrors(er);
     setSent(Object.keys(er).length === 0);
   };
 
   const goLegal = (href: string): void => {
     close();
-    router.push(href);
+    router.push(lp(href));
   };
 
   const clip = `circle(${shown ? request.radius.toFixed(0) : "0"}px at ${request.x.toFixed(0)}px ${request.y.toFixed(0)}px)`;
-  const cottageLabel = COTTAGE_OPTIONS.find((o) => o.v === form.cottage)?.l.split(" · ")[0] ?? "";
+  const cottageOptions = [
+    { v: "any", l: t("booking.anyCottage"), short: t("booking.anyCottage") },
+    ...cottages.map((c) => ({
+      v: String(c.n),
+      l: t("booking.cottageOption", { n: pad(c.n), guests: c.guests }),
+      short: t("common.cottage", { n: pad(c.n) }),
+    })),
+  ];
+  const cottageLabel = cottageOptions.find((o) => o.v === form.cottage)?.short ?? "";
+  const nights =
+    form.checkin === "" || form.checkout === "" || form.checkout <= form.checkin
+      ? 0
+      : nightsBetween(form.checkin, form.checkout);
+  const estimate =
+    nights === 0
+      ? ""
+      : t("booking.estimate", {
+          nights: t("booking.nights", { count: nights }),
+          price: formatPrice(locale, nights * PRICE_PER_NIGHT),
+        });
   const minOut = form.checkin === "" ? null : addDays(form.checkin, 1);
   const range = [form.checkin, form.checkout] as const;
 
@@ -152,64 +171,66 @@ export function BookingModal({
         <div
           role="dialog"
           aria-modal="true"
-          aria-label="Бронювання"
+          aria-label={t("booking.aria")}
           className={`${styles.card} ${shown ? styles.cardShown : ""}`}
         >
-          <button type="button" className={styles.close} aria-label="Закрити" onClick={close}>
+          <button
+            type="button"
+            className={styles.close}
+            aria-label={t("common.close")}
+            onClick={close}
+          >
             ×
           </button>
           {sent ? (
             <div className={styles.done}>
               <h2 className={styles.title}>
-                Дякуємо, {form.name}. <span>Заявку отримали.</span>
+                {t("booking.thanks", { name: form.name })} <span>{t("booking.received")}</span>
               </h2>
-              <p className={styles.doneLead}>Ми зателефонуємо вам для підтвердження.</p>
+              <p className={styles.doneLead}>{t("booking.doneLead")}</p>
               <div className={ui.rowList}>
                 <div className={styles.sumRow}>
-                  <span>Дати</span>
+                  <span>{t("booking.dates")}</span>
                   <span className={ui.strong}>
                     {shortLabel(form.checkin)} — {shortLabel(form.checkout)}
                   </span>
                 </div>
                 <div className={styles.sumRow}>
-                  <span>Котедж</span>
+                  <span>{t("booking.cottage")}</span>
                   <span className={ui.strong}>{cottageLabel}</span>
                 </div>
                 <div className={styles.sumRow}>
-                  <span>Гостей</span>
+                  <span>{t("common.guests")}</span>
                   <span className={ui.strong}>{form.guests}</span>
                 </div>
               </div>
               <button type="button" className={styles.doneBtn} onClick={close}>
-                Закрити
+                {t("common.close")}
               </button>
             </div>
           ) : (
             <form className={styles.form} onSubmit={submit} noValidate>
               <div className={styles.head}>
                 <h2 className={styles.title}>
-                  Бронювання. <span>Без передоплати.</span>
+                  {t("booking.title")} <span>{t("booking.titleNote")}</span>
                 </h2>
-                <p className={styles.intro}>
-                  Залиште заявку — перевіримо дати й зателефонуємо, щоб усе підтвердити.
-                  Онлайн-оплати немає.
-                </p>
+                <p className={styles.intro}>{t("booking.intro")}</p>
               </div>
               <div className={styles.grid}>
                 <label className={fields.label}>
-                  Ім’я
+                  {t("common.name")}
                   <input
                     name="name"
                     value={form.name}
                     onChange={onField}
                     autoComplete="name"
-                    placeholder="Олена"
+                    placeholder={t("common.namePlaceholder")}
                     className={`${fields.input} ${errors.name === undefined ? "" : fields.invalid}`}
                   />
                   <span className={fields.error}>{errors.name}</span>
                 </label>
                 <label className={fields.label}>
-                  Телефон
+                  {t("common.phone")}
                   <input
                     name="phone"
                     type="tel"
@@ -222,7 +243,7 @@ export function BookingModal({
                   <span className={fields.error}>{errors.phone}</span>
                 </label>
                 <DatePicker
-                  label="Заїзд"
+                  label={t("common.checkin")}
                   value={form.checkin}
                   min={null}
                   range={range}
@@ -244,7 +265,7 @@ export function BookingModal({
                 />
                 <DatePicker
                   key={form.checkin}
-                  label="Виїзд"
+                  label={t("common.checkout")}
                   value={form.checkout}
                   min={minOut}
                   range={range}
@@ -262,7 +283,7 @@ export function BookingModal({
                   invalid={errors.checkout !== undefined}
                 />
                 <label className={fields.label}>
-                  Гостей
+                  {t("common.guests")}
                   <select
                     name="guests"
                     value={form.guests}
@@ -277,14 +298,14 @@ export function BookingModal({
                   </select>
                 </label>
                 <label className={fields.label}>
-                  Котедж
+                  {t("booking.cottage")}
                   <select
                     name="cottage"
                     value={form.cottage}
                     onChange={onField}
                     className={fields.select}
                   >
-                    {COTTAGE_OPTIONS.map((o) => (
+                    {cottageOptions.map((o) => (
                       <option key={o.v} value={o.v}>
                         {o.l}
                       </option>
@@ -293,42 +314,45 @@ export function BookingModal({
                 </label>
               </div>
               <label className={fields.label}>
-                Коментар
+                {t("booking.comment")}
                 <textarea
                   name="comment"
                   value={form.comment}
                   onChange={onField}
                   rows={2}
-                  placeholder="Діти, тварини, побажання щодо чану чи джакузі"
+                  placeholder={t("booking.commentPlaceholder")}
                   className={fields.textarea}
                 />
               </label>
-              <span className={styles.estimate}>{estimateOf(form)}</span>
+              <span className={styles.estimate}>{estimate}</span>
               <button type="submit" className={ui.btnBlock}>
-                Надіслати заявку
+                {t("common.sendRequest")}
               </button>
               <span className={fields.consent}>
-                Надсилаючи заявку, ви погоджуєтесь з{" "}
-                <button
-                  type="button"
-                  className={ui.textLink}
-                  onClick={() => {
-                    goLegal("/privacy");
-                  }}
-                >
-                  Політикою конфіденційності
-                </button>{" "}
-                та{" "}
-                <button
-                  type="button"
-                  className={ui.textLink}
-                  onClick={() => {
-                    goLegal("/terms");
-                  }}
-                >
-                  Умовами бронювання
-                </button>
-                .
+                {t("booking.consent", {
+                  privacy: (
+                    <button
+                      type="button"
+                      className={ui.textLink}
+                      onClick={() => {
+                        goLegal("/privacy");
+                      }}
+                    >
+                      {t("common.privacyLink")}
+                    </button>
+                  ),
+                  terms: (
+                    <button
+                      type="button"
+                      className={ui.textLink}
+                      onClick={() => {
+                        goLegal("/terms");
+                      }}
+                    >
+                      {t("common.termsLink")}
+                    </button>
+                  ),
+                })}
               </span>
             </form>
           )}

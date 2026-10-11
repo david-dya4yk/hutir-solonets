@@ -2,8 +2,9 @@
 
 import { useRef, useState } from "react";
 
-import { ROOM_TABS } from "@/content/site";
+import { useContent } from "@/content/ContentProvider";
 import { prefersReducedMotion } from "@/lib/ready";
+import { useI18n } from "@/locales/client";
 
 import type { ReactNode } from "react";
 
@@ -16,7 +17,9 @@ export function RoomTabs(): ReactNode {
   const [room, setRoom] = useState(0);
   const [phase, setPhase] = useState<Phase>("idle");
   const timers = useRef<number[]>([]);
-  const current = ROOM_TABS[room] ?? ROOM_TABS[0];
+  const t = useI18n();
+  const { rooms } = useContent();
+  const current = rooms[room] ?? rooms[0];
 
   const select = (i: number): void => {
     if (i === room || phase !== "idle") {
@@ -50,9 +53,9 @@ export function RoomTabs(): ReactNode {
   return (
     <>
       <div className={styles.tabs} data-reveal="">
-        {ROOM_TABS.map((t, i) => (
+        {rooms.map((tab, i) => (
           <button
-            key={t.title}
+            key={tab.title}
             type="button"
             className={`${styles.tab} ${room === i ? styles.tabOn : ""}`}
             aria-pressed={room === i}
@@ -60,7 +63,7 @@ export function RoomTabs(): ReactNode {
               select(i);
             }}
           >
-            {t.title}
+            {tab.title}
             <span className={styles.tabBar} />
           </button>
         ))}
@@ -78,7 +81,7 @@ export function RoomTabs(): ReactNode {
         </div>
         <div className={`${ui.frame} ${styles.photo}`}>
           <div className={`${ui.fill} ${ui.stripes}`} />
-          <span className={ui.caption}>фото · {current.shot}</span>
+          <span className={ui.caption}>{t("common.photo", { label: current.shot })}</span>
         </div>
       </div>
     </>

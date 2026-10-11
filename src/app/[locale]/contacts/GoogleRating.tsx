@@ -1,12 +1,17 @@
 import { GOOGLE_RATING, REVIEW_HREF } from "@/content/site";
+import { intlLocale } from "@/locales/config";
+import { getI18n } from "@/locales/server";
 
+import type { Locale } from "@/locales/config";
 import type { ReactNode } from "react";
 
 import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
-export function GoogleRating(): ReactNode {
-  const { rating, value, count } = GOOGLE_RATING;
+export async function GoogleRating({ locale }: { readonly locale: Locale }): Promise<ReactNode> {
+  const t = await getI18n();
+  const { value, count } = GOOGLE_RATING;
+  const rating = value.toLocaleString(intlLocale(locale), { minimumFractionDigits: 1 });
   return (
     <section className={styles.ratingSection}>
       <div className={styles.rating} data-reveal="">
@@ -17,12 +22,12 @@ export function GoogleRating(): ReactNode {
             </span>
           </span>
           <div className={styles.scoreText}>
-            <span className={styles.stars} role="img" aria-label={`${rating} з 5`}>
+            <span className={styles.stars} role="img" aria-label={t("rating.of5", { rating })}>
               ★★★★★
             </span>
-            <span className={styles.ratingLabel}>Рейтинг Google</span>
+            <span className={styles.ratingLabel}>{t("rating.label")}</span>
             <span className={styles.reviews}>
-              <span data-count={count}>{count}</span> відгука
+              <span data-count={count}>{count}</span> {t("rating.reviews", { count })}
             </span>
           </div>
         </div>
@@ -32,7 +37,7 @@ export function GoogleRating(): ReactNode {
           rel="noopener"
           className={`${ui.btn} ${styles.leave}`}
         >
-          Залишити відгук ↗
+          {t("rating.leave")}
         </a>
       </div>
     </section>

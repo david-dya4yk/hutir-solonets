@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { useI18n, useLocalePath } from "@/locales/client";
+
 import { DatePicker } from "./DatePicker";
 
 import type { ChangeEvent, SubmitEvent, ReactNode } from "react";
@@ -32,6 +34,8 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
   const [bad, setBad] = useState({ name: false, phone: false });
   const [sent, setSent] = useState(false);
   const [picker, setPicker] = useState(false);
+  const t = useI18n();
+  const lp = useLocalePath();
 
   const onField = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
@@ -59,38 +63,36 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
       <div className={`${styles.inner} ${pageTop ? styles.innerTop : ""}`}>
         <div className={styles.copy}>
           <h2 className={styles.title} data-reveal="lines">
-            <span className={ui.line}>Плануєте відпочинок?</span>
-            <span className={ui.line}>Підберемо будинок і дати.</span>
+            <span className={ui.line}>{t("contactForm.title1")}</span>
+            <span className={ui.line}>{t("contactForm.title2")}</span>
           </h2>
           <p className={ui.lead} data-reveal="">
-            Телефонуйте, пишіть у месенджери або залиште заявку. Відповідаємо самі.
+            {t("contactForm.lead")}
           </p>
         </div>
         <div className={styles.card} data-reveal="">
           {sent ? (
             <div className={styles.done}>
               <h3 className={styles.doneTitle}>
-                Дякуємо. <span>Заявку отримали.</span>
+                {t("contactForm.thanks")} <span>{t("contactForm.received")}</span>
               </h3>
-              <p className={styles.doneText}>
-                Ми зателефонуємо вам для підтвердження — зазвичай протягом години.
-              </p>
+              <p className={styles.doneText}>{t("contactForm.doneText")}</p>
             </div>
           ) : (
             <form className={styles.form} onSubmit={submit} noValidate>
               <label className={styles.label}>
-                Ім’я
+                {t("common.name")}
                 <input
                   name="name"
                   value={contact.name}
                   onChange={onField}
-                  placeholder="Олена"
+                  placeholder={t("common.namePlaceholder")}
                   autoComplete="name"
                   className={`${fields.inputTall} ${bad.name ? fields.invalid : ""}`}
                 />
               </label>
               <label className={styles.label}>
-                Телефон
+                {t("common.phone")}
                 <input
                   name="phone"
                   type="tel"
@@ -102,7 +104,7 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
                 />
               </label>
               <DatePicker
-                label="Заїзд"
+                label={t("common.checkin")}
                 value={contact.checkin}
                 min={null}
                 open={picker}
@@ -114,7 +116,7 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
                 }}
               />
               <label className={styles.label}>
-                Гостей
+                {t("common.guests")}
                 <select
                   name="guests"
                   value={contact.guests}
@@ -129,28 +131,30 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
                 </select>
               </label>
               <label className={fields.labelWide}>
-                Щось іще?
+                {t("contactForm.more")}
                 <textarea
                   name="message"
                   value={contact.message}
                   onChange={onField}
                   rows={3}
-                  placeholder="Котедж, тварини, діти — необов’язково"
+                  placeholder={t("contactForm.morePlaceholder")}
                   className={`${fields.textarea} ${styles.textarea}`}
                 />
               </label>
               <span className={styles.error}>
-                {bad.name || bad.phone ? "Вкажіть ім’я та номер телефону" : ""}
+                {bad.name || bad.phone ? t("contactForm.error") : ""}
               </span>
               <button type="submit" className={`${ui.btnBlock} ${styles.wide}`}>
-                Надіслати заявку
+                {t("common.sendRequest")}
               </button>
               <span className={`${fields.consent} ${styles.wide}`}>
-                Надсилаючи заявку, ви погоджуєтесь з{" "}
-                <Link href="/privacy" className={ui.textLink}>
-                  Політикою конфіденційності
-                </Link>
-                .
+                {t("contactForm.consent", {
+                  privacy: (
+                    <Link href={lp("/privacy")} className={ui.textLink}>
+                      {t("common.privacyLink")}
+                    </Link>
+                  ),
+                })}
               </span>
             </form>
           )}

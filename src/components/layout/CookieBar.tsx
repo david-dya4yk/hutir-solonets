@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { useI18n, useLocalePath } from "@/locales/client";
+
 import type { ReactNode } from "react";
 
 import styles from "./CookieBar.module.css";
@@ -29,6 +31,8 @@ const hasChoice = (): boolean => {
 export function CookieBar({ request }: { readonly request: number }): ReactNode {
   const [auto, setAuto] = useState(false);
   const [handled, setHandled] = useState(0);
+  const t = useI18n();
+  const lp = useLocalePath();
 
   useEffect(() => {
     if (hasChoice()) {
@@ -55,19 +59,18 @@ export function CookieBar({ request }: { readonly request: number }): ReactNode 
 
   return (
     <div role="dialog" aria-label="Cookie" className={styles.bar}>
-      <span className={styles.title}>Ми використовуємо cookie</span>
+      <span className={styles.title}>{t("cookieBar.title")}</span>
       <p className={styles.text}>
-        Необхідні cookie потрібні для роботи сайту. З вашої згоди ми також використовуємо аналітичні
-        й рекламні cookie (Meta Pixel), щоб показувати вам актуальні пропозиції.{" "}
+        {t("cookieBar.text")}{" "}
         <Link
-          href="/cookies"
+          href={lp("/cookies")}
           className={ui.textLink}
           onClick={() => {
             setHandled(request);
             setAuto(false);
           }}
         >
-          Детальніше
+          {t("cookieBar.more")}
         </Link>
       </p>
       <div className={styles.actions}>
@@ -78,7 +81,7 @@ export function CookieBar({ request }: { readonly request: number }): ReactNode 
             choose("all");
           }}
         >
-          Прийняти всі
+          {t("cookieBar.acceptAll")}
         </button>
         <button
           type="button"
@@ -87,7 +90,7 @@ export function CookieBar({ request }: { readonly request: number }): ReactNode 
             choose("necessary");
           }}
         >
-          Лише необхідні
+          {t("cookieBar.necessary")}
         </button>
       </div>
     </div>

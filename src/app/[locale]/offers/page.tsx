@@ -1,6 +1,8 @@
 import { BookButton } from "@/components/booking/BookButton";
 import { Lines } from "@/components/ui/Lines";
-import { OFFERS, pad } from "@/content/site";
+import { getContent } from "@/content";
+import { pad } from "@/content/site";
+import { getI18n, initLocale } from "@/locales/server";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -8,24 +10,32 @@ import type { ReactNode } from "react";
 import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
-export const metadata: Metadata = {
-  title: "Пропозиції",
-  description: "Акції, сезонні пропозиції та подарункові сертифікати.",
-};
+export async function generateMetadata(props: PageProps<"/[locale]/offers">): Promise<Metadata> {
+  await initLocale(props.params);
+  const t = await getI18n();
+  return { title: t("meta.offersTitle"), description: t("meta.offersDescription") };
+}
 
-export default function OffersPage(): ReactNode {
+export default async function OffersPage(props: PageProps<"/[locale]/offers">): Promise<ReactNode> {
+  const locale = await initLocale(props.params);
+  const t = await getI18n();
+  const { offers } = getContent(locale);
   return (
     <>
       <section className={ui.pageTop}>
         <div className={styles.head}>
-          <Lines as="h1" className={ui.displayLg} lines={["Привід приїхати", "трохи раніше."]} />
+          <Lines
+            as="h1"
+            className={ui.displayLg}
+            lines={[t("offers.title1"), t("offers.title2")]}
+          />
           <p className={ui.lead} data-reveal="">
-            Акції, сезонні пропозиції та подарункові сертифікати. Умови уточнимо під час дзвінка.
+            {t("offers.lead")}
           </p>
         </div>
       </section>
       <div className={`${ui.container} ${styles.groups}`}>
-        {OFFERS.map((g, i) => (
+        {offers.map((g, i) => (
           <section key={g.title} className={styles.group}>
             <div className={styles.groupHead} data-reveal="">
               <span className={styles.num}>{pad(i + 1)}</span>
@@ -37,14 +47,16 @@ export default function OffersPage(): ReactNode {
                   <div className={`${ui.frame} ${ui.zoomHost} ${styles.photo}`}>
                     <div className={`${ui.fill} ${ui.stripes} ${ui.zoom}`} />
                     <span className={ui.tag}>{o.tag}</span>
-                    <span className={ui.caption}>фото · {o.shot}</span>
+                    <span className={ui.caption}>{t("common.photo", { label: o.shot })}</span>
                   </div>
                   <h3 className={styles.title}>{o.title}</h3>
                   <p className={styles.text}>{o.text}</p>
                   <BookButton
                     className={`${ui.btnMd} ${styles.cta}`}
                     comment={
-                      o.cert ? `Подарунковий сертифікат: ${o.title}` : `Пропозиція: ${o.title}`
+                      o.cert
+                        ? t("offers.certComment", { title: o.title })
+                        : t("offers.offerComment", { title: o.title })
                     }
                   >
                     {o.cta}

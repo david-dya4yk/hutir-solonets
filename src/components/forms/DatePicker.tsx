@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { buildMonth, longLabel, monthKey, shiftMonth, todayIso, WEEKDAYS } from "@/lib/dates";
+import { buildMonth, longLabel, monthKey, shiftMonth, todayIso, weekdays } from "@/lib/dates";
+import { useCurrentLocale, useI18n } from "@/locales/client";
 
 import type { ReactNode } from "react";
 
@@ -56,11 +57,13 @@ export function DatePicker({
   compact = false,
 }: DatePickerProps): ReactNode {
   const root = useRef<HTMLDivElement>(null);
+  const t = useI18n();
+  const locale = useCurrentLocale();
   const [view, setView] = useState<string | null>(null);
   const today = open ? todayIso() : "";
   const floor = min ?? today;
   const current = view ?? monthKey(value === "" ? floor : value);
-  const month = open ? buildMonth(current) : null;
+  const month = open ? buildMonth(locale, current) : null;
   const atStart = current <= monthKey(floor);
 
   useEffect(() => {
@@ -102,7 +105,7 @@ export function DatePicker({
     <div ref={root} className={styles.root}>
       {label}
       <button type="button" className={fieldClass} onClick={toggle} aria-expanded={open}>
-        <span>{value === "" ? "Оберіть дату" : longLabel(value)}</span>
+        <span>{value === "" ? t("datePicker.pick") : longLabel(locale, value)}</span>
         <span className={open ? styles.chevOpen : styles.chev} />
       </button>
       {error !== undefined && <span className={styles.error}>{error}</span>}
@@ -115,7 +118,7 @@ export function DatePicker({
               <button
                 type="button"
                 className={`${styles.nav} ${atStart ? styles.navDim : ""}`}
-                aria-label="Попередній місяць"
+                aria-label={t("datePicker.prev")}
                 onClick={() => {
                   shift(-1);
                 }}
@@ -126,7 +129,7 @@ export function DatePicker({
               <button
                 type="button"
                 className={styles.nav}
-                aria-label="Наступний місяць"
+                aria-label={t("datePicker.next")}
                 onClick={() => {
                   shift(1);
                 }}
@@ -135,7 +138,7 @@ export function DatePicker({
               </button>
             </div>
             <div className={styles.grid}>
-              {WEEKDAYS.map((w) => (
+              {weekdays(locale).map((w) => (
                 <span key={w} className={styles.weekday}>
                   {w}
                 </span>

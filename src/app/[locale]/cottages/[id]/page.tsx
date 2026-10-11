@@ -5,7 +5,10 @@ import { BookButton } from "@/components/booking/BookButton";
 import { RoomTabs } from "@/components/cottage/RoomTabs";
 import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
-import { COTTAGES, cottageHref, cottageMeta, cottageTitle, findCottage, pad } from "@/content/site";
+import { findCottage, getContent } from "@/content";
+import { COTTAGE_SPECS, cottageHref, pad, PRICE_PER_NIGHT } from "@/content/site";
+import { formatPrice, LOCALES, localePath } from "@/locales/config";
+import { getI18n, initLocale } from "@/locales/server";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -13,14 +16,20 @@ import type { ReactNode } from "react";
 import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
-export function generateStaticParams(): { id: string }[] {
-  return COTTAGES.map((c) => ({ id: String(c.n) }));
+export function generateStaticParams(): { locale: string; id: string }[] {
+  return LOCALES.flatMap((locale) => COTTAGE_SPECS.map((c) => ({ locale, id: String(c.n) })));
 }
 
-export async function generateMetadata(props: PageProps<"/cottages/[id]">): Promise<Metadata> {
+export async function generateMetadata(
+  props: PageProps<"/[locale]/cottages/[id]">,
+): Promise<Metadata> {
+  const locale = await initLocale(props.params);
   const { id } = await props.params;
-  const c = findCottage(Number(id));
-  return c === undefined ? {} : { title: cottageTitle(c), description: c.desc };
+  const t = await getI18n();
+  const c = findCottage(getContent(locale), Number(id));
+  return c === undefined
+    ? {}
+    : { title: t("common.cottage", { n: pad(c.n) }), description: c.desc };
 }
 
 const ICONS = {
@@ -53,17 +62,27 @@ function Spec({
   );
 }
 
-export default async function CottagePage(props: PageProps<"/cottages/[id]">): Promise<ReactNode> {
+export default async function CottagePage(
+  props: PageProps<"/[locale]/cottages/[id]">,
+): Promise<ReactNode> {
+  const locale = await initLocale(props.params);
   const { id } = await props.params;
-  const cur = findCottage(Number(id));
+  const t = await getI18n();
+  const content = getContent(locale);
+  const { cottages } = content;
+  const cur = findCottage(content, Number(id));
   if (cur === undefined) {
     notFound();
   }
-  const idx = COTTAGES.indexOf(cur);
+  const idx = cottages.indexOf(cur);
   const others = [1, 2, 3]
-    .map((k) => COTTAGES[(idx + k) % COTTAGES.length])
+    .map((k) => cottages[(idx + k) % cottages.length])
     .filter((c) => c !== undefined);
-  const title = cottageTitle(cur);
+  const titleOf = (n: number): string => t("common.cottage", { n: pad(n) });
+  const metaOf = (c: { readonly area: number; readonly guests: number }): string =>
+    `${t("common.area", { n: c.area })} · ${t("common.upToGuests", { n: c.guests })}`;
+  const title = titleOf(cur.n);
+  const price = formatPrice(locale, PRICE_PER_NIGHT);
 
   return (
     <>
@@ -74,10 +93,10 @@ export default async function CottagePage(props: PageProps<"/cottages/[id]">): P
           segments="edge"
           captionClass={ui.captionTopRight}
           labels={[
-            `фото · будинок ${String(cur.n)}, ${cur.shot}`,
-            "фото · вітальня у вечірньому світлі",
-            "фото · тераса з видом на гори",
-            "фото · спальня в теплих тонах",
+            t("common.photo", { label: t("cottages.shot", { n: cur.n, shot: cur.shot }) }),
+            t("common.photo", { label: t("cottage.shotLiving") }),
+            t("common.photo", { label: t("cottage.shotTerrace") }),
+            t("common.photo", { label: t("cottage.shotBedroom") }),
           ]}
         />
         <div className={styles.heroText}>
@@ -90,58 +109,64 @@ export default async function CottagePage(props: PageProps<"/cottages/[id]">): P
           <div className={styles.aboutText}>
             <Lines className={ui.displayMd} lines={[`${title}.`, cur.tagline]} />
             <p className={`${ui.body} ${styles.desc}`} data-reveal="">
-              {cur.desc} Будинок орендується повністю — постільна білизна, рушники й паркінг уже
-              входять у вартість.
+              {cur.desc} {t("cottage.included")}
             </p>
           </div>
           <div className={ui.rowList} data-reveal="">
-            <Spec icon={ICONS.area} label="Площа">
-              <span className={ui.strong}>{cur.area} м²</span>
+            <Spec icon={ICONS.area} label={t("cottage.area")}>
+              <span className={ui.strong}>{t("common.area", { n: cur.area })}</span>
             </Spec>
-            <Spec icon={ICONS.guests} label="Гостей">
-              <span className={ui.strong}>до {cur.guests}</span>
+            <Spec icon={ICONS.guests} label={t("cottage.guests")}>
+              <span className={ui.strong}>{t("common.upTo", { n: cur.guests })}</span>
             </Spec>
-            <Spec icon={ICONS.beds} label="Спальні">
+            <Spec icon={ICONS.beds} label={t("cottage.bedrooms")}>
               <span className={ui.strong}>{cur.beds}</span>
             </Spec>
-            <Spec icon={ICONS.price} label="Вартість">
+            <Spec icon={ICONS.price} label={t("cottage.price")}>
               <span className={styles.price}>
-                14 000 грн <span className={styles.per}>/ доба</span>
+                {price} <span className={styles.per}>{t("common.perNight")}</span>
               </span>
             </Spec>
             <BookButton className={`${ui.btnLg} ${styles.book}`} cottage={cur.n} magnet>
-              Забронювати будинок {pad(cur.n)}
+              {t("cottage.book", { n: pad(cur.n) })}
             </BookButton>
           </div>
         </div>
       </section>
 
       <section className={styles.section}>
-        <Lines className={styles.amenTitle} lines={["Зручності", "у кожному будинку."]} />
+        <Lines
+          className={styles.amenTitle}
+          lines={[t("cottage.amenities1"), t("cottage.amenities2")]}
+        />
         <RoomTabs />
       </section>
 
       <section className={styles.othersSection}>
         <div className={ui.container}>
           <div className={styles.othersHead}>
-            <Lines className={ui.displayMd} lines={["Інші", "котеджі."]} />
-            <Link href="/cottages" className={`${ui.btn} ${styles.all}`} data-reveal="">
-              Усі котеджі
+            <Lines className={ui.displayMd} lines={[t("cottage.others1"), t("cottage.others2")]} />
+            <Link
+              href={localePath(locale, "/cottages")}
+              className={`${ui.btn} ${styles.all}`}
+              data-reveal=""
+            >
+              {t("cottage.all")}
             </Link>
           </div>
           <div className={styles.othersGrid}>
             {others.map((c) => (
               <Link
                 key={c.n}
-                href={cottageHref(c)}
+                href={localePath(locale, cottageHref(c))}
                 className={`${ui.frame} ${ui.zoomHost} ${styles.other}`}
                 data-reveal=""
               >
                 <div className={`${ui.fill} ${ui.stripes} ${ui.zoom}`} />
                 <div className={ui.shadeLight} />
                 <div className={styles.otherText}>
-                  <span className={styles.otherTitle}>{cottageTitle(c)}</span>
-                  <span className={styles.otherMeta}>{cottageMeta(c)}</span>
+                  <span className={styles.otherTitle}>{titleOf(c.n)}</span>
+                  <span className={styles.otherMeta}>{metaOf(c)}</span>
                 </div>
               </Link>
             ))}

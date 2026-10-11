@@ -1,31 +1,43 @@
 import Link from "next/link";
 
-import { LEGAL, LEGAL_ORDER } from "@/content/site";
+import { getContent } from "@/content";
+import { LEGAL_ORDER } from "@/content/site";
+import { localePath } from "@/locales/config";
+import { getI18n } from "@/locales/server";
 
 import type { LegalKey } from "@/content/site";
+import type { Locale } from "@/locales/config";
 import type { ReactNode } from "react";
 
 import styles from "./LegalPage.module.css";
 
-export function LegalPage({ doc }: { readonly doc: LegalKey }): ReactNode {
-  const cur = LEGAL[doc];
+export async function LegalPage({
+  locale,
+  doc,
+}: {
+  readonly locale: Locale;
+  readonly doc: LegalKey;
+}): Promise<ReactNode> {
+  const t = await getI18n();
+  const { legal } = getContent(locale);
+  const cur = legal[doc];
   return (
     <section className={styles.page}>
-      <nav className={styles.tabs} aria-label="Документи">
+      <nav className={styles.tabs} aria-label={t("legal.aria")}>
         {LEGAL_ORDER.map((k) => (
           <Link
             key={k}
-            href={`/${k}`}
+            href={localePath(locale, `/${k}`)}
             className={k === doc ? styles.tabOn : styles.tab}
             aria-current={k === doc ? "page" : undefined}
           >
-            {LEGAL[k].tab}
+            {legal[k].tab}
           </Link>
         ))}
       </nav>
       <div className={styles.head}>
         <h1 className={styles.title}>{cur.title}</h1>
-        <span className={styles.date}>Редакція від 1 жовтня 2026 року</span>
+        <span className={styles.date}>{t("legal.revision")}</span>
         <p className={styles.lead}>{cur.lead}</p>
       </div>
       <div className={styles.items}>

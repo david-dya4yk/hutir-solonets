@@ -7,7 +7,12 @@ import { onReady, prefersReducedMotion } from "@/lib/ready";
 
 const EASE = "cubic-bezier(.2,.65,.25,1)";
 
-const formatCount = (v: number, dec: number): string => v.toFixed(dec).replace(".", ",");
+const formatCount = (v: number, dec: number): string =>
+  v.toLocaleString(document.documentElement.lang, {
+    minimumFractionDigits: dec,
+    maximumFractionDigits: dec,
+    useGrouping: false,
+  });
 
 const runCount = (node: HTMLElement): void => {
   const to = Number.parseFloat(node.dataset["count"] ?? "0");
