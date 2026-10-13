@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BookButton } from "@/components/booking/BookButton";
 import { ContactSection } from "@/components/forms/ContactSection";
 import { Faq } from "@/components/home/Faq";
+import { FocusTiles } from "@/components/home/FocusTiles";
 import { HeroVideo } from "@/components/home/HeroVideo";
 import { PlanMap } from "@/components/home/PlanMap";
 import { Reviews } from "@/components/home/Reviews";
@@ -86,7 +87,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
         </div>
       </section>
 
-      <section className={styles.split}>
+      <FocusTiles className={styles.split}>
         <Link href={localePath(locale, "/cottages")} className={styles.tile} data-reveal="">
           <div className={`${styles.tilePhoto} ${styles.tileCottages}`} />
           <div className={styles.tileShade} />
@@ -117,7 +118,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
             <FeatureDots className={styles.tileDots} items={c.homeSpaDots} />
           </div>
         </Link>
-      </section>
+      </FocusTiles>
 
       <Reviews />
 

@@ -14,3 +14,13 @@
   min-height: 4px;
   font-size: 15px;
 }
+
+@media (width < 900px) {
+  .form {
+    gap: 16px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+}

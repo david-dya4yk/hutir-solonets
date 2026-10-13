@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import { useContent } from "@/content/ContentProvider";
-import { COTTAGE_SPECS, PRICE_PER_NIGHT, pad } from "@/content/site";
-import { addDays, nightsBetween, shortLabel } from "@/lib/dates";
+import { PRICE_PER_NIGHT, pad } from "@/content/site";
+import { dayMonthLabel, nightsBetween, shortLabel } from "@/lib/dates";
 import { useCurrentLocale, useI18n } from "@/locales/client";
 import { formatPrice } from "@/locales/config";
 
@@ -21,7 +21,6 @@ type Form = {
   phone: string;
   checkin: string;
   checkout: string;
-  guests: string;
   cottage: string;
   comment: string;
 };
@@ -32,18 +31,11 @@ type ErrorKey = "errName" | "errPhone" | "errCheckin" | "errCheckout" | "errOrde
 
 type Errors = Partial<Record<Field, string | undefined>>;
 
-type Picker = "in" | "out" | null;
-
 export type BookingSummary = {
   readonly name: string;
   readonly dates: string;
   readonly cottage: string;
-  readonly guests: string;
 };
-
-const MAX_GUESTS = Math.max(...COTTAGE_SPECS.map((c) => c.guests));
-
-const GUEST_OPTIONS = Array.from({ length: MAX_GUESTS }, (_, i) => String(i + 1));
 
 const validate = (f: Form): Partial<Record<Field, ErrorKey>> => {
   const er: Partial<Record<Field, ErrorKey>> = {};
@@ -82,14 +74,13 @@ export function BookingForm({
   const t = useI18n();
   const locale = useCurrentLocale();
   const { cottages } = useContent();
-  const [picker, setPicker] = useState<Picker>(null);
+  const [picker, setPicker] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
   const [form, setForm] = useState<Form>({
     name: "",
     phone: "",
     checkin: "",
     checkout: "",
-    guests: "8",
     cottage: cottage === undefined ? "any" : String(cottage),
     comment: comment ?? "",
   });
@@ -127,7 +118,6 @@ export function BookingForm({
         name: form.name,
         dates: `${shortLabel(form.checkin)} — ${shortLabel(form.checkout)}`,
         cottage: cottageOptions.find((o) => o.v === form.cottage)?.short ?? "",
-        guests: form.guests,
       });
     }
   };
@@ -143,8 +133,14 @@ export function BookingForm({
           nights: t("booking.nights", { count: nights }),
           price: formatPrice(locale, nights * PRICE_PER_NIGHT),
         });
-  const minOut = form.checkin === "" ? null : addDays(form.checkin, 1);
   const range = [form.checkin, form.checkout] as const;
+  const datesLabel =
+    form.checkin === ""
+      ? t("datePicker.pick")
+      : `${dayMonthLabel(locale, form.checkin)} — ${
+          form.checkout === "" ? "…" : dayMonthLabel(locale, form.checkout)
+        }`;
+  const datesError = errors.checkin ?? errors.checkout;
 
   return (
     <form className={styles.form} onSubmit={submit} noValidate>
@@ -176,55 +172,24 @@ export function BookingForm({
           <span className={fields.error}>{errors.phone}</span>
         </label>
         <DatePicker
-          label={t("common.checkin")}
-          value={form.checkin}
+          label={`${t("common.checkin")} — ${t("common.checkout")}`}
+          value={form.checkout === "" ? form.checkin : form.checkout}
+          display={datesLabel}
           min={null}
           range={range}
-          open={picker === "in"}
-          onOpenChange={(o) => {
-            setPicker(o ? "in" : null);
-          }}
+          open={picker}
+          onOpenChange={setPicker}
           onPick={(v) => {
-            setForm((f) => ({
-              ...f,
-              checkin: v,
-              checkout: f.checkout !== "" && f.checkout <= v ? "" : f.checkout,
-            }));
-            setErrors((er) => ({ ...er, checkin: undefined }));
-            setPicker("out");
+            // The first tap picks check-in, the second check-out; a tap on or before
+            // check-in, or after a full range, starts a new range.
+            const out = form.checkin !== "" && form.checkout === "" && v > form.checkin;
+            setForm((f) => (out ? { ...f, checkout: v } : { ...f, checkin: v, checkout: "" }));
+            setErrors((er) => ({ ...er, checkin: undefined, checkout: undefined }));
+            setPicker(!out);
           }}
-          error={errors.checkin ?? ""}
-          invalid={errors.checkin !== undefined}
+          error={datesError ?? ""}
+          invalid={datesError !== undefined}
         />
-        <DatePicker
-          key={form.checkin}
-          label={t("common.checkout")}
-          value={form.checkout}
-          min={minOut}
-          range={range}
-          align="right"
-          open={picker === "out"}
-          onOpenChange={(o) => {
-            setPicker(o ? "out" : null);
-          }}
-          onPick={(v) => {
-            setForm((f) => ({ ...f, checkout: v }));
-            setErrors((er) => ({ ...er, checkout: undefined }));
-            setPicker(null);
-          }}
-          error={errors.checkout ?? ""}
-          invalid={errors.checkout !== undefined}
-        />
-        <label className={fields.label}>
-          {t("common.guests")}
-          <select name="guests" value={form.guests} onChange={onField} className={fields.select}>
-            {GUEST_OPTIONS.map((g) => (
-              <option key={g} value={g}>
-                {g}
-              </option>
-            ))}
-          </select>
-        </label>
         <label className={fields.label}>
           {t("booking.cottage")}
           <select name="cottage" value={form.cottage} onChange={onField} className={fields.select}>

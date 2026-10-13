@@ -32,7 +32,7 @@
 
 .section {
   max-width: var(--max);
-  padding: clamp(88px, 10vw, 150px) var(--gutter);
+  padding: clamp(56px, 10vw, 150px) var(--gutter);
   margin: 0 auto;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .othersSection {
-  padding: clamp(88px, 10vw, 150px) 0;
+  padding: clamp(56px, 10vw, 150px) 0;
   background: var(--second);
 }
 

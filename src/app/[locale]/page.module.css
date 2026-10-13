@@ -243,6 +243,32 @@
   transform: translateX(10px);
 }
 
+@media (width < 920px) {
+  .tileSpaBox {
+    border-left: none;
+  }
+
+  .tilePhoto,
+  .tileBody {
+    transition:
+      transform 1.4s var(--ease),
+      filter 0.8s var(--ease),
+      opacity 0.8s var(--ease);
+  }
+
+  .tile:not([data-active]) .tilePhoto {
+    filter: brightness(0.2) saturate(0.4);
+  }
+
+  .tile:not([data-active]) .tileBody {
+    opacity: 0.4;
+  }
+
+  .tile[data-active] .tilePhoto {
+    transform: scale(1.04);
+  }
+}
+
 .tileEyebrow {
   font-size: clamp(17px, 1.5vw, 22px);
   font-style: italic;
@@ -364,7 +390,7 @@
   gap: clamp(48px, 7vw, 120px);
   align-items: stretch;
   max-width: var(--max);
-  padding: clamp(88px, 10vw, 150px) var(--gutter);
+  padding: clamp(56px, 10vw, 150px) var(--gutter);
   margin: 0 auto;
 }
 

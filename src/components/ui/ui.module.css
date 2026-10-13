@@ -7,8 +7,8 @@
 
 .section {
   composes: container;
-  padding-top: clamp(88px, 11vw, 170px);
-  padding-bottom: clamp(88px, 11vw, 170px);
+  padding-top: clamp(56px, 11vw, 170px);
+  padding-bottom: clamp(56px, 11vw, 170px);
 }
 
 .pageTop {
