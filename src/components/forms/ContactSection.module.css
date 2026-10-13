@@ -9,7 +9,13 @@
   position: absolute;
   inset: -12% 0;
   background:
-    url("/assets/form-bg.jpg") center 55% / cover no-repeat,
+    url("/assets/form-bg.jpg") center 50% / cover no-repeat,
+    var(--stripes);
+}
+
+.bgHome {
+  background:
+    url("/assets/home-form.jpg") center 55% / cover no-repeat,
     var(--stripes);
 }
 

@@ -51,7 +51,6 @@ export default async function SpaPage(props: PageProps<"/[locale]/spa">): Promis
               />
             </div>
             <div className={styles.text} data-reveal="">
-              <span className={styles.blockEyebrow}>{s.eyebrow}</span>
               <h2 className={styles.blockTitle}>{s.title}</h2>
               <p className={ui.body}>{s.text}</p>
             </div>

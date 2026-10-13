@@ -52,15 +52,21 @@ export function Header(): ReactNode {
             solonєts
           </Link>
           <nav className={styles.nav} aria-label={t("nav.aria")}>
-            {NAV.slice(1).map((it) => (
-              <Link
-                key={it.href}
-                href={lp(it.href)}
-                className={`${styles.navLink} ${isActive(path, it.href) ? styles.navActive : ""}`}
-              >
-                {t(`nav.${it.key}`)}
-              </Link>
-            ))}
+            {NAV.slice(1).map((it) =>
+              it.disabled === true ? (
+                <span key={it.href} className={styles.navLink} aria-disabled="true">
+                  {t(`nav.${it.key}`)}
+                </span>
+              ) : (
+                <Link
+                  key={it.href}
+                  href={lp(it.href)}
+                  className={`${styles.navLink} ${isActive(path, it.href) ? styles.navActive : ""}`}
+                >
+                  {t(`nav.${it.key}`)}
+                </Link>
+              ),
+            )}
           </nav>
           <div className={styles.actions}>
             <BookButton className={styles.book} magnet />
@@ -83,17 +89,23 @@ export function Header(): ReactNode {
         <div className={styles.menuDecor} />
         <div className={styles.menuInner}>
           <nav className={styles.menuNav}>
-            {NAV.map((it) => (
-              <Link
-                key={it.href}
-                href={lp(it.href)}
-                className={styles.menuLink}
-                onClick={close}
-                tabIndex={menu ? 0 : -1}
-              >
-                {t(`nav.${it.key}`)}
-              </Link>
-            ))}
+            {NAV.map((it) =>
+              it.disabled === true ? (
+                <span key={it.href} className={styles.menuLink} aria-disabled="true">
+                  {t(`nav.${it.key}`)}
+                </span>
+              ) : (
+                <Link
+                  key={it.href}
+                  href={lp(it.href)}
+                  className={styles.menuLink}
+                  onClick={close}
+                  tabIndex={menu ? 0 : -1}
+                >
+                  {t(`nav.${it.key}`)}
+                </Link>
+              ),
+            )}
           </nav>
           <div className={styles.menuContacts}>
             <a href={PHONE_HREF} className={styles.menuPhone} tabIndex={menu ? 0 : -1}>

@@ -211,3 +211,7 @@
 .fop {
   color: rgb(255 255 255 / 55%);
 }
+
+.pageLink[aria-disabled="true"] {
+  pointer-events: none;
+}

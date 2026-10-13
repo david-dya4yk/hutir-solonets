@@ -1,7 +1,10 @@
+import { redirect } from "next/navigation";
+
 import { BookButton } from "@/components/booking/BookButton";
 import { Lines } from "@/components/ui/Lines";
 import { getContent } from "@/content";
-import { pad } from "@/content/site";
+import { OFFERS_ENABLED, pad } from "@/content/site";
+import { localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
 import type { Metadata } from "next";
@@ -18,6 +21,9 @@ export async function generateMetadata(props: PageProps<"/[locale]/offers">): Pr
 
 export default async function OffersPage(props: PageProps<"/[locale]/offers">): Promise<ReactNode> {
   const locale = await initLocale(props.params);
+  if (!OFFERS_ENABLED) {
+    redirect(localePath(locale, "/"));
+  }
   const t = await getI18n();
   const { offers } = getContent(locale);
   return (
