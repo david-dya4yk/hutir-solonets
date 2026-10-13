@@ -46,11 +46,17 @@ export async function Footer(): Promise<ReactNode> {
           </div>
           <div className={styles.col}>
             <span className={styles.colTitle}>{t("footer.pages")}</span>
-            {NAV.map((it) => (
-              <Link key={it.href} href={lp(it.href)} className={styles.pageLink}>
-                {t(`nav.${it.key}`)}
-              </Link>
-            ))}
+            {NAV.map((it) =>
+              it.disabled === true ? (
+                <span key={it.href} className={styles.pageLink} aria-disabled="true">
+                  {t(`nav.${it.key}`)}
+                </span>
+              ) : (
+                <Link key={it.href} href={lp(it.href)} className={styles.pageLink}>
+                  {t(`nav.${it.key}`)}
+                </Link>
+              ),
+            )}
           </div>
           <div className={styles.col}>
             <span className={styles.colTitle}>{t("footer.address")}</span>

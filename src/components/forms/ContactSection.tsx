@@ -20,7 +20,7 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
   return (
     <section className={styles.section}>
       <div className={ui.parallax} data-parallax="0.12">
-        <div className={styles.bg} />
+        <div className={`${styles.bg} ${pageTop ? "" : styles.bgHome}`} />
       </div>
       <div className={styles.shade} />
       <div className={`${styles.inner} ${pageTop ? styles.innerTop : ""}`}>

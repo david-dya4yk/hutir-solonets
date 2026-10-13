@@ -16,7 +16,7 @@
 
 .heroPhoto {
   background:
-    url("/assets/spa-hero.jpg") center / cover no-repeat,
+    url("/assets/spa-hero.jpg") center 55% / cover no-repeat,
     var(--stripes);
 }
 
@@ -62,7 +62,7 @@
 
 .block {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 600px) minmax(0, 1fr);
   gap: clamp(28px, 4vw, 72px);
   align-items: center;
 }
@@ -70,7 +70,8 @@
 .media {
   width: 100%;
   min-width: 0;
-  aspect-ratio: 16 / 9;
+  max-width: 600px;
+  aspect-ratio: 1;
 }
 
 .text {
@@ -81,7 +82,7 @@
 }
 
 .blockAlt {
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 600px);
   align-items: end;
 }
 
@@ -105,13 +106,6 @@
   text-shadow: none;
   background: rgb(255 255 255 / 92%);
   border-radius: 4px;
-}
-
-.blockEyebrow {
-  font-size: 15px;
-  font-style: italic;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .blockTitle {

@@ -11,6 +11,7 @@ import { FeatureDots } from "@/components/ui/FeatureDots";
 import { Lines } from "@/components/ui/Lines";
 import { Media } from "@/components/ui/Media";
 import { getContent } from "@/content";
+import { OFFERS_ENABLED } from "@/content/site";
 import { localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
@@ -64,7 +65,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
           </div>
           <Media
             className={styles.introPhoto}
-            src="/assets/home-intro.jpg"
+            src="/assets/home-intro-kitchen.jpg"
             pos="center 60%"
             parallax={0.08}
           >
@@ -125,7 +126,6 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
           <Lines className={`${ui.display} ${styles.planTitle}`} lines={[t("home.planTitle")]} />
           <PlanMap />
           <div className={styles.planNote} data-reveal="">
-            <span>{t("home.planHint")}</span>
             <span>{t("home.planLegend")}</span>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
           <Media
             className={styles.square}
             src="/assets/home-about.jpg"
-            pos="center 80%"
+            pos="center 55%"
             parallax={0.08}
           />
         </div>
@@ -181,9 +181,11 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
               </p>
               <div className={styles.offerActions} data-reveal="">
                 <BookButton className={ui.btn} magnet />
-                <Link href={localePath(locale, "/offers")} className={ui.underline}>
-                  {t("home.allOffers")}
-                </Link>
+                {OFFERS_ENABLED && (
+                  <Link href={localePath(locale, "/offers")} className={ui.underline}>
+                    {t("home.allOffers")}
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -198,8 +200,8 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
           </div>
           <Media
             className={styles.faqPhoto}
-            src="/assets/home-faq.jpg"
-            pos="center 50%"
+            src="/assets/home-faq-hammock.jpg"
+            pos="center 60%"
             parallax={0.08}
           />
         </div>

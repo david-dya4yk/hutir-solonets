@@ -70,7 +70,7 @@ export default {
     planTitle: "Take a walk around",
     planHint: "Tap a cottage number to learn more",
     planLegend: "Forest · cottages · SPA area · parking",
-    planCaption: "aerial photo of the grounds · autumn, from above",
+    planCaption: "Aerial view of the hutir: cottages, the pool and the forest around",
     whyTitle: 'Why "Hutir Solonets"?',
     whyLead: "Every place has its own story.",
     whyRoots: "Ours is rooted in the past of our native land.",
@@ -101,6 +101,7 @@ export default {
     tag: "@hutir_solonets — and your warmest moments will appear here.",
     prev: "Previous",
     next: "Next",
+    watch: "Watch the video by {handle}",
   },
   cottages: {
     title1: "Cottages.",

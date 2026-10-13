@@ -46,7 +46,6 @@ export type SlideImage = {
 };
 
 export type SpaBlock = {
-  readonly eyebrow: string;
   readonly title: string;
   readonly text: string;
   readonly slides: readonly string[];
@@ -79,9 +78,16 @@ export type Social = {
   readonly href: string;
 };
 
+export type ReviewClip = {
+  readonly src: string;
+  readonly poster: string;
+};
+
 export type ReviewSource = {
   readonly handle: string;
   readonly video: boolean;
+  readonly clip?: ReviewClip;
+  readonly photo?: string;
 };
 
 export type Review = ReviewSource & {
@@ -105,8 +111,8 @@ export type LegalDoc = {
 
 export type NavKey = "home" | "cottages" | "spa" | "offers" | "contacts";
 
-export const PHONE_DISPLAY = "+38 067 123 45 67";
-export const PHONE_HREF = "tel:+380671234567";
+export const PHONE_DISPLAY = "+38 050 743 77 72";
+export const PHONE_HREF = "tel:+380507437772";
 export const EMAIL = "hello@solonets.com.ua";
 export const INSTAGRAM_URL = "https://www.instagram.com/hutir_solonets?cplk=MmVkanRqbXY2NXMy";
 export const mapEmbedSrc = (locale: Locale): string =>
@@ -215,13 +221,22 @@ export const COTTAGE_SPECS: readonly CottageSpec[] = [
 
 export const cottageHref = (c: CottageSpec): string => `/cottages/${String(c.n)}`;
 
-export const NAV: readonly { readonly href: string; readonly key: NavKey }[] = [
+/** The offers page is hidden for now: its nav item is not a link, and /offers redirects home. */
+export const OFFERS_ENABLED = false as boolean;
+
+type NavItem = { readonly href: string; readonly key: NavKey; readonly disabled?: boolean };
+
+const ALL_NAV: readonly NavItem[] = [
   { href: "/", key: "home" },
   { href: "/cottages", key: "cottages" },
   { href: "/spa", key: "spa" },
   { href: "/offers", key: "offers" },
   { href: "/contacts", key: "contacts" },
 ];
+
+export const NAV: readonly NavItem[] = ALL_NAV.map((it) =>
+  it.key === "offers" && !OFFERS_ENABLED ? { ...it, disabled: true } : it,
+);
 
 export const LEGAL_ORDER: readonly LegalKey[] = ["privacy", "cookies", "terms"];
 
@@ -235,32 +250,45 @@ export const SOCIALS: readonly Social[] = [
   {
     label: "Telegram",
     icon: "https://cdn.simpleicons.org/telegram/ffffff",
-    handle: "@solonets",
-    href: "https://t.me/",
+    handle: "@kristina_semenovich",
+    href: "https://t.me/kristina_semenovich",
   },
   {
     label: "Viber",
     icon: "https://cdn.simpleicons.org/viber/ffffff",
-    handle: "+380 67 123 45 67",
-    href: "viber://chat?number=%2B380671234567",
+    handle: "+380 50 743 77 72",
+    href: "viber://chat?number=%2B380507437772",
   },
   {
     label: "WhatsApp",
     icon: "https://cdn.simpleicons.org/whatsapp/ffffff",
-    handle: "+380 67 123 45 67",
-    href: "https://wa.me/380671234567",
+    handle: "+380 50 743 77 72",
+    href: "https://wa.me/380507437772",
   },
 ];
 
+const reviewClip = (n: number): ReviewClip => ({
+  src: `/assets/review-${String(n)}.mp4`,
+  poster: `/assets/review-${String(n)}.jpg`,
+});
+
 export const REVIEW_SOURCES: readonly ReviewSource[] = [
-  { handle: "@olena.mandrivky", video: true },
-  { handle: "@andriy_k", video: false },
-  { handle: "@mariia.family", video: true },
-  { handle: "@taras.and.co", video: false },
-  { handle: "@iryna_travels", video: true },
-  { handle: "@max.bukovyna", video: false },
-  { handle: "@sofia.weekend", video: true },
-  { handle: "@dmytro.ph", video: false },
+  { handle: "@hutir_solonets", video: true, clip: reviewClip(1) },
+  { handle: "@petrashescu8888", video: false, photo: "/assets/review-photo-1.jpg" },
+  { handle: "@syvous.y", video: true, clip: reviewClip(2) },
+  { handle: "@andrey_yuvchenko_lawyer", video: false, photo: "/assets/review-photo-8.jpg" },
+  { handle: "@hutir_solonets", video: true, clip: reviewClip(3) },
+  { handle: "@alionadovganych", video: false, photo: "/assets/review-photo-2.jpg" },
+  { handle: "@hutir_solonets", video: true, clip: reviewClip(4) },
+  { handle: "@dara_statkevych", video: false, photo: "/assets/review-photo-7.jpg" },
+  { handle: "@alionadovganych", video: true, clip: reviewClip(5) },
+  { handle: "@o.krupenna", video: false, photo: "/assets/review-photo-3.jpg" },
+  { handle: "@mama_lessyka", video: true, clip: reviewClip(6) },
+  { handle: "@_natashkkaa__04", video: false, photo: "/assets/review-photo-6.jpg" },
+  { handle: "@vitakilimnik", video: true, clip: reviewClip(7) },
+  { handle: "@nataliiaagatii", video: false, photo: "/assets/review-photo-4.jpg" },
+  { handle: "@hutir_solonets", video: true, clip: reviewClip(8) },
+  { handle: "@k_.karinaa", video: false, photo: "/assets/review-photo-5.jpg" },
 ];
 
 export const PLAN_AMENITY_SPOTS: readonly (readonly [string, string])[] = [

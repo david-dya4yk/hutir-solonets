@@ -180,13 +180,13 @@
 
 .tileCottages {
   background:
-    url("/assets/home-cottages.jpg") center 70% / cover no-repeat,
+    url("/assets/home-cottages.jpg") 60% 55% / cover no-repeat,
     var(--stripes);
 }
 
 .tileSpa {
   background:
-    url("/assets/home-spa.jpg") 38% center / cover no-repeat,
+    url("/assets/home-spa.jpg") 65% 60% / cover no-repeat,
     var(--stripes);
 }
 
