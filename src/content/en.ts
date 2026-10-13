@@ -120,16 +120,60 @@ export const en: LocalContent = {
       title: "Two indoor pools",
       text: "The warm pools are open in any weather. Large windows look out onto the forest — swim and watch the leaves fall.",
       slides: [
-        "indoor pools, windows to the forest",
+        "indoor pool, windows onto the forest",
+        "indoor pool and loungers",
         "pool in the evening light",
-        "loungers by the pool",
+        "relaxing by the pool edge",
+      ],
+      images: [
+        {
+          src: "/assets/spa-indoor-1.jpg",
+          alt: "A guest with a glass in the indoor pool by panoramic windows",
+          position: "center 68%",
+        },
+        {
+          src: "/assets/spa-indoor-2.jpg",
+          alt: "Indoor pool with a forest view through large windows",
+          position: "center 48%",
+        },
+        {
+          src: "/assets/spa-indoor-3.jpg",
+          alt: "Indoor pool in the evening, light lines on the ceiling and wicker lamps",
+          position: "center 52%",
+        },
+        {
+          src: "/assets/spa-indoor-4.jpg",
+          alt: "A guest resting at the edge of the indoor pool",
+          position: "center 72%",
+        },
       ],
     },
     {
       eyebrow: "Outdoor pool",
       title: "Outdoor pool",
       text: "In summer it is the heart of the day. Sun loungers, sunshine and the scent of spruce all around.",
-      slides: ["outdoor pool and spruces", "sun loungers, midday", "pool at sunset"],
+      slides: [
+        "outdoor pool and cottage, summer",
+        "outdoor pool in the forest",
+        "loungers by the pool",
+      ],
+      images: [
+        {
+          src: "/assets/spa-outdoor-3.jpg",
+          alt: "Outdoor pool on a wooden deck next to a cottage, with the forest behind",
+          position: "center 70%",
+        },
+        {
+          src: "/assets/spa-outdoor-1.jpg",
+          alt: "Outdoor pool with a wooden deck and loungers in the forest",
+          position: "center 68%",
+        },
+        {
+          src: "/assets/spa-outdoor-2.jpg",
+          alt: "Loungers and a parasol by the outdoor pool",
+          position: "center 82%",
+        },
+      ],
     },
     {
       eyebrow: "Jacuzzi",
@@ -140,6 +184,23 @@ export const en: LocalContent = {
         "jacuzzi with a forest view",
         "towels and tea by the jacuzzi",
       ],
+      images: [
+        {
+          src: "/assets/spa-jacuzzi-1.jpg",
+          alt: "A guest relaxing in the jacuzzi on a terrace among spruces",
+          position: "center 62%",
+        },
+        {
+          src: "/assets/spa-jacuzzi-2.jpg",
+          alt: "A couple in the jacuzzi on a winter night, steam rising over the water",
+          position: "center 45%",
+        },
+        {
+          src: "/assets/spa-jacuzzi-3.jpg",
+          alt: "The lit jacuzzi during a snowfall",
+          position: "center 70%",
+        },
+      ],
     },
     {
       eyebrow: "Hot tub",
@@ -149,6 +210,36 @@ export const en: LocalContent = {
         "steam over the hot tub, evening",
         "hot tub and golden leaves",
         "hot tub in the first snow",
+      ],
+      images: [
+        {
+          src: "/assets/spa-chan-1.jpg",
+          alt: "Guests in the hot tub among steam, candles and fire beneath",
+          position: "center 18%",
+        },
+        {
+          src: "/assets/spa-chan-2.jpg",
+          alt: "The hot tub gazebo in the autumn garden",
+          position: "center 52%",
+        },
+        {
+          src: "/assets/spa-chan-3.jpg",
+          alt: "The hot tub gazebo in winter, firewood by the stove",
+          position: "center 34%",
+        },
+      ],
+    },
+    {
+      eyebrow: "Sauna",
+      title: "Finnish sauna",
+      text: "Dry heat, the scent of wood and silence. After the steam room — into the pool or out into the fresh air, then back into the warmth.",
+      slides: ["sauna, wooden benches"],
+      images: [
+        {
+          src: "/assets/spa-sauna.jpg",
+          alt: "A guest relaxing in the wooden sauna",
+          position: "center 28%",
+        },
       ],
     },
   ],

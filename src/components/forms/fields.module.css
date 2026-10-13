@@ -5,12 +5,6 @@
   font-size: 15px;
 }
 
-.labelWide {
-  composes: label;
-  grid-column: 1 / -1;
-  gap: 10px;
-}
-
 .input {
   height: 54px;
   padding: 0 22px;
@@ -31,11 +25,6 @@
   border-color: var(--accent);
 }
 
-.inputTall {
-  composes: input;
-  height: 56px;
-}
-
 .invalid {
   border-color: var(--error);
 }
@@ -48,11 +37,6 @@
   background: transparent
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23151717' stroke-width='1.5'/%3E%3C/svg%3E")
     no-repeat right 22px center;
-}
-
-.selectTall {
-  composes: input select;
-  height: 56px;
 }
 
 .textarea {

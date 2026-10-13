@@ -24,10 +24,9 @@ export default async function SpaPage(props: PageProps<"/[locale]/spa">): Promis
     <>
       <section className={styles.hero}>
         <div className={ui.parallax} data-parallax="0.25">
-          <div className={`${ui.parallaxDeep} ${ui.stripes}`} />
+          <div className={`${ui.parallaxDeep} ${styles.heroPhoto}`} />
         </div>
         <div className={styles.heroShade} />
-        <span className={ui.captionTopRight}>{t("common.photo", { label: t("spa.caption") })}</span>
         <span className={styles.eyebrow} data-reveal="">
           {t("spa.eyebrow")}
         </span>
@@ -45,7 +44,9 @@ export default async function SpaPage(props: PageProps<"/[locale]/spa">): Promis
             <div className={`${ui.frame} ${styles.media}`} data-reveal="">
               <Slides
                 segments="inset"
+                offset={(i * 6000) / spa.length}
                 labels={s.slides.map((l) => t("common.photo", { label: l }))}
+                {...(s.images === undefined ? {} : { images: s.images })}
                 captionClass={styles.slideCaption}
               />
             </div>

@@ -118,6 +118,14 @@
   background: none;
   border: none;
   border-bottom: 1px solid var(--text);
+  transition:
+    color 0.3s,
+    border-color 0.3s;
+}
+
+.underline:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .textLink {
@@ -128,6 +136,11 @@
   cursor: pointer;
   background: none;
   border: none;
+  transition: color 0.3s;
+}
+
+.textLink:hover {
+  color: var(--accent);
 }
 
 .frame {

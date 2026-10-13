@@ -1,10 +1,21 @@
 import type { Locale } from "@/locales/config";
 
+export type CottageRoom =
+  "exterior" | "dining" | "living" | "kitchen" | "bedroom" | "bathroom" | "terrace";
+
+export type CottagePhoto = {
+  readonly src: string;
+  readonly position?: string;
+  readonly room?: CottageRoom;
+};
+
 export type CottageSpec = {
   readonly n: number;
   readonly area: number;
   readonly guests: number;
   readonly beds: number;
+  readonly photo?: CottagePhoto;
+  readonly gallery?: readonly CottagePhoto[];
 };
 
 export type CottageText = {
@@ -28,11 +39,18 @@ export type Room = {
   readonly items: readonly string[];
 };
 
+export type SlideImage = {
+  readonly src: string;
+  readonly alt: string;
+  readonly position?: string;
+};
+
 export type SpaBlock = {
   readonly eyebrow: string;
   readonly title: string;
   readonly text: string;
   readonly slides: readonly string[];
+  readonly images?: readonly (SlideImage | undefined)[];
 };
 
 export type FaqItem = {
@@ -102,13 +120,97 @@ export const PRICE_PER_NIGHT = 14000;
 export const pad = (n: number): string => String(n).padStart(2, "0");
 
 export const COTTAGE_SPECS: readonly CottageSpec[] = [
-  { n: 1, area: 140, guests: 8, beds: 3 },
-  { n: 2, area: 160, guests: 10, beds: 4 },
-  { n: 3, area: 150, guests: 8, beds: 3 },
-  { n: 4, area: 190, guests: 12, beds: 5 },
-  { n: 5, area: 165, guests: 10, beds: 4 },
+  {
+    n: 1,
+    area: 140,
+    guests: 8,
+    beds: 3,
+    photo: { src: "/assets/cottage-1-2.jpg", position: "center 60%" },
+  },
+  {
+    n: 2,
+    area: 160,
+    guests: 10,
+    beds: 4,
+    photo: { src: "/assets/cottage-1-2.jpg", position: "center 60%" },
+  },
+  {
+    n: 3,
+    area: 150,
+    guests: 8,
+    beds: 3,
+    photo: { src: "/assets/cottage-3-ext.jpg", position: "center 62%", room: "exterior" },
+    gallery: [
+      { src: "/assets/cottage-3-dining.jpg", position: "center 62%", room: "dining" },
+      { src: "/assets/cottage-3-living.jpg", position: "center 62%", room: "living" },
+      { src: "/assets/cottage-3-kitchen.jpg", position: "center 55%", room: "kitchen" },
+      { src: "/assets/cottage-3-bedroom-1.jpg", position: "center 62%", room: "bedroom" },
+      { src: "/assets/cottage-3-bedroom-2.jpg", position: "center 62%", room: "bedroom" },
+      { src: "/assets/cottage-3-bath.jpg", position: "center 55%", room: "bathroom" },
+      { src: "/assets/cottage-3-ext.jpg", position: "center 62%", room: "exterior" },
+    ],
+  },
+  {
+    n: 4,
+    area: 190,
+    guests: 14,
+    beds: 5,
+    photo: { src: "/assets/cottage-4-exterior.jpg", position: "center 60%", room: "exterior" },
+    gallery: [
+      { src: "/assets/cottage-4-exterior.jpg", position: "center 60%", room: "exterior" },
+      { src: "/assets/cottage-4-dining.jpg", position: "center 60%", room: "dining" },
+      { src: "/assets/cottage-4-terrace-view.jpg", position: "center 55%", room: "terrace" },
+      { src: "/assets/cottage-4-bedroom.jpg", position: "center 60%", room: "bedroom" },
+      { src: "/assets/cottage-4-kitchen.jpg", position: "center 55%", room: "kitchen" },
+      { src: "/assets/cottage-4-bedroom-2.jpg", position: "center 65%", room: "bedroom" },
+      { src: "/assets/cottage-4-dining-2.jpg", position: "center 55%", room: "dining" },
+      { src: "/assets/cottage-4-kitchen-2.jpg", position: "center 50%", room: "kitchen" },
+      { src: "/assets/cottage-4-terrace.jpg", position: "center 60%", room: "terrace" },
+    ],
+  },
+  {
+    n: 5,
+    area: 165,
+    guests: 10,
+    beds: 4,
+    photo: { src: "/assets/cottage-5-exterior.jpg", position: "center 55%", room: "exterior" },
+    gallery: [
+      { src: "/assets/cottage-5-exterior.jpg", position: "center 55%", room: "exterior" },
+      { src: "/assets/cottage-5-dining.jpg", position: "center 55%", room: "dining" },
+      { src: "/assets/cottage-5-living.jpg", position: "center 60%", room: "living" },
+      { src: "/assets/cottage-5-bedroom.jpg", position: "center 60%", room: "bedroom" },
+      { src: "/assets/cottage-5-kitchen.jpg", position: "center 55%", room: "kitchen" },
+      { src: "/assets/cottage-5-bedroom-2.jpg", position: "center 55%", room: "bedroom" },
+      { src: "/assets/cottage-5-bath.jpg", position: "center 50%", room: "bathroom" },
+      { src: "/assets/cottage-5-dining-2.jpg", position: "center 60%", room: "dining" },
+      { src: "/assets/cottage-5-kitchen-2.jpg", position: "center 60%", room: "kitchen" },
+      { src: "/assets/cottage-5-bedroom-3.jpg", position: "center 55%", room: "bedroom" },
+      { src: "/assets/cottage-5-kitchen-3.jpg", position: "center 55%", room: "kitchen" },
+      { src: "/assets/cottage-5-exterior-2.jpg", position: "center 55%", room: "exterior" },
+    ],
+  },
   { n: 6, area: 200, guests: 12, beds: 5 },
-  { n: 7, area: 175, guests: 10, beds: 4 },
+  {
+    n: 7,
+    area: 175,
+    guests: 10,
+    beds: 4,
+    photo: { src: "/assets/cottage-7-exterior.jpg", position: "center 60%", room: "exterior" },
+    gallery: [
+      { src: "/assets/cottage-7-exterior.jpg", position: "center 60%", room: "exterior" },
+      { src: "/assets/cottage-7-dining.jpg", position: "center 55%", room: "dining" },
+      { src: "/assets/cottage-7-bedroom.jpg", position: "center 60%", room: "bedroom" },
+      { src: "/assets/cottage-7-living.jpg", position: "center 55%", room: "living" },
+      { src: "/assets/cottage-7-bedroom-2.jpg", position: "center 60%", room: "bedroom" },
+      { src: "/assets/cottage-7-dining-2.jpg", position: "center 60%", room: "dining" },
+      { src: "/assets/cottage-7-bedroom-3.jpg", position: "center 55%", room: "bedroom" },
+      { src: "/assets/cottage-7-bath.jpg", position: "center 50%", room: "bathroom" },
+      { src: "/assets/cottage-7-bedroom-4.jpg", position: "center 55%", room: "bedroom" },
+      { src: "/assets/cottage-7-living-2.jpg", position: "center 55%", room: "living" },
+      { src: "/assets/cottage-7-bedroom-5.jpg", position: "center 55%", room: "bedroom" },
+      { src: "/assets/cottage-7-bath-2.jpg", position: "center 50%", room: "bathroom" },
+    ],
+  },
 ];
 
 export const cottageHref = (c: CottageSpec): string => `/cottages/${String(c.n)}`;

@@ -21,12 +21,16 @@
   max-width: 44ch;
 }
 
-.social {
-  transition: opacity 0.3s;
+.link {
+  transition: color 0.3s;
 }
 
-.social:hover {
-  opacity: 0.6;
+.link:hover {
+  color: var(--accent);
+}
+
+.split .link {
+  border-color: var(--footer);
 }
 
 .mapSection {
@@ -95,8 +99,8 @@
   align-items: center;
   justify-content: space-between;
   padding: clamp(32px, 4vw, 48px) 0;
-  border-top: 1px solid var(--gold-line);
-  border-bottom: 1px solid var(--gold-line);
+  border-top: 1px solid var(--footer);
+  border-bottom: 1px solid var(--footer);
 }
 
 .score {

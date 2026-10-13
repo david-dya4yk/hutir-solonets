@@ -33,11 +33,6 @@
   border-color: var(--accent);
 }
 
-.fieldCompact {
-  composes: field;
-  height: 56px;
-}
-
 .active {
   border-color: var(--text);
 }
@@ -90,10 +85,6 @@
   right: 0;
   left: auto;
   transform-origin: top right;
-}
-
-.popCompact {
-  top: calc(100% + 8px);
 }
 
 .popOpen {

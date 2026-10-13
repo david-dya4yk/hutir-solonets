@@ -14,6 +14,12 @@
   background: var(--media-bg);
 }
 
+.heroPhoto {
+  background:
+    url("/assets/spa-hero.jpg") center / cover no-repeat,
+    var(--stripes);
+}
+
 .heroShade {
   position: absolute;
   inset: 0;

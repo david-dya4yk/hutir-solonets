@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { BookButton } from "@/components/booking/BookButton";
+import { CottagePhoto } from "@/components/cottage/CottagePhoto";
 import { RoomTabs } from "@/components/cottage/RoomTabs";
 import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
@@ -10,6 +11,7 @@ import { COTTAGE_SPECS, cottageHref, pad, PRICE_PER_NIGHT } from "@/content/site
 import { formatPrice, LOCALES, localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
+import type { CottagePhoto as CottagePhotoData } from "@/content/site";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
@@ -83,6 +85,13 @@ export default async function CottagePage(
     `${t("common.area", { n: c.area })} · ${t("common.upToGuests", { n: c.guests })}`;
   const title = titleOf(cur.n);
   const price = formatPrice(locale, PRICE_PER_NIGHT);
+  const positionOf = (p: { readonly position?: string }): { position?: string } =>
+    p.position === undefined ? {} : { position: p.position };
+  const altOf = (n: number, p: CottagePhotoData): string =>
+    p.room === undefined
+      ? t("cottages.photoAlt")
+      : t("cottage.photoAlt", { cottage: titleOf(n), room: t(`cottage.rooms.${p.room}`) });
+  const slides = cur.gallery ?? (cur.photo === undefined ? [] : [cur.photo]);
 
   return (
     <>
@@ -92,12 +101,22 @@ export default async function CottagePage(
           shade
           segments="edge"
           captionClass={ui.captionTopRight}
-          labels={[
-            t("common.photo", { label: t("cottages.shot", { n: cur.n, shot: cur.shot }) }),
-            t("common.photo", { label: t("cottage.shotLiving") }),
-            t("common.photo", { label: t("cottage.shotTerrace") }),
-            t("common.photo", { label: t("cottage.shotBedroom") }),
-          ]}
+          sizes="100vw"
+          images={slides.map((p) => ({
+            src: p.src,
+            alt: altOf(cur.n, p),
+            ...positionOf(p),
+          }))}
+          labels={
+            cur.gallery === undefined
+              ? [
+                  t("common.photo", { label: t("cottages.shot", { n: cur.n, shot: cur.shot }) }),
+                  t("common.photo", { label: t("cottage.shotLiving") }),
+                  t("common.photo", { label: t("cottage.shotTerrace") }),
+                  t("common.photo", { label: t("cottage.shotBedroom") }),
+                ]
+              : cur.gallery.map((p) => altOf(cur.n, p))
+          }
         />
         <div className={styles.heroText}>
           <h1 className={styles.heroTitle}>{title}</h1>
@@ -162,7 +181,11 @@ export default async function CottagePage(
                 className={`${ui.frame} ${ui.zoomHost} ${styles.other}`}
                 data-reveal=""
               >
-                <div className={`${ui.fill} ${ui.stripes} ${ui.zoom}`} />
+                <CottagePhoto
+                  photo={c.photo}
+                  alt={c.photo === undefined ? "" : altOf(c.n, c.photo)}
+                  sizes="(max-width: 900px) 100vw, 33vw"
+                />
                 <div className={ui.shadeLight} />
                 <div className={styles.otherText}>
                   <span className={styles.otherTitle}>{titleOf(c.n)}</span>

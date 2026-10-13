@@ -20,7 +20,6 @@ type DatePickerProps = {
   readonly error?: string;
   readonly invalid?: boolean;
   readonly align?: "left" | "right";
-  readonly compact?: boolean;
 };
 
 const dayClass = (
@@ -54,7 +53,6 @@ export function DatePicker({
   error,
   invalid = false,
   align = "left",
-  compact = false,
 }: DatePickerProps): ReactNode {
   const root = useRef<HTMLDivElement>(null);
   const t = useI18n();
@@ -95,11 +93,9 @@ export function DatePicker({
     }
   };
 
-  const fieldClass = [
-    compact ? styles.fieldCompact : styles.field,
-    invalid ? styles.invalid : "",
-    open ? styles.active : "",
-  ].join(" ");
+  const fieldClass = [styles.field, invalid ? styles.invalid : "", open ? styles.active : ""].join(
+    " ",
+  );
 
   return (
     <div ref={root} className={styles.root}>
@@ -110,7 +106,7 @@ export function DatePicker({
       </button>
       {error !== undefined && <span className={styles.error}>{error}</span>}
       <div
-        className={`${styles.pop} ${align === "right" ? styles.popRight : ""} ${compact ? styles.popCompact : ""} ${open ? styles.popOpen : ""}`}
+        className={`${styles.pop} ${align === "right" ? styles.popRight : ""} ${open ? styles.popOpen : ""}`}
       >
         {month !== null && (
           <>

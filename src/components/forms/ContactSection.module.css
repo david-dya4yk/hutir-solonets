@@ -58,34 +58,6 @@
   border-radius: clamp(20px, 2vw, 28px);
 }
 
-.form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  gap: 22px 20px;
-}
-
-.label {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-size: 15px;
-}
-
-.textarea {
-  padding: 16px 22px;
-}
-
-.error {
-  grid-column: 1 / -1;
-  min-height: 4px;
-  font-size: 14px;
-  color: var(--error);
-}
-
-.wide {
-  grid-column: 1 / -1;
-}
-
 .done {
   display: flex;
   flex-direction: column;

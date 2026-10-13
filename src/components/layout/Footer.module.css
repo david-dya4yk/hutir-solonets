@@ -105,12 +105,11 @@
   align-self: flex-start;
   font-size: 17px;
   color: var(--white);
-  transition: opacity 0.3s;
+  transition: color 0.3s;
 }
 
 .pageLink:hover {
-  color: var(--white);
-  opacity: 0.6;
+  color: var(--accent);
 }
 
 .route {
@@ -119,10 +118,14 @@
   font-size: 16px;
   color: var(--white);
   border-bottom: 1px solid var(--white);
+  transition:
+    color 0.3s,
+    border-color 0.3s;
 }
 
 .route:hover {
-  color: var(--white);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .help {
@@ -190,10 +193,11 @@
   cursor: pointer;
   background: none;
   border: none;
+  transition: color 0.3s;
 }
 
 .legalLink:hover {
-  color: var(--white);
+  color: var(--accent);
 }
 
 .fop {

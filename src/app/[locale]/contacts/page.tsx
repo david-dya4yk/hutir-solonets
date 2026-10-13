@@ -35,11 +35,11 @@ export default async function ContactsPage(
             </p>
           </div>
           <div className={ui.rowList} data-reveal="">
-            <a href={PHONE_HREF} className={ui.row}>
+            <a href={PHONE_HREF} className={`${ui.row} ${styles.link}`}>
               <span>{t("common.phone")}</span>
               <span className={ui.strong}>{PHONE_DISPLAY}</span>
             </a>
-            <a href={`mailto:${EMAIL}`} className={ui.row}>
+            <a href={`mailto:${EMAIL}`} className={`${ui.row} ${styles.link}`}>
               <span>{t("contacts.email")}</span>
               <span className={ui.strong}>{EMAIL}</span>
             </a>
@@ -49,10 +49,10 @@ export default async function ContactsPage(
                 href={s.href}
                 target="_blank"
                 rel="noopener"
-                className={`${ui.row} ${styles.social}`}
+                className={`${ui.row} ${styles.link}`}
               >
                 <span>{s.label}</span>
-                <span className={ui.strong}>{s.handle} ↗</span>
+                <span className={ui.strong}>{s.handle}</span>
               </a>
             ))}
           </div>

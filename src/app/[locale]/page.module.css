@@ -183,7 +183,7 @@
 
 .tileSpa {
   background:
-    url("/assets/home-spa.jpg") center 55% / cover no-repeat,
+    url("/assets/spa-indoor-2.jpg") center 55% / cover no-repeat,
     var(--stripes);
 }
 
