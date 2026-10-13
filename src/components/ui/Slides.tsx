@@ -7,11 +7,13 @@ import { prefersReducedMotion } from "@/lib/ready";
 import { useI18n } from "@/locales/client";
 
 import type { SlideImage } from "@/content/site";
-import type { ReactNode } from "react";
+import type { PointerEvent, ReactNode } from "react";
 
 import styles from "./Slides.module.css";
 
 const INTERVAL = 6000;
+
+const SWIPE_PX = 40;
 
 type SlidesProps = {
   readonly labels: readonly string[];
@@ -37,6 +39,29 @@ export function Slides({
   const n = labels.length;
 
   const started = useRef(false);
+  const swipe = useRef<{ x: number; y: number } | null>(null);
+
+  const go = (delta: number): void => {
+    setIndex((i) => (i + delta + n) % n);
+  };
+
+  const onPointerDown = (e: PointerEvent<HTMLDivElement>): void => {
+    swipe.current = { x: e.clientX, y: e.clientY };
+  };
+
+  const onPointerUp = (e: PointerEvent<HTMLDivElement>): void => {
+    const start = swipe.current;
+    swipe.current = null;
+    if (start === null || n < 2) {
+      return;
+    }
+    const dx = e.clientX - start.x;
+    const dy = e.clientY - start.y;
+    if (Math.abs(dx) >= SWIPE_PX && Math.abs(dx) > Math.abs(dy)) {
+      started.current = true;
+      go(dx < 0 ? 1 : -1);
+    }
+  };
 
   useEffect(() => {
     if (prefersReducedMotion() || n < 2) {
@@ -56,7 +81,15 @@ export function Slides({
 
   return (
     <>
-      <div className={styles.track} style={{ transform: `translateX(-${String(index * 100)}%)` }}>
+      <div
+        className={n > 1 ? styles.trackSwipe : styles.track}
+        style={{ transform: `translateX(-${String(index * 100)}%)` }}
+        onPointerDown={onPointerDown}
+        onPointerUp={onPointerUp}
+        onPointerCancel={() => {
+          swipe.current = null;
+        }}
+      >
         {labels.map((label, j) => {
           const image = images[j];
           return (
@@ -66,6 +99,7 @@ export function Slides({
                   src={image.src}
                   alt={image.alt}
                   fill
+                  draggable={false}
                   sizes={sizes}
                   className={styles.image}
                   style={{ objectPosition: image.position ?? "center" }}
