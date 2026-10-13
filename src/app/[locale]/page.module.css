@@ -8,9 +8,12 @@
 }
 
 .heroPhoto {
-  background:
-    url("/assets/hero.jpg") center 62% / cover no-repeat,
-    var(--stripes);
+  background: var(--stripes);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 62%;
 }
 
 .heroShade {
