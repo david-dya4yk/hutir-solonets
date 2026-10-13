@@ -88,7 +88,7 @@
 
 .ratingSection {
   max-width: var(--max);
-  padding: clamp(72px, 9vw, 128px) var(--gutter) clamp(88px, 11vw, 160px);
+  padding: clamp(72px, 9vw, 128px) var(--gutter) clamp(56px, 11vw, 160px);
   margin: 0 auto;
 }
 
@@ -141,4 +141,31 @@
 .leave {
   height: 56px;
   padding: 0 30px;
+}
+
+@media (width < 600px) {
+  .card {
+    right: auto;
+    bottom: 12px;
+    left: 12px;
+    gap: 8px;
+    max-width: calc(100% - 24px);
+    padding: 16px 18px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardText {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .card .route {
+    height: 40px;
+    padding: 0 18px;
+    margin-top: 2px;
+    font-size: 13px;
+  }
 }

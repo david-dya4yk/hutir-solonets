@@ -12,6 +12,8 @@ import styles from "./DatePicker.module.css";
 type DatePickerProps = {
   readonly label: string;
   readonly value: string;
+  /** Text shown in the field instead of the formatted value, e.g. a date range. */
+  readonly display?: string;
   readonly min: string | null;
   readonly open: boolean;
   readonly onOpenChange: (open: boolean) => void;
@@ -45,6 +47,7 @@ const dayClass = (
 export function DatePicker({
   label,
   value,
+  display,
   min,
   open,
   onOpenChange,
@@ -101,7 +104,7 @@ export function DatePicker({
     <div ref={root} className={styles.root}>
       {label}
       <button type="button" className={fieldClass} onClick={toggle} aria-expanded={open}>
-        <span>{value === "" ? t("datePicker.pick") : longLabel(locale, value)}</span>
+        <span>{display ?? (value === "" ? t("datePicker.pick") : longLabel(locale, value))}</span>
         <span className={open ? styles.chevOpen : styles.chev} />
       </button>
       {error !== undefined && <span className={styles.error}>{error}</span>}

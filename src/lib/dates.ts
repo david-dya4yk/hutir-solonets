@@ -79,6 +79,11 @@ export const longLabel = (locale: Locale, iso: string): string => {
   return `${String(Number(d))} ${MONTHS_GENITIVE[locale][Number(m) - 1] ?? ""} ${y}`;
 };
 
+export const dayMonthLabel = (locale: Locale, iso: string): string => {
+  const [, m = "1", d = "1"] = iso.split("-");
+  return `${String(Number(d))} ${MONTHS_GENITIVE[locale][Number(m) - 1] ?? ""}`;
+};
+
 export const shortLabel = (iso: string): string => {
   if (iso === "") {
     return "";

@@ -76,3 +76,27 @@
 .consent button {
   font-size: 13px;
 }
+
+@media (width < 900px) {
+  .label {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .input {
+    height: 48px;
+  }
+
+  .textarea {
+    padding: 12px 22px;
+  }
+
+  .error {
+    min-height: 0;
+    font-size: 12px;
+  }
+
+  .error:empty {
+    display: none;
+  }
+}

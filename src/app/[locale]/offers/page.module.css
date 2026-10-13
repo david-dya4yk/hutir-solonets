@@ -6,7 +6,7 @@
 }
 
 .groups {
-  padding-bottom: clamp(88px, 11vw, 160px);
+  padding-bottom: clamp(56px, 11vw, 160px);
 }
 
 .group {

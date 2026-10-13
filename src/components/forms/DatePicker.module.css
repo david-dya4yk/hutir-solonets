@@ -168,3 +168,23 @@
   color: var(--gold-muted);
   cursor: default;
 }
+
+@media (width < 900px) {
+  .root {
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  .field {
+    height: 48px;
+  }
+
+  .error {
+    min-height: 0;
+    font-size: 12px;
+  }
+
+  .error:empty {
+    display: none;
+  }
+}

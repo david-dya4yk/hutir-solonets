@@ -32,7 +32,6 @@ export default {
     phone: "Телефон",
     checkin: "Заїзд",
     checkout: "Виїзд",
-    guests: "Гостей",
     close: "Закрити",
   },
   nav: {

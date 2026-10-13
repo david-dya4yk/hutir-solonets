@@ -23,14 +23,57 @@ export function HeroVideo({
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const video = root.current?.querySelector("video");
-    if (video === null || video === undefined) {
+    const found = root.current?.querySelector("video");
+    if (found === null || found === undefined) {
       return;
     }
+    const video: HTMLVideoElement = found;
     video.muted = true;
-    if (video.paused && window.matchMedia(MOBILE).matches) {
-      video.play().catch(() => undefined);
+    const gestures = ["touchend", "pointerup", "click", "keydown", "scroll"] as const;
+    const detach = (): void => {
+      gestures.forEach((e) => {
+        window.removeEventListener(e, play);
+      });
+    };
+    let swapped = false;
+    const swapToImage = (): void => {
+      const src = video.querySelector("source")?.src;
+      if (swapped || src === undefined) {
+        return;
+      }
+      swapped = true;
+      const img = document.createElement("img");
+      img.className = video.className;
+      img.alt = "";
+      img.setAttribute("aria-hidden", "true");
+      img.addEventListener("load", () => {
+        if (video.paused) {
+          detach();
+          video.replaceWith(img);
+        }
+      });
+      img.src = src;
+    };
+    function play(): void {
+      if (video.paused && !document.hidden && window.matchMedia(MOBILE).matches) {
+        video.play().then(detach, (e: unknown) => {
+          if (e instanceof DOMException && e.name === "NotAllowedError") {
+            swapToImage();
+          }
+        });
+      }
     }
+    gestures.forEach((e) => {
+      window.addEventListener(e, play, { passive: true });
+    });
+    document.addEventListener("visibilitychange", play);
+    window.addEventListener("pageshow", play);
+    play();
+    return () => {
+      detach();
+      document.removeEventListener("visibilitychange", play);
+      window.removeEventListener("pageshow", play);
+    };
   }, []);
 
   return (

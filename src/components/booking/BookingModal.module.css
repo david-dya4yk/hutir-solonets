@@ -127,6 +127,20 @@
 
   .card {
     height: 100%;
+    padding: 24px 20px;
     border-radius: 0;
+  }
+
+  .head {
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 15px;
+    line-height: 1.5;
   }
 }

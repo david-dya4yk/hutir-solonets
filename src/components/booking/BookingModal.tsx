@@ -98,10 +98,6 @@ export function BookingModal({
                   <span>{t("booking.cottage")}</span>
                   <span className={ui.strong}>{summary.cottage}</span>
                 </div>
-                <div className={styles.sumRow}>
-                  <span>{t("common.guests")}</span>
-                  <span className={ui.strong}>{summary.guests}</span>
-                </div>
               </div>
               <button type="button" className={styles.doneBtn} onClick={close}>
                 {t("common.close")}

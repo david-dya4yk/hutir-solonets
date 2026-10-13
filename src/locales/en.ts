@@ -34,7 +34,6 @@ export default {
     phone: "Phone",
     checkin: "Check-in",
     checkout: "Check-out",
-    guests: "Guests",
     close: "Close",
   },
   nav: {

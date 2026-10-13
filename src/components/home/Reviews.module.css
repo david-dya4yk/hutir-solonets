@@ -1,5 +1,5 @@
 .section {
-  padding: clamp(88px, 11vw, 160px) 0;
+  padding: clamp(56px, 11vw, 160px) 0;
   color: var(--text);
   background: var(--second);
   border-top: 1px solid color-mix(in srgb, var(--text) 10%, transparent);
@@ -227,5 +227,108 @@
 
   .ig {
     margin-left: 0;
+  }
+
+  .slider {
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  .slides {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: calc((100vw - 24px) / 1.5 * 1.6);
+    transition: transform 0.7s var(--ease);
+    will-change: transform;
+  }
+
+  .slide {
+    --card-w: calc((100vw - 24px) / 1.5);
+
+    position: relative;
+    flex: 0 0 var(--card-w);
+    height: calc(var(--card-w) * 1.25);
+    margin-right: 12px;
+    overflow: hidden;
+    text-shadow: var(--text-shadow);
+    background: var(--media-bg);
+    border-radius: var(--radius);
+    transition: height 0.7s var(--ease);
+  }
+
+  .play::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    animation: play-pulse 2s var(--ease) infinite;
+  }
+
+  .play {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .meta {
+    bottom: 16px;
+    left: 16px;
+    gap: 6px;
+    width: calc(var(--card-w) - 32px);
+  }
+
+  .quote {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .author {
+    gap: 6px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .igIcon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .slide .meta {
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+  }
+
+  .slideActive {
+    height: calc(var(--card-w) * 1.6);
+  }
+
+  .slideActive .meta {
+    opacity: 1;
+  }
+
+  .jump,
+  .jump .slide,
+  .jump .meta {
+    transition: none;
+  }
+}
+
+@keyframes play-pulse {
+  from {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .play::after {
+    animation: none;
   }
 }
