@@ -93,7 +93,8 @@
 }
 
 .plainBtn {
-  padding: 0;
+  composes: hoverLine from "../ui/ui.module.css";
+  padding: 0 0 3px;
   font-size: 16px;
   color: var(--white);
   cursor: pointer;
@@ -101,27 +102,37 @@
   border: none;
 }
 
+.toTopIcon {
+  vertical-align: -0.15em;
+}
+
 .pageLink {
+  composes: hoverLine from "../ui/ui.module.css";
   align-self: flex-start;
   font-size: 17px;
   color: var(--white);
-  transition: opacity 0.3s;
 }
 
 .pageLink:hover {
   color: var(--white);
-  opacity: 0.6;
 }
 
 .route {
+  composes: hoverLine from "../ui/ui.module.css";
   align-self: flex-start;
-  padding-bottom: 3px;
   font-size: 16px;
+  font-weight: 700;
   color: var(--white);
-  border-bottom: 1px solid var(--white);
 }
 
-.route:hover {
+.call {
+  composes: hoverLine from "../ui/ui.module.css";
+  font-weight: 700;
+  color: var(--white);
+}
+
+.route:hover,
+.call:hover {
   color: var(--white);
 }
 
@@ -184,7 +195,8 @@
 }
 
 .legalLink {
-  padding: 0;
+  composes: hoverLine from "../ui/ui.module.css";
+  padding: 0 0 3px;
   font-size: 14px;
   color: rgb(255 255 255 / 70%);
   cursor: pointer;

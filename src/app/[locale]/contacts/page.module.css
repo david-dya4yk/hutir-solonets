@@ -124,8 +124,9 @@
 }
 
 .stars {
+  display: flex;
+  gap: 4px;
   font-size: 18px;
-  letter-spacing: 0.18em;
 }
 
 .ratingLabel {

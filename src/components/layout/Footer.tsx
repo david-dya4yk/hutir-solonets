@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { EMAIL, NAV, PHONE_DISPLAY, ROUTE_HREF, SOCIALS } from "@/content/site";
+import { EMAIL, NAV, PHONE_DISPLAY, PHONE_HREF, ROUTE_HREF, SOCIALS } from "@/content/site";
 import { localePath } from "@/locales/config";
 import { getCurrentLocale, getI18n } from "@/locales/server";
 
@@ -66,7 +66,10 @@ export async function Footer(): Promise<ReactNode> {
         </div>
         <div className={styles.help}>
           <span>
-            {t("footer.help")} <b>{t("footer.call")}</b>
+            {t("footer.help")}{" "}
+            <a href={PHONE_HREF} className={styles.call}>
+              {t("footer.call")}
+            </a>
           </span>
           <LangSwitch />
         </div>
