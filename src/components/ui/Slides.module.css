@@ -12,6 +12,10 @@
   background: var(--stripes);
 }
 
+.image {
+  object-fit: cover;
+}
+
 .shade {
   position: absolute;
   inset: 0;

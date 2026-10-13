@@ -52,17 +52,15 @@
   height: 48px;
   font-size: 24px;
   line-height: 1;
-  color: var(--text);
+  color: var(--white);
   cursor: pointer;
-  background: var(--close-bg);
+  background: var(--accent);
   border: none;
   border-radius: 50%;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.close:hover {
+  background: var(--accent-hover);
 }
 
 .head {
@@ -85,17 +83,6 @@
   margin: 0;
   font-size: 16px;
   line-height: 1.65;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  gap: 18px;
-}
-
-.estimate {
-  min-height: 4px;
-  font-size: 15px;
 }
 
 .done {

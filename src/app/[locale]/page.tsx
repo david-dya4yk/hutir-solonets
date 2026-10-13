@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BookButton } from "@/components/booking/BookButton";
 import { ContactSection } from "@/components/forms/ContactSection";
 import { Faq } from "@/components/home/Faq";
+import { HeroVideo } from "@/components/home/HeroVideo";
 import { PlanMap } from "@/components/home/PlanMap";
 import { Reviews } from "@/components/home/Reviews";
 import { FeatureDots } from "@/components/ui/FeatureDots";
@@ -27,6 +28,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
         <div className={ui.parallax} data-parallax="0.3">
           <div className={`${ui.parallaxDeep} ${styles.heroPhoto}`} />
         </div>
+        <HeroVideo src="/assets/hero-mobile.mp4" poster="/assets/hero-mobile-poster.jpg" />
         <div className={styles.heroShade} />
         <div className={styles.heroContent}>
           <Lines as="h1" className={styles.heroTitle} lines={[t("common.brand")]} />
@@ -143,7 +145,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
           <Media
             className={styles.square}
             src="/assets/home-about.jpg"
-            pos="center 65%"
+            pos="center 80%"
             parallax={0.08}
           />
         </div>

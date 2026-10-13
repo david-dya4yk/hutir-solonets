@@ -96,7 +96,7 @@ export function Reviews(): ReactNode {
               rel="noopener"
               className={`${ui.underline} ${styles.ig}`}
             >
-              Instagram ↗
+              Instagram
             </a>
             <BookButton className={`${ui.btn} ${styles.book}`} magnet />
           </div>

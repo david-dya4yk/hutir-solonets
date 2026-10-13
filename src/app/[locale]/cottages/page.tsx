@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { CottagePhoto } from "@/components/cottage/CottagePhoto";
 import { Lines } from "@/components/ui/Lines";
 import { getContent } from "@/content";
 import { cottageHref, pad, PRICE_PER_NIGHT } from "@/content/site";
@@ -43,11 +44,24 @@ export default async function CottagesPage(
               href={localePath(locale, cottageHref(c))}
               className={`${ui.frame} ${ui.zoomHost} ${styles.photo}`}
             >
-              <div className={`${ui.fill} ${ui.stripes} ${ui.zoom}`} />
+              <CottagePhoto
+                photo={c.photo}
+                alt={
+                  c.photo?.room === undefined
+                    ? t("cottages.photoAlt")
+                    : t("cottage.photoAlt", {
+                        cottage: t("common.cottage", { n: pad(c.n) }),
+                        room: t(`cottage.rooms.${c.photo.room}`),
+                      })
+                }
+                sizes="(max-width: 900px) 100vw, 50vw"
+              />
               <span className={ui.tag}>№ {pad(c.n)}</span>
-              <span className={ui.caption}>
-                {t("common.photo", { label: t("cottages.shot", { n: c.n, shot: c.shot }) })}
-              </span>
+              {c.photo === undefined && (
+                <span className={ui.caption}>
+                  {t("common.photo", { label: t("cottages.shot", { n: c.n, shot: c.shot }) })}
+                </span>
+              )}
             </Link>
             <div className={styles.titleRow}>
               <h3 className={styles.title}>{t("common.cottage", { n: pad(c.n) })}</h3>
