@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 
 import { BookButton } from "@/components/booking/BookButton";
+import { Icon } from "@/components/ui/Icon";
 import { useContent } from "@/content/ContentProvider";
 import { INSTAGRAM_URL } from "@/content/site";
 import { prefersReducedMotion } from "@/lib/ready";
@@ -117,7 +118,11 @@ export function Reviews(): ReactNode {
             <article key={r.key} className={styles.card}>
               <div className={styles.photo} />
               <div className={ui.shadeLight} />
-              {r.video && <span className={styles.play}>▶</span>}
+              {r.video && (
+                <span className={styles.play}>
+                  <Icon name="play" />
+                </span>
+              )}
               <div className={styles.meta}>
                 <span className={styles.quote}>«{r.quote}»</span>
                 <span className={styles.author}>

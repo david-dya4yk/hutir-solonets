@@ -80,6 +80,7 @@ export function Header(): ReactNode {
         </div>
       </header>
       <div className={`${styles.menu} ${menu ? styles.menuShown : ""}`} aria-hidden={!menu}>
+        <div className={styles.menuDecor} />
         <div className={styles.menuInner}>
           <nav className={styles.menuNav}>
             {NAV.map((it) => (

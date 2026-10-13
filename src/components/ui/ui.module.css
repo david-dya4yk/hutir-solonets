@@ -109,7 +109,33 @@
   font-size: 17px;
 }
 
+.hoverLine {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.hoverLine::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  content: "";
+  background: currentcolor;
+  transition: width 0.45s var(--ease);
+}
+
+.hoverLine:hover::before,
+.hoverLineOn::before {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
 .underline {
+  position: relative;
+  display: inline-block;
   padding: 0 0 4px;
   font-size: 16px;
   font-weight: 500;
@@ -117,15 +143,48 @@
   cursor: pointer;
   background: none;
   border: none;
-  border-bottom: 1px solid var(--text);
-  transition:
-    color 0.3s,
-    border-color 0.3s;
+  transition: color 0.3s;
+}
+
+.underline::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentcolor;
+  transform-origin: right;
 }
 
 .underline:hover {
   color: var(--accent);
-  border-color: var(--accent);
+}
+
+.underline:hover::before {
+  animation: line-swipe 0.9s var(--ease);
+}
+
+@keyframes line-swipe {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  50% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  50.01% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }
 
 .textLink {

@@ -258,7 +258,7 @@ export const en: LocalContent = {
     },
     {
       q: "Can I bring pets?",
-      a: "Yes, we are pet-friendly! 🐾 Hutir Solonets welcomes guests with four-legged friends weighing up to 5 kg. The pet fee is UAH 300.\n\nPlease help keep the cottages and grounds clean. Pets are not allowed in the pools.",
+      a: "Yes, we are pet-friendly! Hutir Solonets welcomes guests with four-legged friends weighing up to 5 kg. The pet fee is UAH 300.\n\nPlease help keep the cottages and grounds clean. Pets are not allowed in the pools.",
     },
     {
       q: "Can I cancel a booking and get my prepayment back?",

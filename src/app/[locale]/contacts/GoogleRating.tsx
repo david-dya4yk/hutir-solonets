@@ -1,3 +1,4 @@
+import { Icon } from "@/components/ui/Icon";
 import { GOOGLE_RATING, REVIEW_HREF } from "@/content/site";
 import { intlLocale } from "@/locales/config";
 import { getI18n } from "@/locales/server";
@@ -23,7 +24,9 @@ export async function GoogleRating({ locale }: { readonly locale: Locale }): Pro
           </span>
           <div className={styles.scoreText}>
             <span className={styles.stars} role="img" aria-label={t("rating.of5", { rating })}>
-              ★★★★★
+              {[1, 2, 3, 4, 5].map((n) => (
+                <Icon key={n} name="star" />
+              ))}
             </span>
             <span className={styles.ratingLabel}>{t("rating.label")}</span>
             <span className={styles.reviews}>

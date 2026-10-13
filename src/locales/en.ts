@@ -219,7 +219,7 @@ export default {
     address: "Address",
     help: "Need help with your booking?",
     call: "Give us a call.",
-    toTop: "Back to top ↑",
+    toTop: "Back to top",
     copyright: "© 2026 Hutir Solonets",
     privacy: "Privacy Policy",
     cookies: "Cookie Policy",

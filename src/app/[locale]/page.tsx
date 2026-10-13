@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { BookButton } from "@/components/booking/BookButton";
@@ -26,7 +27,18 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
     <>
       <section className={styles.hero}>
         <div className={ui.parallax} data-parallax="0.3">
-          <div className={`${ui.parallaxDeep} ${styles.heroPhoto}`} />
+          <div className={`${ui.parallaxDeep} ${styles.heroPhoto}`}>
+            <Image
+              src="/assets/hero.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+              loading="eager"
+              fetchPriority="high"
+              className={styles.heroImage}
+              data-hero-image=""
+            />
+          </div>
         </div>
         <HeroVideo src="/assets/hero-mobile.mp4" poster="/assets/hero-mobile-poster.jpg" />
         <div className={styles.heroShade} />

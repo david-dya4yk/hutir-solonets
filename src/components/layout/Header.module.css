@@ -48,21 +48,18 @@
 }
 
 .navLink {
+  composes: hoverLine from "../ui/ui.module.css";
   padding: 6px 0;
   font-size: 16px;
   color: var(--white);
-  transition:
-    color 0.3s,
-    opacity 0.3s;
 }
 
 .navLink:hover {
-  color: var(--accent);
-  opacity: 1;
+  color: var(--white);
 }
 
 .navActive {
-  opacity: 0.6;
+  composes: hoverLineOn from "../ui/ui.module.css";
 }
 
 .actions {
@@ -137,7 +134,7 @@
   overflow: auto;
   color: var(--white);
   pointer-events: none;
-  background: var(--text);
+  background: var(--footer);
   opacity: 0;
   transition: opacity 0.45s ease;
 }
@@ -147,7 +144,16 @@
   opacity: 1;
 }
 
+.menuDecor {
+  position: absolute;
+  inset: auto 0 0;
+  height: 60%;
+  pointer-events: none;
+  background: url("/assets/footer-decor.svg") top / cover;
+}
+
 .menuInner {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -173,12 +179,11 @@
   font-weight: 600;
   color: var(--white);
   letter-spacing: -0.02em;
-  border-bottom: 1px solid rgb(255 255 255 / 10%);
-  transition: color 0.3s;
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
 }
 
 .menuLink:hover {
-  color: var(--accent);
+  color: var(--white);
 }
 
 .menuContacts {
@@ -186,18 +191,13 @@
   flex-direction: column;
   gap: 8px;
   font-size: 16px;
-  color: #a8916c;
+  color: rgb(255 255 255 / 70%);
 }
 
 .menuPhone {
   font-size: 22px;
   font-weight: 500;
   color: var(--white);
-  transition: color 0.3s;
-}
-
-.menuPhone:hover {
-  color: var(--accent);
 }
 
 @media (width < 1180px) {

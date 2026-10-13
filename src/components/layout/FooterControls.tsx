@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 
+import { Icon } from "@/components/ui/Icon";
 import { useChangeLocale, useCurrentLocale, useI18n } from "@/locales/client";
 import { LOCALES } from "@/locales/config";
 
@@ -35,7 +36,7 @@ export function ToTopButton(): ReactNode {
         window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
       }}
     >
-      {t("footer.toTop")}
+      {t("footer.toTop")} <Icon name="arrowUp" className={styles.toTopIcon} />
     </button>
   );
 }
