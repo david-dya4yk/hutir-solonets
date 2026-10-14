@@ -1,4 +1,5 @@
 import { BookButton } from "@/components/booking/BookButton";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
 import { getContent } from "@/content";
@@ -24,7 +25,9 @@ export default async function SpaPage(props: PageProps<"/[locale]/spa">): Promis
     <>
       <section className={styles.hero}>
         <div className={ui.parallax} data-parallax="0.25">
-          <div className={`${ui.parallaxDeep} ${styles.heroPhoto}`} />
+          <div className={ui.parallaxDeep}>
+            <LazyImage src="/assets/spa-hero.jpg" pos="center 55%" sizes="100vw" eager />
+          </div>
         </div>
         <div className={styles.heroShade} />
         <span className={styles.eyebrow} data-reveal="">

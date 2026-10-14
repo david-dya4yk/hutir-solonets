@@ -4,6 +4,7 @@ import { useEffect, useEffectEvent, useRef, useState, useSyncExternalStore } fro
 
 import { BookButton } from "@/components/booking/BookButton";
 import { Icon } from "@/components/ui/Icon";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { useContent } from "@/content/ContentProvider";
 import { INSTAGRAM_URL } from "@/content/site";
 import { prefersReducedMotion } from "@/lib/ready";
@@ -151,10 +152,11 @@ function Card({
   const t = useI18n();
   return (
     <article className={className} aria-hidden={hidden ? true : undefined}>
-      <div
-        className={styles.photo}
-        style={r.image === undefined ? undefined : { backgroundImage: `url("${r.image}")` }}
-      />
+      <div className={styles.photo}>
+        {r.image !== undefined && (
+          <LazyImage src={r.image} sizes="(max-width: 899px) 40vw, 620px" />
+        )}
+      </div>
       <div className={ui.shadeLight} />
       {r.video && (
         <span className={styles.play}>
@@ -162,7 +164,6 @@ function Card({
         </span>
       )}
       <div className={styles.meta}>
-        {r.quote !== "" && <span className={styles.quote}>«{r.quote}»</span>}
         <span className={styles.author}>
           <span className={styles.igIcon} />
           {r.handle}

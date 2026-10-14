@@ -90,9 +90,7 @@ export type ReviewSource = {
   readonly photo?: string;
 };
 
-export type Review = ReviewSource & {
-  readonly quote: string;
-};
+export type Review = ReviewSource;
 
 export type PlanPoint = {
   readonly t: string;

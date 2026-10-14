@@ -16,7 +16,6 @@ export type LocalContent = {
   readonly spa: readonly SpaBlock[];
   readonly faq: readonly FaqItem[];
   readonly offers: readonly OfferGroup[];
-  readonly reviews: readonly string[];
   readonly planAmenities: readonly string[];
   readonly homeCottageDots: readonly string[];
   readonly homeSpaDots: readonly string[];
