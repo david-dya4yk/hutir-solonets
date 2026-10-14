@@ -9,6 +9,7 @@ import { HeroVideo } from "@/components/home/HeroVideo";
 import { PlanMap } from "@/components/home/PlanMap";
 import { Reviews } from "@/components/home/Reviews";
 import { FeatureDots } from "@/components/ui/FeatureDots";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { Lines } from "@/components/ui/Lines";
 import { Media } from "@/components/ui/Media";
 import { getContent } from "@/content";
@@ -89,7 +90,13 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
 
       <FocusTiles className={styles.split}>
         <Link href={localePath(locale, "/cottages")} className={styles.tile} data-reveal="">
-          <div className={`${styles.tilePhoto} ${styles.tileCottages}`} />
+          <div className={styles.tilePhoto}>
+            <LazyImage
+              src="/assets/home-cottages.jpg"
+              pos="60% 55%"
+              sizes="(max-width: 919px) 100vw, 50vw"
+            />
+          </div>
           <div className={styles.tileShade} />
           <div className={styles.tileBody}>
             <div className={styles.tileHead}>
@@ -106,7 +113,13 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
           className={`${styles.tile} ${styles.tileSpaBox}`}
           data-reveal=""
         >
-          <div className={`${styles.tilePhoto} ${styles.tileSpa}`} />
+          <div className={styles.tilePhoto}>
+            <LazyImage
+              src="/assets/home-spa.jpg"
+              pos="65% 60%"
+              sizes="(max-width: 919px) 100vw, 50vw"
+            />
+          </div>
           <div className={styles.tileShade} />
           <div className={styles.tileBody}>
             <div className={styles.tileHead}>

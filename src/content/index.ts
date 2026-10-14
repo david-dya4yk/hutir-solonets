@@ -6,7 +6,7 @@ import type { Cottage, PlanPoint, Review } from "./site";
 import type { LocalContent } from "./types";
 import type { Locale } from "@/locales/config";
 
-export type Content = Omit<LocalContent, "cottages" | "reviews" | "planAmenities"> & {
+export type Content = Omit<LocalContent, "cottages" | "planAmenities"> & {
   readonly cottages: readonly Cottage[];
   readonly reviews: readonly Review[];
   readonly planAmenities: readonly PlanPoint[];
@@ -22,7 +22,7 @@ const build = (c: LocalContent): Content => ({
     tagline: c.cottages[i]?.tagline ?? "",
     desc: c.cottages[i]?.desc ?? "",
   })),
-  reviews: REVIEW_SOURCES.map((r, i) => ({ ...r, quote: c.reviews[i] ?? "" })),
+  reviews: REVIEW_SOURCES,
   planAmenities: PLAN_AMENITY_SPOTS.map(([x, y], i) => ({ t: c.planAmenities[i] ?? "", x, y })),
 });
 

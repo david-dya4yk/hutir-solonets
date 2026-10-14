@@ -232,12 +232,6 @@
   bottom: -12%;
 }
 
-.photo {
-  background:
-    var(--src) var(--pos, center) / cover no-repeat,
-    var(--stripes);
-}
-
 .stripes {
   background: var(--stripes);
 }
@@ -325,4 +319,41 @@
 
 .strong {
   font-weight: 600;
+}
+
+.skeleton {
+  overflow: hidden;
+  background: var(--media-bg);
+}
+
+.skeleton::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(100deg, transparent 30%, rgb(255 255 255 / 35%) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.image {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s var(--ease);
+}
+
+.imageIn {
+  composes: image;
+  opacity: 1;
+}
+
+@keyframes skeleton-shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
 }

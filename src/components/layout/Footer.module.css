@@ -215,3 +215,9 @@
 .pageLink[aria-disabled="true"] {
   pointer-events: none;
 }
+
+@media (width < 900px) {
+  .mountains {
+    height: 60%;
+  }
+}

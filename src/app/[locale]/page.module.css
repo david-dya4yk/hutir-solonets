@@ -178,18 +178,6 @@
   transform: scale(1.04);
 }
 
-.tileCottages {
-  background:
-    url("/assets/home-cottages.jpg") 60% 55% / cover no-repeat,
-    var(--stripes);
-}
-
-.tileSpa {
-  background:
-    url("/assets/home-spa.jpg") 65% 60% / cover no-repeat,
-    var(--stripes);
-}
-
 .tileShade {
   position: absolute;
   inset: 0;

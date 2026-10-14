@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useI18n, useLocalePath } from "@/locales/client";
 
 import { BookingForm } from "./BookingForm";
+import { LazyImage } from "../ui/LazyImage";
 
 import type { ReactNode } from "react";
 
@@ -20,7 +21,14 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
   return (
     <section className={styles.section}>
       <div className={ui.parallax} data-parallax="0.12">
-        <div className={`${styles.bg} ${pageTop ? "" : styles.bgHome}`} />
+        <div className={styles.bg}>
+          <LazyImage
+            src={pageTop ? "/assets/form-bg.jpg" : "/assets/home-form.jpg"}
+            pos={pageTop ? "center 50%" : "center 55%"}
+            sizes="100vw"
+            eager={pageTop}
+          />
+        </div>
       </div>
       <div className={styles.shade} />
       <div className={`${styles.inner} ${pageTop ? styles.innerTop : ""}`}>
