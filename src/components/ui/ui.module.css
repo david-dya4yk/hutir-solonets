@@ -109,6 +109,11 @@
   font-size: 17px;
 }
 
+.btnBlock:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
 .hoverLine {
   position: relative;
   display: inline-block;

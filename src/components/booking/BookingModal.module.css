@@ -26,7 +26,7 @@
   width: 100%;
   max-width: 680px;
   max-height: 100%;
-  padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 56px);
+  padding: clamp(28px, 3.4vw, 48px) clamp(20px, 3.4vw, 48px);
   overflow: auto;
   color: var(--text);
   pointer-events: auto;
@@ -90,6 +90,11 @@
   flex-direction: column;
   gap: 24px;
   padding: 24px 48px 8px 0;
+}
+
+.doneAccent {
+  display: block;
+  color: var(--accent);
 }
 
 .doneLead {

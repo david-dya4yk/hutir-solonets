@@ -1,18 +1,27 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .estimate {
-  min-height: 4px;
   font-size: 15px;
+}
+
+.estimate:empty {
+  display: none;
+}
+
+.failed {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--error);
 }
 
 @media (width < 900px) {

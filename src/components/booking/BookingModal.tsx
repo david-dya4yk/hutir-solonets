@@ -86,7 +86,8 @@ export function BookingModal({
           {summary !== null ? (
             <div className={styles.done}>
               <h2 className={styles.title}>
-                {t("booking.thanks", { name: summary.name })} <span>{t("booking.received")}</span>
+                {t("booking.thanks", { name: summary.name })}{" "}
+                <span className={styles.doneAccent}>{t("booking.received")}</span>
               </h2>
               <p className={styles.doneLead}>{t("booking.doneLead")}</p>
               <div className={ui.rowList}>

@@ -52,13 +52,10 @@ function Spec({
 }): ReactNode {
   return (
     <div className={ui.row}>
-      <span
-        role="img"
-        aria-label={label}
-        title={label}
-        className={styles.icon}
-        style={{ "--icon": `url('${icon}')` }}
-      />
+      <span className={styles.specLabel}>
+        <span aria-hidden="true" className={styles.icon} style={{ "--icon": `url('${icon}')` }} />
+        {label}
+      </span>
       {children}
     </div>
   );

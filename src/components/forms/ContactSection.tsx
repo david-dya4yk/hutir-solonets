@@ -45,7 +45,8 @@ export function ContactSection({ pageTop = false }: { readonly pageTop?: boolean
           {sent ? (
             <div className={styles.done}>
               <h3 className={styles.doneTitle}>
-                {t("contactForm.thanks")} <span>{t("contactForm.received")}</span>
+                {t("contactForm.thanks")}{" "}
+                <span className={styles.doneAccent}>{t("contactForm.received")}</span>
               </h3>
               <p className={styles.doneText}>{t("contactForm.doneText")}</p>
             </div>
