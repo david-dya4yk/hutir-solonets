@@ -9,6 +9,7 @@ import { useCurrentLocale, useI18n } from "@/locales/client";
 import { formatPrice } from "@/locales/config";
 
 import { DatePicker } from "./DatePicker";
+import { sendBooking } from "./sendBooking";
 
 import type { ChangeEvent, SubmitEvent, ReactNode } from "react";
 
@@ -76,6 +77,7 @@ export function BookingForm({
   const { cottages } = useContent();
   const [picker, setPicker] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
+  const [status, setStatus] = useState<"idle" | "sending" | "failed">("idle");
   const [form, setForm] = useState<Form>({
     name: "",
     phone: "",
@@ -113,13 +115,32 @@ export function BookingForm({
       }
     });
     setErrors(er);
-    if (Object.keys(er).length === 0) {
-      onSent({
-        name: form.name,
-        dates: `${shortLabel(form.checkin)} — ${shortLabel(form.checkout)}`,
-        cottage: cottageOptions.find((o) => o.v === form.cottage)?.short ?? "",
-      });
+    if (Object.keys(er).length > 0 || status === "sending") {
+      return;
     }
+    const cottageLabel = cottageOptions.find((o) => o.v === form.cottage)?.short ?? "";
+    setStatus("sending");
+    void sendBooking({
+      name: form.name,
+      phone: form.phone,
+      checkin: form.checkin,
+      checkout: form.checkout,
+      cottage: cottageLabel,
+      comment: form.comment,
+      locale,
+    })
+      .catch(() => false)
+      .then((ok) => {
+        if (!ok) {
+          setStatus("failed");
+          return;
+        }
+        onSent({
+          name: form.name,
+          dates: `${shortLabel(form.checkin)} — ${shortLabel(form.checkout)}`,
+          cottage: cottageLabel,
+        });
+      });
   };
 
   const nights =
@@ -213,8 +234,13 @@ export function BookingForm({
         />
       </label>
       <span className={styles.estimate}>{estimate}</span>
-      <button type="submit" className={ui.btnBlock}>
-        {t("common.sendRequest")}
+      {status === "failed" && (
+        <span className={styles.failed} role="alert">
+          {t("booking.failed")}
+        </span>
+      )}
+      <button type="submit" className={ui.btnBlock} disabled={status === "sending"}>
+        {status === "sending" ? t("booking.sending") : t("common.sendRequest")}
       </button>
       <span className={fields.consent}>{consent}</span>
     </form>

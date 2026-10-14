@@ -53,6 +53,13 @@
   max-width: 48ch;
 }
 
+.specLabel {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--text-70);
+}
+
 .icon {
   flex: none;
   width: 24px;

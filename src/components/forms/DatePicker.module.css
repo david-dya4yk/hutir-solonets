@@ -56,9 +56,12 @@
 }
 
 .error {
-  min-height: 14px;
   font-size: 13px;
   color: var(--error);
+}
+
+.error:empty {
+  display: none;
 }
 
 .pop {
@@ -180,11 +183,6 @@
   }
 
   .error {
-    min-height: 0;
     font-size: 12px;
-  }
-
-  .error:empty {
-    display: none;
   }
 }

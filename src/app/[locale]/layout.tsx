@@ -39,11 +39,19 @@ export function generateStaticParams(): { locale: string }[] {
 }
 
 export async function generateMetadata(props: LayoutProps<"/[locale]">): Promise<Metadata> {
-  await initLocale(props.params);
+  const locale = await initLocale(props.params);
   const t = await getI18n();
+  const image = { url: "/og.jpg", width: 1200, height: 630, alt: t("meta.title") };
   return {
     title: { default: t("meta.title"), template: t("meta.template") },
     description: t("meta.description"),
+    openGraph: {
+      type: "website",
+      siteName: t("common.brand"),
+      locale: locale === "uk" ? "uk_UA" : "en_US",
+      images: [image],
+    },
+    twitter: { card: "summary_large_image", images: [image] },
   };
 }
 

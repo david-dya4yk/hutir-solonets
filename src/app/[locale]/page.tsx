@@ -180,7 +180,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
       <section className={ui.soft}>
         <div className={ui.section}>
           <div className={styles.offer}>
-            <Media className={styles.square} src="/assets/home-offer.jpg" pos="center 55%" zoom />
+            <Media className={styles.square} src="/assets/home-offer.jpg" pos="center" zoom />
             <div className={styles.offerText}>
               <div className={styles.offerTag} data-reveal="">
                 <span className={styles.offerLabel}>{t("home.offerLabel")}</span>

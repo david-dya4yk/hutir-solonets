@@ -71,6 +71,11 @@
   letter-spacing: -0.025em;
 }
 
+.doneAccent {
+  display: block;
+  color: var(--accent);
+}
+
 .doneText {
   margin: 0;
   font-size: 17px;
