@@ -161,15 +161,15 @@ const ROOMS_5_6: readonly Room[] = [
 export const en: LocalContent = {
   cottages: [
     {
-      shot: "terrace and meadow",
-      tagline: "Closest to the pool.",
-      desc: "A two-storey cottage in the traditional Ukrainian mountain style, set right next to the outdoor pool. The windows look out over the pool, the grounds and the forest. Parking is close by.",
-      rooms: ROOMS_1_2,
-    },
-    {
       shot: "balcony with a ridge view",
       tagline: "Next to the pool.",
       desc: "A two-storey cottage with distinctive Ukrainian mountain architecture, set near the outdoor pool, slightly aside from the main poolside area. The windows look out over the grounds and the surrounding forest.",
+      rooms: ROOMS_1_2,
+    },
+    {
+      shot: "terrace and meadow",
+      tagline: "Closest to the pool.",
+      desc: "A two-storey cottage in the traditional Ukrainian mountain style, set right next to the outdoor pool. The windows look out over the pool, the grounds and the forest. Parking is close by.",
       rooms: ROOMS_1_2,
     },
     {
