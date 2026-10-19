@@ -1,4 +1,162 @@
+import type { Room } from "./site";
 import type { LocalContent } from "./types";
+
+const BEDROOM_1_2 = ["Double bed", "Two chairs and a table", "Wardrobe"];
+
+const ROOMS_1_2: readonly Room[] = [
+  {
+    title: "Living room",
+    shot: "studio living room with kitchen",
+    text: "A spacious 32.3 m² studio living room with a kitchen, an electric fireplace and a set dining table.",
+    items: [
+      "Sofa bed",
+      "Electric fireplace",
+      "TV",
+      "Set dining table",
+      "Gas hob",
+      "Microwave",
+      "Electric kettle",
+      "Sink",
+      "Extra dishes",
+      "Bottled drinking water",
+    ],
+  },
+  {
+    title: "Bedroom 1",
+    shot: "bedroom 1",
+    text: "A 15 m² bedroom. The 5 m² bathroom is entered from the hallway.",
+    items: BEDROOM_1_2,
+  },
+  {
+    title: "Bedroom 2",
+    shot: "bedroom 2",
+    text: "A 16.1 m² bedroom with its own 5 m² bathroom.",
+    items: [...BEDROOM_1_2, "En-suite bathroom"],
+  },
+  {
+    title: "Bedroom 3",
+    shot: "bedroom 3",
+    text: "A 16.1 m² bedroom with its own 5 m² bathroom.",
+    items: [...BEDROOM_1_2, "En-suite bathroom"],
+  },
+  {
+    title: "Bedroom 4",
+    shot: "bedroom 4",
+    text: "A 15 m² bedroom with a 5.4 m² bathroom.",
+    items: [...BEDROOM_1_2, "Bathroom"],
+  },
+  {
+    title: "Terrace",
+    shot: "terrace",
+    text: "A spot for morning coffee and evening talks in the fresh air.",
+    items: ["Table", "Sofa"],
+  },
+];
+
+const BEDROOM_3 = ["Double bed", "Bedside bench", "Clothes rack", "En-suite bathroom"];
+
+const ROOMS_3: readonly Room[] = [
+  {
+    title: "Living room",
+    shot: "studio living room with kitchen",
+    text: "A studio living room with a kitchen and a set dining table.",
+    items: [
+      "Sofa bed",
+      "Coffee table",
+      "TV",
+      "Set dining table",
+      "Electric hob",
+      "Microwave",
+      "Electric kettle",
+      "Sink",
+      "Extra dishes",
+    ],
+  },
+  {
+    title: "Bedroom 1",
+    shot: "bedroom 1",
+    text: "A bedroom with a double bed and an extra sofa.",
+    items: ["Double bed", "Sofa"],
+  },
+  {
+    title: "Bathroom",
+    shot: "bathroom",
+    text: "A bathroom with a shower and a water heater.",
+    items: ["Shower", "Toilet", "Washbasin", "Water heater"],
+  },
+  {
+    title: "Bedroom 2",
+    shot: "bedroom 2",
+    text: "A bedroom with its own bathroom.",
+    items: BEDROOM_3,
+  },
+  {
+    title: "Bedroom 3",
+    shot: "bedroom 3",
+    text: "A bedroom with its own bathroom.",
+    items: BEDROOM_3,
+  },
+];
+
+const BEDROOM_5_6 = [
+  "Double bed",
+  "Wardrobe",
+  "Bedside bench",
+  "Bedside tables",
+  "Armchair",
+  "Lamp",
+  "En-suite bathroom",
+];
+
+const ROOMS_5_6: readonly Room[] = [
+  {
+    title: "Living room",
+    shot: "living room with kitchen",
+    text: "A large 51 m² living room with a kitchen and a set dining table for 12 guests.",
+    items: [
+      "Sofa bed",
+      "TV",
+      "Set dining table",
+      "12 chairs",
+      "Gas hob",
+      "Microwave",
+      "Electric kettle",
+      "Fridge",
+      "Extra dishes",
+      "Toilet",
+    ],
+  },
+  {
+    title: "Bedroom 1",
+    shot: "bedroom 1",
+    text: "A 16.7 m² ground-floor bedroom with its own 3.8 m² bathroom.",
+    items: BEDROOM_5_6,
+  },
+  {
+    title: "Bedroom 2",
+    shot: "bedroom 2",
+    text: "A 17 m² bedroom with its own 3 m² bathroom.",
+    items: BEDROOM_5_6,
+  },
+  {
+    title: "Bedroom 3",
+    shot: "bedroom 3",
+    text: "A 17 m² bedroom with its own bathroom.",
+    items: BEDROOM_5_6,
+  },
+  {
+    title: "Bedroom 4",
+    shot: "bedroom 4",
+    text: "A 10.6 m² bedroom with its own bathroom.",
+    items: BEDROOM_5_6,
+  },
+  {
+    title: "Bedroom 5",
+    shot: "bedroom 5",
+    text: "A 14.3 m² bedroom with its own bathroom.",
+    items: BEDROOM_5_6,
+  },
+];
 
 export const en: LocalContent = {
   cottages: [
@@ -6,16 +164,19 @@ export const en: LocalContent = {
       shot: "terrace and meadow",
       tagline: "Closest to the pool.",
       desc: "A two-storey cottage in the traditional Ukrainian mountain style, set right next to the outdoor pool. The windows look out over the pool, the grounds and the forest. Parking is close by.",
+      rooms: ROOMS_1_2,
     },
     {
       shot: "balcony with a ridge view",
       tagline: "Next to the pool.",
       desc: "A two-storey cottage with distinctive Ukrainian mountain architecture, set near the outdoor pool, slightly aside from the main poolside area. The windows look out over the grounds and the surrounding forest.",
+      rooms: ROOMS_1_2,
     },
     {
       shot: "forest edge, morning mist",
       tagline: "Closest to the forest.",
       desc: "A two-storey cottage in the traditional mountain style, set at the highest point of the complex, almost in the forest. Being away from the main leisure area means more quiet and privacy, and the windows look out over the forest and the grounds.",
+      rooms: ROOMS_3,
     },
     {
       shot: "facade and barbecue area",
@@ -26,11 +187,13 @@ export const en: LocalContent = {
       shot: "terrace by the playground",
       tagline: "Closer to nature.",
       desc: "A two-storey cottage in Scandinavian minimalist style, set in the modern part of the complex, closest to the forest. It has its own terrace overlooking the forest and a barbecue area. The windows look out over the forest and the grounds.",
+      rooms: ROOMS_5_6,
     },
     {
       shot: "panoramic windows, mountains",
       tagline: "Overlooking the meadow.",
       desc: "A two-storey cottage in Scandinavian minimalist style, set at the far left of the modern part of the complex. It has its own terrace overlooking a green meadow and a barbecue area. The windows look out over nature and the grounds.",
+      rooms: ROOMS_5_6,
     },
     {
       shot: "path to the hot tub",

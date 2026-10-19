@@ -6,6 +6,7 @@ import { useContent } from "@/content/ContentProvider";
 import { prefersReducedMotion } from "@/lib/ready";
 import { useI18n } from "@/locales/client";
 
+import type { Room } from "@/content/site";
 import type { ReactNode } from "react";
 
 import styles from "./RoomTabs.module.css";
@@ -13,12 +14,17 @@ import ui from "../ui/ui.module.css";
 
 type Phase = "idle" | "out" | "in";
 
-export function RoomTabs(): ReactNode {
+export function RoomTabs({
+  rooms: own,
+}: {
+  readonly rooms?: readonly Room[] | undefined;
+}): ReactNode {
   const [room, setRoom] = useState(0);
   const [phase, setPhase] = useState<Phase>("idle");
   const timers = useRef<number[]>([]);
   const t = useI18n();
-  const { rooms } = useContent();
+  const shared = useContent().rooms;
+  const rooms = own ?? shared;
   const current = rooms[room] ?? rooms[0];
 
   const select = (i: number): void => {
