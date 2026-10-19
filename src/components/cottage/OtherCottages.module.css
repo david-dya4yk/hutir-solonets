@@ -1,0 +1,47 @@
+.card {
+  display: block;
+  color: var(--white);
+}
+
+.card:hover {
+  color: var(--white);
+}
+
+.text {
+  position: absolute;
+  right: 26px;
+  bottom: 24px;
+  left: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.meta {
+  font-size: 16px;
+  color: rgb(255 255 255 / 85%);
+}
+
+@media (width < 900px) {
+  .text {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    gap: 4px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .meta {
+    font-size: 14px;
+  }
+}

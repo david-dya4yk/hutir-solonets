@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { BookButton } from "@/components/booking/BookButton";
-import { CottagePhoto } from "@/components/cottage/CottagePhoto";
+import { OtherCottages } from "@/components/cottage/OtherCottages";
 import { RoomTabs } from "@/components/cottage/RoomTabs";
 import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
@@ -74,9 +74,7 @@ export default async function CottagePage(
     notFound();
   }
   const idx = cottages.indexOf(cur);
-  const others = [1, 2, 3]
-    .map((k) => cottages[(idx + k) % cottages.length])
-    .filter((c) => c !== undefined);
+  const others = [...cottages.slice(idx + 1), ...cottages.slice(0, idx)];
   const titleOf = (n: number): string => t("common.cottage", { n: pad(n) });
   const metaOf = (c: { readonly area: number; readonly guests: number }): string =>
     `${t("common.area", { n: c.area })} · ${t("common.upToGuests", { n: c.guests })}`;
@@ -155,7 +153,7 @@ export default async function CottagePage(
           className={styles.amenTitle}
           lines={[t("cottage.amenities1"), t("cottage.amenities2")]}
         />
-        <RoomTabs />
+        <RoomTabs key={cur.n} rooms={cur.rooms} />
       </section>
 
       <section className={styles.othersSection}>
@@ -170,28 +168,17 @@ export default async function CottagePage(
               {t("cottage.all")}
             </Link>
           </div>
-          <div className={styles.othersGrid}>
-            {others.map((c) => (
-              <Link
-                key={c.n}
-                href={localePath(locale, cottageHref(c))}
-                className={`${ui.frame} ${ui.zoomHost} ${styles.other}`}
-                data-reveal=""
-              >
-                <CottagePhoto
-                  photo={c.photo}
-                  alt={c.photo === undefined ? "" : altOf(c.n, c.photo)}
-                  sizes="(max-width: 900px) 100vw, 33vw"
-                />
-                <div className={ui.shadeLight} />
-                <div className={styles.otherText}>
-                  <span className={styles.otherTitle}>{titleOf(c.n)}</span>
-                  <span className={styles.otherMeta}>{metaOf(c)}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
         </div>
+        <OtherCottages
+          items={others.map((c) => ({
+            n: c.n,
+            href: localePath(locale, cottageHref(c)),
+            title: titleOf(c.n),
+            meta: metaOf(c),
+            photo: c.photo,
+            alt: c.photo === undefined ? "" : altOf(c.n, c.photo),
+          }))}
+        />
       </section>
     </>
   );

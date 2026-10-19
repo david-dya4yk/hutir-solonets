@@ -22,6 +22,8 @@ export type CottageText = {
   readonly shot: string;
   readonly tagline: string;
   readonly desc: string;
+  /** This cottage's own rooms; cottages without them show the shared `rooms`. */
+  readonly rooms?: readonly Room[];
 };
 
 export type Cottage = CottageSpec & CottageText;
@@ -126,15 +128,15 @@ export const pad = (n: number): string => String(n).padStart(2, "0");
 export const COTTAGE_SPECS: readonly CottageSpec[] = [
   {
     n: 1,
-    area: 140,
-    guests: 8,
-    beds: 3,
+    area: 160,
+    guests: 10,
+    beds: 4,
     photo: { src: "/assets/cottage-1-2.jpg", position: "center 60%" },
   },
   {
     n: 2,
-    area: 160,
-    guests: 10,
+    area: 140,
+    guests: 8,
     beds: 4,
     photo: { src: "/assets/cottage-1-2.jpg", position: "center 60%" },
   },
@@ -176,7 +178,7 @@ export const COTTAGE_SPECS: readonly CottageSpec[] = [
     n: 5,
     area: 165,
     guests: 10,
-    beds: 4,
+    beds: 5,
     photo: { src: "/assets/cottage-5-exterior.jpg", position: "center 55%", room: "exterior" },
     gallery: [
       { src: "/assets/cottage-5-exterior.jpg", position: "center 55%", room: "exterior" },
