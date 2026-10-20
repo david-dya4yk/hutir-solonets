@@ -31,15 +31,14 @@
 }
 
 .logo {
-  font-size: clamp(18px, 1.8vw, 22px);
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: -0.02em;
-  white-space: nowrap;
+  display: block;
+  flex: none;
 }
 
-.logo:hover {
-  color: var(--white);
+.logoImg {
+  display: block;
+  width: auto;
+  height: clamp(26px, 2.4vw, 34px);
 }
 
 .nav {

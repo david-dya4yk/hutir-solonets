@@ -11,6 +11,7 @@
   --gold-muted: #c9b27a;
   --error: #b3261e;
   --footer: #2b231d;
+  --footer-decor: color-mix(in srgb, #645d59 45%, var(--footer));
   --media-bg: #bebcb8;
   --field-line: color-mix(in srgb, var(--text) 25%, transparent);
   --field-hover: color-mix(in srgb, var(--text) 60%, transparent);

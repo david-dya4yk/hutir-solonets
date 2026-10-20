@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -49,7 +50,14 @@ export function Header(): ReactNode {
       <header className={`${styles.header} ${menu ? styles.menuOpen : ""}`}>
         <div className={styles.inner}>
           <Link href={lp("/")} className={styles.logo} onClick={close}>
-            solonєts
+            <Image
+              src="/logo.svg"
+              alt={t("common.brand")}
+              width={1571}
+              height={426}
+              unoptimized
+              className={styles.logoImg}
+            />
           </Link>
           <nav className={styles.nav} aria-label={t("nav.aria")}>
             {NAV.slice(1).map((it) =>

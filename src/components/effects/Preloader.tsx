@@ -75,8 +75,8 @@ export function Preloader(): ReactNode {
           className={styles.logo}
           src="/logo.svg"
           alt=""
-          width={3340}
-          height={810}
+          width={1571}
+          height={426}
           preload
           unoptimized
           onLoad={start}
