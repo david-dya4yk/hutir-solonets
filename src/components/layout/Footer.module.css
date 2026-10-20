@@ -34,15 +34,14 @@
 }
 
 .logo {
+  display: block;
   align-self: flex-start;
-  font-size: 61px;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: -0.02em;
 }
 
-.logo:hover {
-  color: var(--white);
+.logoImg {
+  display: block;
+  width: auto;
+  height: clamp(48px, 5vw, 64px);
 }
 
 .socials {

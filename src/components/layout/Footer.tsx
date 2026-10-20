@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { EMAIL, NAV, PHONE_DISPLAY, PHONE_HREF, ROUTE_HREF, SOCIALS } from "@/content/site";
@@ -21,7 +22,14 @@ export async function Footer(): Promise<ReactNode> {
         <div className={styles.cols}>
           <div className={styles.col}>
             <Link href={lp("/")} className={styles.logo}>
-              solonєts
+              <Image
+                src="/logo.svg"
+                alt={t("common.brand")}
+                width={1571}
+                height={426}
+                unoptimized
+                className={styles.logoImg}
+              />
             </Link>
             <div className={styles.socials}>
               {SOCIALS.map((s) => (

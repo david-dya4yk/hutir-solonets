@@ -21,6 +21,7 @@ const build = (c: LocalContent): Content => ({
     shot: c.cottages[i]?.shot ?? "",
     tagline: c.cottages[i]?.tagline ?? "",
     desc: c.cottages[i]?.desc ?? "",
+    ...(c.cottages[i]?.rooms === undefined ? {} : { rooms: c.cottages[i].rooms }),
   })),
   reviews: REVIEW_SOURCES,
   planAmenities: PLAN_AMENITY_SPOTS.map(([x, y], i) => ({ t: c.planAmenities[i] ?? "", x, y })),
