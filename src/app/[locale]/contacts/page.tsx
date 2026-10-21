@@ -1,6 +1,7 @@
 import { ContactSection } from "@/components/forms/ContactSection";
 import { Lines } from "@/components/ui/Lines";
 import { EMAIL, mapEmbedSrc, PHONE_DISPLAY, PHONE_HREF, ROUTE_HREF, SOCIALS } from "@/content/site";
+import { alternates } from "@/lib/seo";
 import { getI18n, initLocale } from "@/locales/server";
 
 import { GoogleRating } from "./GoogleRating";
@@ -12,9 +13,13 @@ import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
 export async function generateMetadata(props: PageProps<"/[locale]/contacts">): Promise<Metadata> {
-  await initLocale(props.params);
+  const locale = await initLocale(props.params);
   const t = await getI18n();
-  return { title: t("meta.contactsTitle"), description: t("meta.contactsDescription") };
+  return {
+    title: t("meta.contactsTitle"),
+    description: t("meta.contactsDescription"),
+    alternates: alternates(locale, "/contacts"),
+  };
 }
 
 export default async function ContactsPage(

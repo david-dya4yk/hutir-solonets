@@ -8,6 +8,7 @@ import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
 import { findCottage, getContent } from "@/content";
 import { COTTAGE_SPECS, cottageHref, pad, PRICE_PER_NIGHT } from "@/content/site";
+import { alternates } from "@/lib/seo";
 import { formatPrice, LOCALES, localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
@@ -31,7 +32,11 @@ export async function generateMetadata(
   const c = findCottage(getContent(locale), Number(id));
   return c === undefined
     ? {}
-    : { title: t("common.cottage", { n: pad(c.n) }), description: c.desc };
+    : {
+        title: t("common.cottage", { n: pad(c.n) }),
+        description: c.desc,
+        alternates: alternates(locale, cottageHref(c)),
+      };
 }
 
 const ICONS = {

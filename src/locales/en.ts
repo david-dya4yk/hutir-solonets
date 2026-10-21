@@ -241,6 +241,13 @@ export default {
     aria: "Documents",
     revision: "Version of 1 October 2026",
   },
+  blog: {
+    title: "Blog",
+    lead: "Stories, tips and news from Hutir Solonets — about holidays in the Carpathians, our cottages and spa.",
+    read: "Read",
+    back: "All articles",
+    cta: "Book your stay",
+  },
   notFound: {
     title: "Page not found.",
     back: "Back to the home page",

@@ -5,9 +5,9 @@
 .tabs {
   display: flex;
   gap: clamp(28px, 4vw, 72px);
-  overflow-x: auto;
+  overflow: auto hidden;
   scrollbar-width: none;
-  border-bottom: 1px solid var(--text);
+  box-shadow: inset 0 -1px 0 var(--text);
 }
 
 .tab {
@@ -35,7 +35,7 @@
 .tabBar {
   position: absolute;
   right: 0;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   height: 3px;
   background: var(--accent);
@@ -189,8 +189,8 @@
     color: rgb(255 255 255 / 88%);
     text-transform: none;
     letter-spacing: 0;
-    background: var(--footer-decor);
-    border: 1px solid var(--footer);
+    background: color-mix(in srgb, var(--accent) 85%, transparent);
+    border: 1px solid var(--accent);
     border-radius: 999px;
   }
 }

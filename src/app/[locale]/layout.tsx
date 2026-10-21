@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { clientContent, getContent } from "@/content";
 import { ContentProvider } from "@/content/ContentProvider";
+import { SITE_URL } from "@/lib/seo";
 import { I18nProviderClient } from "@/locales/client";
 import { LOCALES } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
@@ -42,7 +43,9 @@ export async function generateMetadata(props: LayoutProps<"/[locale]">): Promise
   const locale = await initLocale(props.params);
   const t = await getI18n();
   const image = { url: "/og.jpg", width: 1200, height: 630, alt: t("meta.title") };
+  const google = process.env["GOOGLE_SITE_VERIFICATION"];
   return {
+    metadataBase: new URL(SITE_URL),
     title: { default: t("meta.title"), template: t("meta.template") },
     description: t("meta.description"),
     openGraph: {
@@ -52,6 +55,7 @@ export async function generateMetadata(props: LayoutProps<"/[locale]">): Promise
       images: [image],
     },
     twitter: { card: "summary_large_image", images: [image] },
+    ...(google === undefined || google === "" ? {} : { verification: { google } }),
   };
 }
 

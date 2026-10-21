@@ -14,13 +14,20 @@ import { Lines } from "@/components/ui/Lines";
 import { Media } from "@/components/ui/Media";
 import { getContent } from "@/content";
 import { OFFERS_ENABLED } from "@/content/site";
+import { alternates } from "@/lib/seo";
 import { localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
+
+export async function generateMetadata(props: PageProps<"/[locale]">): Promise<Metadata> {
+  const locale = await initLocale(props.params);
+  return { alternates: alternates(locale, "/") };
+}
 
 export default async function HomePage(props: PageProps<"/[locale]">): Promise<ReactNode> {
   const locale = await initLocale(props.params);
