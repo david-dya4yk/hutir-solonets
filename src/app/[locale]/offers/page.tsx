@@ -4,6 +4,7 @@ import { BookButton } from "@/components/booking/BookButton";
 import { Lines } from "@/components/ui/Lines";
 import { getContent } from "@/content";
 import { OFFERS_ENABLED, pad } from "@/content/site";
+import { alternates } from "@/lib/seo";
 import { localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
@@ -14,9 +15,13 @@ import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
 export async function generateMetadata(props: PageProps<"/[locale]/offers">): Promise<Metadata> {
-  await initLocale(props.params);
+  const locale = await initLocale(props.params);
   const t = await getI18n();
-  return { title: t("meta.offersTitle"), description: t("meta.offersDescription") };
+  return {
+    title: t("meta.offersTitle"),
+    description: t("meta.offersDescription"),
+    alternates: alternates(locale, "/offers"),
+  };
 }
 
 export default async function OffersPage(props: PageProps<"/[locale]/offers">): Promise<ReactNode> {

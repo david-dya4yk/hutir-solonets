@@ -3,6 +3,7 @@ import { LazyImage } from "@/components/ui/LazyImage";
 import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
 import { getContent } from "@/content";
+import { alternates } from "@/lib/seo";
 import { getI18n, initLocale } from "@/locales/server";
 
 import type { Metadata } from "next";
@@ -12,9 +13,13 @@ import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
 export async function generateMetadata(props: PageProps<"/[locale]/spa">): Promise<Metadata> {
-  await initLocale(props.params);
+  const locale = await initLocale(props.params);
   const t = await getI18n();
-  return { title: t("meta.spaTitle"), description: t("meta.spaDescription") };
+  return {
+    title: t("meta.spaTitle"),
+    description: t("meta.spaDescription"),
+    alternates: alternates(locale, "/spa"),
+  };
 }
 
 export default async function SpaPage(props: PageProps<"/[locale]/spa">): Promise<ReactNode> {

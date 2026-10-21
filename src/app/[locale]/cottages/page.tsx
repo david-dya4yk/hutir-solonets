@@ -4,6 +4,7 @@ import { CottagePhoto } from "@/components/cottage/CottagePhoto";
 import { Lines } from "@/components/ui/Lines";
 import { getContent } from "@/content";
 import { cottageHref, pad, PRICE_PER_NIGHT } from "@/content/site";
+import { alternates } from "@/lib/seo";
 import { formatPrice, localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
 
@@ -14,9 +15,13 @@ import styles from "./page.module.css";
 import ui from "@/components/ui/ui.module.css";
 
 export async function generateMetadata(props: PageProps<"/[locale]/cottages">): Promise<Metadata> {
-  await initLocale(props.params);
+  const locale = await initLocale(props.params);
   const t = await getI18n();
-  return { title: t("meta.cottagesTitle"), description: t("meta.cottagesDescription") };
+  return {
+    title: t("meta.cottagesTitle"),
+    description: t("meta.cottagesDescription"),
+    alternates: alternates(locale, "/cottages"),
+  };
 }
 
 export default async function CottagesPage(
