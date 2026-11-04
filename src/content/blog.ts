@@ -19,6 +19,377 @@ export type BlogPost = {
 
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
+    slug: "cottage-for-large-group",
+    date: "2026-11-04",
+    cover: "/assets/cottage-4-dining.jpg",
+    uk: {
+      title: "Котедж у Карпатах для великої компанії на 10–14 осіб",
+      excerpt:
+        "Як обрати будинок у горах для великої родини чи друзів: кількість спалень, стіл на всіх, кухня, басейн і чан поруч. Підказки на прикладі котеджів у Мигове.",
+      body: [
+        {
+          p: [
+            "Знайти котедж у Карпатах для великої компанії складніше, ніж здається. Будинків на 4–6 гостей багато, а от таких, де 10–14 людей не тіснитимуться, сядуть за один стіл і матимуть де відпочити окремо, значно менше. Розповідаємо, на що дивитися, щоб відпочинок великою родиною чи компанією друзів удався, і як ми облаштували котеджі «Хутора Солонець» у Мигове саме під такі поїздки.",
+          ],
+        },
+        {
+          h: "Почніть зі спалень, а не з квадратних метрів",
+          p: [
+            "Площа будинку мало що каже про комфорт. Важливіше, скільки в ньому спалень і як розподілені ліжка. Якщо їдуть кілька пар, кожній захочеться окремої кімнати. Якщо з вами діти, зручно, коли вони сплять поруч із батьками. Перед бронюванням складіть простий список: хто з ким спить, скільки дорослих і дітей, кому потрібна тиша зранку.",
+            "Окремий плюс — санвузли. Коли на 12 людей одна ванна, ранок перетворюється на чергу. У котеджах 05 і 06 на хуторі п’ять спалень, і кожна має власний санвузол — для великої компанії це, мабуть, найпомітніша різниця.",
+          ],
+        },
+        {
+          h: "Стіл, за яким помістяться всі",
+          p: [
+            "Головне у відпочинку великою компанією — спільні вечері. Тому перевірте, чи є в будинку обідній стіл на всіх, а не кілька маленьких. У котеджах 05 і 06 велика вітальня зі столом на 12 гостей, а котедж 04, найбільший на хуторі, розрахований на велику родину або дві сім’ї разом.",
+          ],
+        },
+        {
+          h: "Кухня, мангал і тераса",
+          p: [
+            "Для 10–14 людей ресторан щовечора — це дорого й незручно. Набагато простіше готувати разом: повністю обладнана кухня, сервірований стіл, мангал на терасі. У котеджах хутора все це вже є, а в котеджі 04 — ще й окрема мангальна зона.",
+            "Порада з досвіду: домовтеся заздалегідь, хто що везе і хто відповідає за яку вечерю. Так ніхто не простоїть усі вихідні біля плити.",
+          ],
+        },
+        {
+          h: "Що робити всім разом",
+          p: [
+            "Велика компанія — це різні люди з різними планами. Комусь хочеться на лижі, комусь у ліс, а комусь просто полежати в теплій воді. Тому зручно, коли розваги поруч. На хуторі є два криті басейни, які працюють щодня з 08:00 до 22:00, відкритий басейн, джакузі та чан на дровах. Узимку в селі працює гірськолижний курорт Мигове з трасами для новачків, тюбінгом і ковзанкою, а в теплу пору — короткі лісові маршрути на годину-дві.",
+            "Вечір у чані на дровах на 6–8 людей стає найтеплішим спогадом поїздки — про це ми розповіли окремо в статті «Чан на дровах у Карпатах».",
+          ],
+        },
+        {
+          h: "Якщо компанія більша за один будинок",
+          p: [
+            "Буває, що їде 20 чи 30 людей — дві родини з друзями, ювілей або корпоратив. Тоді можна забронювати кілька котеджів на одній території: кожна сім’я має свій простір, а вечеряти й відпочивати в SPA можна разом. Разом котеджі хутора вміщують до 72 гостей.",
+            "Якщо до вас приїдуть друзі лише на вечір, без ночівлі, вони можуть приєднатися за окрему плату, у яку входять басейни й рушники.",
+          ],
+        },
+        {
+          h: "Практичні дрібниці",
+          p: [
+            "Великою компанією зазвичай їдуть кількома авто, тож звертайте увагу на паркінг. На хуторі він безкоштовний і розташований біля будинків. Постільна білизна та рушники вже входять у вартість, тому не треба везти їх на 14 людей.",
+            "Ще одне важливе питання взимку — електрика. Котеджі мають автономне живлення, тож світло й тепло не залежать від графіків відключень.",
+          ],
+        },
+        {
+          h: "Як забронювати котедж для компанії",
+          p: [
+            "Напишіть, скільки вас, скільки дітей і на які дати плануєте поїздку. Ми підкажемо, який котедж підійде найкраще, а якщо компанія велика — запропонуємо кілька будинків поруч. Бронюючи від двох діб, ви матимете достатньо часу, щоб справді відпочити разом.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A Carpathian cottage for a large group of 10–14 people",
+      excerpt:
+        "How to choose a mountain house for a big family or friends: bedrooms, a table for everyone, a kitchen, pools and a hot tub nearby. Tips based on cottages in Myhove.",
+      body: [
+        {
+          p: [
+            "Finding a cottage in the Carpathians for a large group is harder than it seems. There are plenty of houses for 4 to 6 guests, but far fewer where 10 to 14 people won’t feel cramped, can sit at one table and still find space to rest apart. Here is what to look for so a trip with a big family or group of friends goes well, and how we set up the cottages at Hutir Solonets in Myhove for exactly this kind of stay.",
+          ],
+        },
+        {
+          h: "Start with bedrooms, not square metres",
+          p: [
+            "Floor area says little about comfort. What matters more is how many bedrooms a house has and how the beds are arranged. If several couples are travelling, each will want its own room. With children, it helps when they sleep near their parents. Before booking, make a simple list: who sleeps where, how many adults and children, who needs a quiet morning.",
+            "Bathrooms are another big plus. When 12 people share one bathroom, the morning turns into a queue. Cottages 05 and 06 at the farmstead have five bedrooms, each with its own bathroom — probably the most noticeable difference for a large group.",
+          ],
+        },
+        {
+          h: "A table that fits everyone",
+          p: [
+            "The heart of a group holiday is the shared dinner. So check that the house has one dining table for everyone, not several small ones. Cottages 05 and 06 have a large living room with a table for 12 guests, and cottage 04, the largest at the farmstead, is designed for a big family or two families together.",
+          ],
+        },
+        {
+          h: "Kitchen, barbecue and terrace",
+          p: [
+            "For 10 to 14 people, eating out every evening is expensive and awkward. Cooking together is much easier: a fully equipped kitchen, a set table and a barbecue on the terrace. The farmstead’s cottages have all of this, and cottage 04 also has its own barbecue area.",
+            "A tip from experience: agree in advance who brings what and who is in charge of which dinner. That way nobody spends the whole weekend at the stove.",
+          ],
+        },
+        {
+          h: "Things to do together",
+          p: [
+            "A large group means different people with different plans. Some want to ski, some want the forest, others just want to lie in warm water. So it helps when everything is close by. The farmstead has two indoor pools open daily from 08:00 to 22:00, an outdoor pool, a jacuzzi and a wood-fired hot tub. In winter the village has the Myhove ski resort with beginner runs, tubing and an ice rink, and in the warmer months there are short forest trails of an hour or two.",
+            "An evening in the wood-fired hot tub often becomes the warmest memory of the trip — we wrote about it in our article “A wood-fired hot tub in the Carpathians”.",
+          ],
+        },
+        {
+          h: "If your group is bigger than one house",
+          p: [
+            "Sometimes 20 or 30 people travel together — two families with friends, an anniversary or a corporate trip. Then you can book several cottages on the same site: each family has its own space, while dinners and spa time can be shared. Together the farmstead’s cottages sleep up to 72 guests.",
+            "Friends who come only for the evening without staying overnight can join for an extra fee, which includes the pools and towels.",
+          ],
+        },
+        {
+          h: "Practical details",
+          p: [
+            "Large groups usually arrive in several cars, so check the parking. At the farmstead it is free and right next to the houses. Bed linen and towels are included in the price, so you don’t need to bring them for 14 people.",
+            "Another important question in winter is electricity. The cottages have backup power, so light and heat do not depend on outage schedules.",
+          ],
+        },
+        {
+          h: "How to book a cottage for your group",
+          p: [
+            "Tell us how many of you there are, how many children and which dates you have in mind. We will suggest the best cottage, and for a large group we can offer several houses next to each other. Booking for two nights or more gives you enough time to truly rest together.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "weekend-in-carpathians",
+    date: "2026-11-04",
+    cover: "/assets/cottage-5-living.jpg",
+    uk: {
+      title: "Вихідні в Карпатах: план на 2–3 дні в Мигове",
+      excerpt:
+        "Готовий план вихідних у Буковинських Карпатах: що робити в п’ятницю ввечері, суботу й неділю взимку та влітку, щоб відпочити, а не втомитися з дороги.",
+      body: [
+        {
+          p: [
+            "Коротка поїздка в Карпати на вихідні — найпростіший спосіб перезавантажитися без відпустки. Але за два-три дні легко або нічого не встигнути, або навпаки, так набігатися, що в понеділок захочеться ще одних вихідних. Ми склали простий план для Мигового в Буковинських Карпатах — з варіантами для зими та теплої пори року.",
+          ],
+        },
+        {
+          h: "Чому Мигове для вихідних",
+          p: [
+            "Мигове розташоване приблизно за 63 км від Чернівців, тож дорога не з’їдає половину вихідних. Тут спокійніше, ніж на великих курортах, а все потрібне — поруч: гірськолижні траси, ліс, короткі маршрути, водоспади в межах пів години їзди. Як дістатися з різних міст, ми детально розповіли в статті «Як дістатися до Мигового».",
+          ],
+        },
+        {
+          h: "П’ятниця: приїзд і перший вечір",
+          p: [
+            "Найкраще виїжджати так, щоб бути на місці до темряви, особливо взимку. Заїзд у котеджі хутора — з 14:00, тож можна приїхати, спокійно розкласти речі й нікуди не поспішати.",
+            "Перший вечір — для того, щоб видихнути. Вечеря на кухні котеджу або з мангалу, а потім басейн: криті басейни працюють до 22:00. Якщо хочеться особливої атмосфери, домовтеся про чан на дровах — після дороги це найкращий спосіб розслабитися.",
+          ],
+        },
+        {
+          h: "Субота взимку: лижі, ковзанка і SPA",
+          p: [
+            "Зранку — на гірськолижний курорт Мигове в цьому ж селі. Траси тут пологі й підходять для новачків і дітей, а для тих, хто вперше на лижах, працює лижна школа. Хто не катається, може спробувати тюбінг або ковзанку.",
+            "Після обіду — відпочинок у котеджі чи прогулянка засніженим лісом, а ввечері, за бажання, вечірнє катання під освітленням. Завершити день найкраще в джакузі або в чані, коли над водою піднімається пара.",
+          ],
+        },
+        {
+          h: "Субота влітку і восени: ліс, маршрути, водоспади",
+          p: [
+            "У теплу пору року почніть день із короткого маршруту: стежка «Слідами графа Василька» — близько години легкої прогулянки, «Стіжок» — півтори години з помітнішим підйомом. Для поїздки на авто — водоспад Сіручок приблизно за 16 км або Буковинські водоспади в Розтоках.",
+            "Повернувшись, охолоньте у відкритому басейні влітку чи зігрійтеся в критому восени. Детальніше про маршрути ми писали в статті «Маршрути біля Мигового».",
+          ],
+        },
+        {
+          h: "Неділя: повільний ранок і дорога додому",
+          p: [
+            "Неділю не варто перевантажувати. Довгий сніданок на терасі з видом на гори, ранкове плавання в басейні, коротка прогулянка лісом — і виїзд до 11:00. Так ви повертаєтеся додому відпочилими, а не втомленими.",
+            "Якщо будинок вільний, ми можемо домовитися про пізній виїзд — запитайте про це заздалегідь.",
+          ],
+        },
+        {
+          h: "Якщо є третій день",
+          p: [
+            "Три дні — ідеальний формат для Карпат. Додатковий день можна присвятити поїздці до Вижницького національного парку та центру зубрів у Берегометі, водоспадам або просто відпочинку в SPA без жодних планів. А бронюючи будинок від двох діб, ви не поспішаєте і справді встигаєте сповільнитися.",
+          ],
+        },
+        {
+          h: "Що взяти з собою на вихідні",
+          p: [
+            "Зручне взуття для лісу, теплий одяг шарами, купальник для басейну й чану, продукти для вечері та настільні ігри. Постільна білизна та рушники вже є в котеджі. Залиште заявку з датами — ми підкажемо, які будинки вільні на найближчі вихідні.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A weekend in the Carpathians: a 2–3 day plan for Myhove",
+      excerpt:
+        "A ready-made weekend plan for the Bukovynian Carpathians: what to do on Friday evening, Saturday and Sunday in winter and summer so you rest instead of rushing.",
+      body: [
+        {
+          p: [
+            "A short weekend trip to the Carpathians is the easiest way to recharge without taking leave. But in two or three days it is easy either to do nothing at all or to rush so much that by Monday you need another weekend. We have put together a simple plan for Myhove in the Bukovynian Carpathians, with options for winter and the warmer months.",
+          ],
+        },
+        {
+          h: "Why Myhove for a weekend",
+          p: [
+            "Myhove is about 63 km from Chernivtsi, so the journey does not eat half the weekend. It is calmer than the big resorts, and everything you need is close by: ski runs, forest, short trails and waterfalls within half an hour’s drive. We described how to get here from different cities in our article “How to get to Myhove”.",
+          ],
+        },
+        {
+          h: "Friday: arrival and the first evening",
+          p: [
+            "Try to arrive before dark, especially in winter. Check-in at the farmstead’s cottages is from 14:00, so you can arrive, unpack and take your time.",
+            "The first evening is for breathing out. Dinner in the cottage kitchen or from the barbecue, then the pool: the indoor pools are open until 22:00. For a special atmosphere, ask about the wood-fired hot tub — after a journey it is the best way to relax.",
+          ],
+        },
+        {
+          h: "Saturday in winter: skiing, skating and spa",
+          p: [
+            "In the morning head to the Myhove ski resort in the same village. The runs are gentle and suit beginners and children, and there is a ski school for first-timers. Those who don’t ski can try tubing or the ice rink.",
+            "After lunch, rest in the cottage or walk in the snowy forest, and in the evening try floodlit skiing if you like. The day is best finished in the jacuzzi or the hot tub, with steam rising over the water.",
+          ],
+        },
+        {
+          h: "Saturday in summer and autumn: forest, trails, waterfalls",
+          p: [
+            "In the warmer months start the day with a short trail: In the Footsteps of Count Wassilko is about an hour of easy walking, Stizhok is an hour and a half with a more noticeable climb. For a drive, the Siruchok waterfall is about 16 km away, or head to the Bukovynian waterfalls in Roztoky.",
+            "When you get back, cool off in the outdoor pool in summer or warm up in the indoor pool in autumn. We covered the trails in more detail in “Trails near Myhove”.",
+          ],
+        },
+        {
+          h: "Sunday: a slow morning and the road home",
+          p: [
+            "Don’t overload Sunday. A long breakfast on the terrace with mountain views, a morning swim, a short forest walk — and check-out by 11:00. That way you go home rested, not tired.",
+            "If the house is free, we can arrange a late check-out — just ask in advance.",
+          ],
+        },
+        {
+          h: "If you have a third day",
+          p: [
+            "Three days is the ideal format for the Carpathians. Spend the extra day visiting the Vyzhnytskyi National Park and the bison centre in Berehomet, the waterfalls, or simply relaxing in the spa with no plans at all. Booking for two nights or more means you don’t rush and really have time to slow down.",
+          ],
+        },
+        {
+          h: "What to pack for the weekend",
+          p: [
+            "Comfortable shoes for the forest, warm clothes in layers, swimwear for the pool and hot tub, food for dinners and board games. Bed linen and towels are already in the cottage. Send us a request with your dates and we will tell you which houses are free for the coming weekends.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "carpathians-winter-packing-list",
+    date: "2026-11-04",
+    cover: "/assets/cottage-3-ext.jpg",
+    uk: {
+      title: "Що взяти в Карпати взимку: чекліст для сім’ї",
+      excerpt:
+        "Одяг, взуття, речі для схилу, басейну й дороги — повний список того, що варто взяти в Карпати взимку з дітьми, і чого везти не потрібно.",
+      body: [
+        {
+          p: [
+            "Зимова поїздка в Карпати починається зі збору валіз, і саме тут найчастіше щось забувають: запасні рукавиці, купальник для басейну чи ланцюги для авто. Ми склали чекліст для сім’ї, яка їде в гори взимку, — з урахуванням лиж, басейну, прогулянок і дороги.",
+          ],
+        },
+        {
+          h: "Одяг: шарами, а не одним теплим пуховиком",
+          p: [
+            "У горах погода змінюється швидко, а на схилі чи в лісі ви то зігріваєтеся, то охолоджуєтеся. Тому найкраще працює принцип шарів: термобілизна, що відводить вологу, флісова кофта чи светр і зверху непромокальна куртка та штани.",
+            "Для кожного члена сім’ї візьміть: термобілизну, 2–3 теплі светри чи фліски, непромокальні куртку й штани, шапку, шарф або бафф, теплі рукавиці й запасну пару, вовняні шкарпетки з запасом. Дітям рукавиць і шкарпеток беріть удвічі більше — вони мокнуть першими.",
+          ],
+        },
+        {
+          h: "Взуття",
+          p: [
+            "Зимові черевики з протектором, що не ковзає, і бажано непромокальні. Для котеджу — зручні капці, щоб ноги відпочивали після дня на снігу. Якщо плануєте прогулянки лісом, не завадять льодоступи на взуття.",
+          ],
+        },
+        {
+          h: "Для схилу",
+          p: [
+            "Якщо їдете на гірськолижний курорт Мигове, лижі чи сноуборд можна взяти напрокат на місці, тож власне спорядження везти не обов’язково. А от особисті речі краще мати свої: гірськолижна маска, шолом для дітей, лижні рукавиці, крем від сонця й вітру та гігієнічна помада. Зимове сонце в горах обвітрює й обпікає швидше, ніж здається.",
+          ],
+        },
+        {
+          h: "Для басейну й чану",
+          p: [
+            "Про це забувають найчастіше, а дарма: на «Хуторі Солонець» гостей чекають два криті басейни, відкритий басейн, джакузі та чан на дровах. Візьміть купальники, шапочки, шльопанці та, для дітей, нарукавники чи жилет для плавання. Рушники вже є в котеджі.",
+          ],
+        },
+        {
+          h: "Для авто в дорогу",
+          p: [
+            "Зимова гума обов’язкова, а ланцюги, щітка для скла, лопатка й рідина для омивача — бажані. Візьміть термос із гарячим чаєм, перекус, павербанк і зарядки для телефонів. Плануйте приїзд засвітла: гірські дороги ввечері вимагають більше уваги.",
+          ],
+        },
+        {
+          h: "Для вечорів у котеджі",
+          p: [
+            "Настільні ігри, книжки, улюблені іграшки дітей, продукти для спільної вечері та, якщо плануєте, щось для мангалу. У котеджі є обладнана кухня, тож можна готувати звичну їжу. А завдяки автономному живленню не потрібно везти ліхтарики й павербанки на випадок відключень світла.",
+          ],
+        },
+        {
+          h: "Аптечка",
+          p: [
+            "Жарознижувальне, засоби від застуди, пластирі, еластичний бинт, засіб від опіків і обморожень, ліки, які ви приймаєте постійно. Для дітей — те, що зазвичай дає ваш педіатр. Краще взяти й не знадобиться, ніж шукати аптеку ввечері.",
+          ],
+        },
+        {
+          h: "Чого везти не потрібно",
+          p: [
+            "Постільну білизну та рушники — вони входять у вартість котеджу. Лижі — їх можна орендувати на курорті. Велику кількість посуду — кухня повністю обладнана. Залиште місце в багажнику для гарного настрою, а нам — заявку з датами, і ми підберемо котедж для вашої родини.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "What to pack for the Carpathians in winter: a family checklist",
+      excerpt:
+        "Clothes, footwear, things for the slope, the pool and the road — a complete list of what to bring to the Carpathians in winter with children, and what to leave at home.",
+      body: [
+        {
+          p: [
+            "A winter trip to the Carpathians starts with packing, and that is where things usually get forgotten: spare gloves, swimwear for the pool or snow chains for the car. Here is a checklist for a family heading to the mountains in winter, covering skiing, the pool, walks and the road.",
+          ],
+        },
+        {
+          h: "Clothes: layers, not one warm down jacket",
+          p: [
+            "Mountain weather changes quickly, and on the slope or in the forest you keep warming up and cooling down. Layering works best: moisture-wicking thermal underwear, a fleece or sweater, and a waterproof jacket and trousers on top.",
+            "For each family member bring: thermal underwear, two or three warm sweaters or fleeces, a waterproof jacket and trousers, a hat, a scarf or neck gaiter, warm gloves plus a spare pair, and plenty of wool socks. Pack twice as many gloves and socks for children — theirs get wet first.",
+          ],
+        },
+        {
+          h: "Footwear",
+          p: [
+            "Winter boots with a non-slip tread, ideally waterproof. Comfortable slippers for the cottage so your feet can rest after a day in the snow. If you plan forest walks, ice grips for your shoes are a good idea.",
+          ],
+        },
+        {
+          h: "For the slope",
+          p: [
+            "If you are heading to the Myhove ski resort, skis and snowboards can be rented on site, so you don’t need to bring your own equipment. Personal items are better brought from home: ski goggles, helmets for children, ski gloves, sun and wind cream and lip balm. Winter sun in the mountains burns and chaps skin faster than you think.",
+          ],
+        },
+        {
+          h: "For the pool and hot tub",
+          p: [
+            "This is the most commonly forgotten item, and it shouldn’t be: Hutir Solonets has two indoor pools, an outdoor pool, a jacuzzi and a wood-fired hot tub. Bring swimwear, swim caps, flip-flops and armbands or a swim vest for children. Towels are already in the cottage.",
+          ],
+        },
+        {
+          h: "For the car",
+          p: [
+            "Winter tyres are a must, and chains, a snow brush, a small shovel and washer fluid are recommended. Bring a thermos of hot tea, snacks, a power bank and phone chargers. Plan to arrive in daylight: mountain roads need more attention after dark.",
+          ],
+        },
+        {
+          h: "For evenings in the cottage",
+          p: [
+            "Board games, books, children’s favourite toys, food for shared dinners and, if you plan to grill, something for the barbecue. The cottage has a fully equipped kitchen, so you can cook familiar food. Thanks to backup power, there is no need to bring torches and power banks in case of outages.",
+          ],
+        },
+        {
+          h: "First-aid kit",
+          p: [
+            "Fever reducers, cold remedies, plasters, an elastic bandage, something for burns and frostbite, and any medicines you take regularly. For children, whatever your paediatrician usually recommends. Better to bring it and not need it than to hunt for a pharmacy in the evening.",
+          ],
+        },
+        {
+          h: "What you don’t need to bring",
+          p: [
+            "Bed linen and towels — they are included in the cottage price. Skis — you can rent them at the resort. Lots of crockery — the kitchen is fully equipped. Leave room in the boot for a good mood, and send us a request with your dates so we can find a cottage for your family.",
+          ],
+        },
+      ],
+    },
+  },
+  {
     slug: "new-year-carpathians",
     date: "2026-10-28",
     cover: "/assets/hero.jpg",
