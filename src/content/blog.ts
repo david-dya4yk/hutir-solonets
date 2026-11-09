@@ -19,6 +19,457 @@ export type BlogPost = {
 
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
+    slug: "new-year-cottage-with-pool",
+    date: "2026-11-09",
+    cover: "/assets/spa-chan-3.jpg",
+    uk: {
+      title: "Котедж на Новий рік з басейном і чаном у Карпатах",
+      excerpt:
+        "Котедж на Новий рік у Карпатах: свій будинок для компанії, теплі басейни, чан на дровах і план свята з 31 грудня до 3 січня в Мигове.",
+      body: [
+        {
+          p: [
+            "Котедж на Новий рік у Карпатах — це коли свято повністю ваше: свій будинок, свій стіл, своя музика і жодних сусідів за стіною. А якщо поруч ще й теплий басейн та чан на дровах, новорічні дні перетворюються на справжній відпочинок, а не на марафон біля плити. Розповідаємо, як спланувати новорічні вихідні 2026/2027 у котеджі «Хутора Солонець» у Мигове — від заїзду 31 грудня до неспішного 3 січня.",
+          ],
+        },
+        {
+          h: "Новорічний календар 2026/2027",
+          p: [
+            "31 грудня 2026 року припадає на четвер, 1 січня 2027 року — на п’ятницю. Тож найзручніший формат — чотири дні: заїзд 31 грудня і виїзд у неділю, 3 січня. Хто може, приїжджає ще 30 грудня, щоб зустріти свято вже без дорожньої втоми.",
+            "Зважайте: поки діє воєнний стан, святкові дні автоматично не стають вихідними, і графік роботи визначає роботодавець. Тож про вільні дні краще домовитися на роботі заздалегідь.",
+          ],
+        },
+        {
+          h: "Чому для Нового року краще свій котедж",
+          p: [
+            "Новий рік — свято для своїх. В окремому будинку можна накрити один великий стіл, засидітися до ранку й не підлаштовуватися під розклад ресторану. На хуторі котедж орендується повністю: усередині кухня з усім необхідним, обідній стіл на всю компанію, тераса з видом на гори й мангал.",
+            "Є ще одна причина, суто практична. Під час воєнного стану комендантська година зазвичай діє і в новорічну ніч, а гуляння в громадських місцях не проводять. Коли все свято — вечеря, опівнічні тости, тепла вода — відбувається на території, де ви живете, нікуди не треба йти і ні про що не треба хвилюватися.",
+          ],
+        },
+        {
+          h: "Басейни і чан: як вписати SPA у святковий день",
+          p: [
+            "На хуторі два криті басейни, які працюють щодня з 08:00 до 22:00, а також відкритий басейн, джакузі та чан на дровах. 31 грудня найкраще поплавати вдень або ввечері до вечері: поки хтось нарізає салати, інші гріються у воді, а потім міняються.",
+            "Чан — головна зимова атракція. Гаряча вода, мороз, пара і сніг на смереках довкола — так новорічний вечір запам’ятовується надовго. Про час, коли розтопити чан, домовтеся заздалегідь: у святкові дні охочих багато. А як правильно паритися, ми розповіли в статті «Чан на дровах у Карпатах: що це і як правильно паритися».",
+            "Одна важлива порада: не поєднуйте гарячу воду з алкоголем. Шампанське — за столом, у чані — трав’яний чай.",
+          ],
+        },
+        {
+          h: "Опівніч без феєрверків",
+          p: [
+            "Під час воєнного стану феєрверки, салюти й петарди в Україні заборонені, і за них можна отримати штраф. Торік поліція нагадувала, що хлопавки й бенгальські вогні дозволені, тож для опівнічного настрою візьміть саме їх. Правила на цей Новий рік уточнюйте ближче до свята.",
+            "Без салюту свято нічого не втрачає. Гірлянди на терасі, свічки на столі, зоряне небо над лісом і тиша, якої в місті не почуєш, — цього цілком достатньо. А котеджі мають автономне живлення, тож ялинка світиться незалежно від графіків відключень.",
+          ],
+        },
+        {
+          h: "1 січня: повільний ранок і зимові розваги",
+          p: [
+            "Перший день року — для неспішності. Пізній сніданок із залишками святкового столу, басейн, що відкривається о 08:00, коротка прогулянка засніженим лісом, який починається просто біля хутора.",
+            "Хто хоче активності — у селі працює гірськолижний курорт Мигове з пологими трасами для новачків, лижною школою, тюбінгом і ковзанкою. Орієнтовна ціна денного скіпаса в основний сезон — 950 грн для дорослих і 475 грн для дітей, але актуальні ціни на свята уточнюйте на місці. Детальніше про курорт — у статті «Мигове взимку: лижі, ковзанка і SPA в Буковинських Карпатах».",
+          ],
+        },
+        {
+          h: "Який котедж обрати і скільки ночей",
+          p: [
+            "Котеджі хутора розраховані на 8–14 гостей. Найбільший — котедж 04 на 14 осіб з окремою мангальною зоною, а в котеджах 05 і 06 п’ять спалень, кожна з власним санвузлом, і стіл на 12 гостей у вітальні. Якщо компанія більша, можна забронювати кілька будинків поруч: разом вони вміщують до 72 гостей.",
+            "Друзі, які приїдуть лише на святкову вечерю без ночівлі, можуть приєднатися за окрему плату, у яку входять басейни й рушники. Постільна білизна, рушники й паркінг для тих, хто живе в котеджі, уже входять у вартість.",
+            "Щодо тривалості: одна ніч на Новий рік — це завжди поспіх. Дві-три ночі дають змогу і відсвяткувати, і відпочити після свята.",
+          ],
+        },
+        {
+          h: "Ціни й умови на новорічні дати",
+          p: [
+            "Звичайна вартість — від 14 000 грн за добу за будинок, але на новорічні дати діють окремі ціни та умови бронювання й скасування. Їх ми повідомляємо під час дзвінка, тож уточнюйте перед тим, як збирати компанію.",
+            "Новорічні дати — найпопулярніші за весь рік, і найкращі будинки бронюють ще восени. Якщо ви вже знаєте, з ким їдете, не відкладайте.",
+          ],
+        },
+        {
+          h: "Забронюйте котедж на Новий рік",
+          p: [
+            "Залиште заявку: вкажіть дати, скільки буде дорослих і дітей та чи хочете ви чан у певний вечір. Ми зателефонуємо, підтвердимо бронювання й підкажемо, який будинок найкраще підійде вашій компанії. Ще кілька ідей для свята шукайте в статті «Новий рік у Карпатах 2027: як обрати котедж для компанії».",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A New Year cottage with pools and a hot tub in the Carpathians",
+      excerpt:
+        "A New Year cottage in the Carpathians: a house of your own, warm pools, a wood-fired hot tub and a holiday plan from 31 December to 3 January in Myhove.",
+      body: [
+        {
+          p: [
+            "A New Year cottage in the Carpathians means the celebration is entirely yours: your own house, your own table, your own music and no neighbours behind the wall. Add a warm pool and a wood-fired hot tub next door, and the holidays become a real rest rather than a marathon at the stove. Here is how to plan the 2026/2027 New Year break at a Hutir Solonets cottage in Myhove — from check-in on 31 December to an unhurried 3 January.",
+          ],
+        },
+        {
+          h: "The 2026/2027 New Year calendar",
+          p: [
+            "31 December 2026 falls on a Thursday and 1 January 2027 on a Friday. So the most convenient option is four days: arrive on 31 December and leave on Sunday, 3 January. Those who can come on 30 December to see in the new year without the tiredness of the road.",
+            "Keep in mind that while martial law is in force, public holidays do not automatically become days off, and employers set the work schedule. So it is best to agree on your days off at work in advance.",
+          ],
+        },
+        {
+          h: "Why your own cottage is better for New Year",
+          p: [
+            "New Year is a celebration for your own people. In a separate house you can set one big table, stay up until morning and not adjust to a restaurant’s schedule. At the farmstead the cottage is rented as a whole: inside there is a fully equipped kitchen, a dining table for the whole group, a terrace with a mountain view and a barbecue.",
+            "There is another, purely practical reason. Under martial law the curfew usually applies on New Year’s night as well, and public celebrations are not held. When the whole party — dinner, midnight toasts, warm water — happens where you are staying, there is nowhere to go and nothing to worry about.",
+          ],
+        },
+        {
+          h: "Pools and the hot tub: fitting the spa into the holiday",
+          p: [
+            "The farmstead has two indoor pools open daily from 08:00 to 22:00, plus an outdoor pool, a jacuzzi and a wood-fired hot tub. On 31 December it is best to swim during the day or in the evening before dinner: while some people make the salads, others warm up in the water, and then you swap.",
+            "The hot tub is the main winter attraction. Hot water, frost, steam and snow on the spruces around you — that is how a New Year’s evening stays in your memory. Agree on a time to heat the hot tub in advance, as many guests want it over the holidays. We explained how to enjoy it in “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it”.",
+            "One important tip: don’t combine hot water with alcohol. Champagne belongs at the table; in the hot tub, herbal tea.",
+          ],
+        },
+        {
+          h: "Midnight without fireworks",
+          p: [
+            "Under martial law, fireworks, salutes and firecrackers are banned in Ukraine, and using them can bring a fine. Last year the police reminded people that party poppers and sparklers are allowed, so bring those for the midnight mood. Check this year’s rules closer to the holiday.",
+            "The celebration loses nothing without a salute. Fairy lights on the terrace, candles on the table, a starry sky above the forest and a silence you never hear in the city are more than enough. And the cottages have backup power, so the tree stays lit regardless of outage schedules.",
+          ],
+        },
+        {
+          h: "1 January: a slow morning and winter fun",
+          p: [
+            "The first day of the year is for taking it slow. A late breakfast from the leftovers of the festive table, the pool that opens at 08:00, a short walk through the snowy forest that starts right by the farmstead.",
+            "If you want some activity, the Myhove ski resort in the village has gentle beginner runs, a ski school, tubing and an ice rink. A main-season day pass costs roughly 950 UAH for adults and 475 UAH for children, but check the current holiday prices on site. Read more about the resort in “Myhove in winter: skiing, skating and a spa in the Bukovynian Carpathians”.",
+          ],
+        },
+        {
+          h: "Which cottage to choose and how many nights",
+          p: [
+            "The farmstead’s cottages sleep 8 to 14 guests. The largest is cottage 04 for 14 people with its own barbecue area, while cottages 05 and 06 have five bedrooms, each with its own bathroom, and a table for 12 guests in the living room. If your group is bigger, you can book several houses next to each other: together they sleep up to 72 guests.",
+            "Friends who come only for the festive dinner without staying overnight can join for an extra fee, which includes the pools and towels. For those staying in the cottage, bed linen, towels and parking are already included.",
+            "As for length: one night at New Year always feels rushed. Two or three nights let you both celebrate and rest afterwards.",
+          ],
+        },
+        {
+          h: "Prices and terms for New Year dates",
+          p: [
+            "The regular price is from 14,000 UAH per night for the house, but New Year dates have their own prices and booking and cancellation terms. We share them on the phone, so please check before you gather your group.",
+            "New Year dates are the most popular of the whole year, and the best houses are booked in autumn. If you already know who is coming, don’t wait.",
+          ],
+        },
+        {
+          h: "Book a cottage for New Year",
+          p: [
+            "Send us a request with your dates, the number of adults and children and whether you would like the hot tub on a particular evening. We will call to confirm the booking and suggest the house that suits your group best. For more holiday ideas, see “New Year in the Carpathians 2027: how to choose a cottage for your group”.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "new-year-with-kids-carpathians",
+    date: "2026-11-09",
+    cover: "/assets/pool-indoor-3.jpg",
+    uk: {
+      title: "Новий рік у Карпатах з дітьми: свято в котеджі",
+      excerpt:
+        "Новий рік у Карпатах з дітьми: як підготувати свято в котеджі, що робити, якщо малеча не дочекається опівночі, басейн, ковзанка й тюбінг у Мигове.",
+      body: [
+        {
+          p: [
+            "Новий рік у Карпатах з дітьми — це сніг, у якому можна валятися, ялинка в теплому будинку і відчуття справжньої зимової казки. Але щоб свято вдалося і дітям, і дорослим, його варто трохи продумати: режим, розваги, подарунки й безпеку. Розповідаємо, як зустріти Новий рік родиною в котеджі в Мигове, щоб ніхто не втомився і всі мали що згадати.",
+          ],
+        },
+        {
+          h: "Чому котедж зручніший за готель",
+          p: [
+            "З дітьми важливо, щоб був простір: де побігати, де поспати вдень, де розкласти іграшки й не переживати, що шумите. Котедж на хуторі орендується повністю, тож дитячий сміх о сьомій ранку нікому не заважає.",
+            "У будинку повністю обладнана кухня, тож дитяче меню можна готувати самостійно, без пошуку закладу з відповідними стравами. А котеджі розраховані на 8–14 гостей, тому з вами легко поїдуть бабусі, дідусі чи ще одна родина з дітьми — малечі завжди веселіше разом.",
+            "Ще один плюс — режим. У власному будинку дитина може поспати вдень у тиші, поки дорослі готують вечерю, а ввечері лягти у своє ліжко, не чекаючи, поки закінчиться свято в ресторані. Заїзд у котеджі з 14:00, тож навіть після довгої дороги буде час розкласти речі, погуляти й спокійно повечеряти.",
+          ],
+        },
+        {
+          h: "Опівніч для дітей: два «нові роки»",
+          p: [
+            "Більшість малюків не доживають до півночі, і це нормально. Популярна родинна ідея — влаштувати дитячий Новий рік раніше, наприклад о 20:00 чи 21:00: бій курантів із запису, бенгальські вогні, подарунки під ялинкою і тост дитячим шампанським. Діти щасливі, лягають спати вчасно, а дорослі зустрічають справжню опівніч уже спокійно.",
+            "Для старших дітей, які хочуть дочекатися дванадцятої, підготуйте план на вечір: настільні ігри, квест з пошуком подарунків по будинку, новорічні листівки, які потім можна відкрити через рік. Гарна традиція — записати разом бажання на наступний рік і сховати їх у конверт, щоб прочитати наступного Нового року.",
+          ],
+        },
+        {
+          h: "Безпечне свято без феєрверків",
+          p: [
+            "Під час воєнного стану феєрверки, салюти й петарди в Україні заборонені. Торік поліція нагадувала, що хлопавки й бенгальські вогні дозволені, — і для дітей це навіть краще. Правила на цей Новий рік уточнюйте ближче до свята.",
+            "Бенгальські вогні запалюйте надворі або на терасі, тримайте відро з водою чи сніг поруч, а малюкам давайте їх лише в руках дорослих. І пам’ятайте, що в новорічну ніч, найімовірніше, діятиме комендантська година, тож усе свято краще провести на території котеджу.",
+          ],
+        },
+        {
+          h: "Басейн, коли за вікном мороз",
+          p: [
+            "Теплий басейн узимку — найкраща розвага для дітей. На хуторі два криті басейни працюють щодня з 08:00 до 22:00, а ввечері в них вмикається м’яка підсвітка, яку діти особливо люблять. Поплавати перед святковою вечерею — гарний спосіб витратити енергію, щоб потім малеча спокійно сиділа за столом.",
+            "Дорослі тим часом можуть по черзі вибратися в чан на дровах. Дітям гаряча вода чану підходить лише ненадовго й під наглядом, а краще обійтися теплим басейном.",
+          ],
+        },
+        {
+          h: "Ковзанка, тюбінг і перші лижі",
+          p: [
+            "У селі працює гірськолижний курорт Мигове, і для дітей тут чимало розваг. Пологі траси й лижна школа підходять для перших уроків, тюбінг — найвеселіша зимова пригода для всієї родини, а на ковзанці одночасно можуть кататися до 100 людей. Стан трас і роботу курорту в новорічні дні уточнюйте перед поїздкою.",
+            "Плануйте активності на ранок і обід: узимку темніє рано, а втомлені діти ввечері важче налаштовуються на свято. Більше ідей — у статті «Карпати з дітьми взимку: чим зайнятися в Мигове».",
+          ],
+        },
+        {
+          h: "Ялинка, прикраси й подарунки",
+          p: [
+            "Візьміть із собою кілька улюблених прикрас, гірлянду й подарунки — так дитина відчує, що свято поїхало разом із родиною. Окрема радість — прикрашати будинок разом у перший вечір: паперові сніжинки, гірлянда на терасі, саморобні іграшки з шишок, зібраних у лісі.",
+            "Подарунки зручно сховати заздалегідь, поки діти гуляють чи плавають. А для ранку 1 січня підготуйте маленький сюрприз — щоб перший день року почався з радості, а не з прибирання.",
+          ],
+        },
+        {
+          h: "Що взяти з собою",
+          p: [
+            "Для дітей — непромокальні комбінезони, дві пари рукавиць, теплі шкарпетки на зміну, купальники й шапочки для басейну, улюблені іграшки й нічник, якщо дитина звикла до нього. Постільна білизна та рушники вже входять у вартість, тож везти їх не потрібно. Повний список речей ми зібрали в статті «Що взяти в Карпати взимку: чекліст для сім’ї».",
+            "Котеджі мають автономне живлення, тож світло й тепло не залежать від графіків відключень, а безкоштовний паркінг розташований поруч із будинками — зручно, коли машина повна речей і подарунків.",
+          ],
+        },
+        {
+          h: "Після Нового року — Різдво й Маланка",
+          p: [
+            "Зимові свята на Буковині тривають довго. Різдво тепер святкують 25 грудня, тож можна приїхати на обидва свята одразу. А 13–14 січня в селах і містечках краю, зокрема у Вашківцях, відбувається Маланка — яскраве дійство з ряджених, яке дітям точно запам’ятається. Детальніше — у статті «Різдво та Маланка на Буковині: де побачити свято і що варто знати».",
+          ],
+        },
+        {
+          h: "Забронюйте родинний Новий рік",
+          p: [
+            "Залиште заявку: вкажіть дати, скільки буде дорослих і дітей та їхній вік. Ми зателефонуємо, підтвердимо бронювання й підкажемо, який котедж найзручніший для родини. На новорічні дати діють окремі ціни та умови — уточнюйте їх під час дзвінка, а бронювати радимо якомога раніше.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "New Year in the Carpathians with kids: a cottage celebration",
+      excerpt:
+        "New Year in the Carpathians with kids: preparing the celebration in a cottage, what to do if little ones can’t wait for midnight, pools, skating and tubing.",
+      body: [
+        {
+          p: [
+            "New Year in the Carpathians with kids means snow to roll in, a tree in a warm house and the feeling of a real winter fairy tale. But for the holiday to work for children and adults alike, it is worth planning a little: routine, activities, presents and safety. Here is how to celebrate New Year as a family in a cottage in Myhove so that nobody gets worn out and everyone has something to remember.",
+          ],
+        },
+        {
+          h: "Why a cottage beats a hotel",
+          p: [
+            "With children you need space: somewhere to run around, to nap during the day, to spread out toys without worrying about noise. A cottage at the farmstead is rented as a whole, so children’s laughter at seven in the morning bothers no one.",
+            "The house has a fully equipped kitchen, so you can cook a children’s menu yourselves instead of searching for a place with suitable dishes. And the cottages sleep 8 to 14 guests, so grandparents or another family with children can easily come along — kids always have more fun together.",
+            "Routine is another plus. In your own house a child can nap in quiet while the adults cook dinner, and go to bed in their own bed in the evening without waiting for a restaurant party to end. Check-in is from 14:00, so even after a long drive there is time to unpack, go for a walk and have a calm dinner.",
+          ],
+        },
+        {
+          h: "Midnight for kids: two “New Years”",
+          p: [
+            "Most little ones don’t make it to midnight, and that is fine. A popular family idea is to hold a children’s New Year earlier, say at 20:00 or 21:00: a recorded clock chime, sparklers, presents under the tree and a toast with children’s fizzy drink. The kids are happy and go to bed on time, and the adults greet the real midnight in peace.",
+            "For older children who want to stay up until twelve, prepare a plan for the evening: board games, a treasure hunt for presents around the house, New Year cards to open a year later. A nice tradition is to write down wishes for the coming year together and seal them in an envelope to read next New Year.",
+          ],
+        },
+        {
+          h: "A safe celebration without fireworks",
+          p: [
+            "Under martial law, fireworks, salutes and firecrackers are banned in Ukraine. Last year the police reminded people that party poppers and sparklers are allowed — which is even better for children. Check this year’s rules closer to the holiday.",
+            "Light sparklers outdoors or on the terrace, keep a bucket of water or some snow nearby, and let little ones hold them only together with an adult. Also remember that a curfew will most likely apply on New Year’s night, so it is best to spend the whole celebration at the cottage.",
+          ],
+        },
+        {
+          h: "A pool while it’s freezing outside",
+          p: [
+            "A warm pool in winter is the best fun for children. At the farmstead two indoor pools are open daily from 08:00 to 22:00, and in the evening soft lighting comes on, which children especially love. A swim before the festive dinner is a good way to burn off energy so the little ones sit calmly at the table later.",
+            "Meanwhile the adults can take turns in the wood-fired hot tub. The hot water of the tub suits children only briefly and under supervision; the warm pool is a better choice for them.",
+          ],
+        },
+        {
+          h: "Skating, tubing and first skis",
+          p: [
+            "The Myhove ski resort operates in the village and has plenty for children. Gentle runs and a ski school suit first lessons, tubing is the most fun winter adventure for the whole family, and up to 100 people can skate on the ice rink at once. Check slope conditions and the resort’s holiday hours before the trip.",
+            "Plan activities for the morning and early afternoon: it gets dark early in winter, and tired children find it harder to get into the festive mood in the evening. More ideas are in “The Carpathians with children in winter: what to do in Myhove”.",
+          ],
+        },
+        {
+          h: "The tree, decorations and presents",
+          p: [
+            "Bring a few favourite decorations, fairy lights and the presents — so your child feels the holiday travelled with the family. Decorating the house together on the first evening is a joy of its own: paper snowflakes, lights on the terrace, homemade ornaments from pine cones collected in the forest.",
+            "It is easy to hide presents in advance while the children are out walking or swimming. And for the morning of 1 January, prepare a small surprise so the first day of the year starts with joy rather than tidying up.",
+          ],
+        },
+        {
+          h: "What to bring",
+          p: [
+            "For the children: waterproof snowsuits, two pairs of mittens, spare warm socks, swimwear and swim caps, favourite toys and a night light if your child is used to one. Bed linen and towels are included in the price, so there is no need to bring them. We put together a full list in “What to pack for the Carpathians in winter: a family checklist”.",
+            "The cottages have backup power, so light and heat do not depend on outage schedules, and free parking is right next to the houses — handy when the car is full of bags and presents.",
+          ],
+        },
+        {
+          h: "After New Year: Christmas and Malanka",
+          p: [
+            "Winter holidays in Bukovyna last a long time. Christmas is now celebrated on 25 December, so you can come for both holidays at once. And on 13–14 January, villages and towns in the region, including Vashkivtsi, hold Malanka — a vivid masked celebration children are sure to remember. Read more in “Christmas and Malanka in Bukovyna: where to see the festival and what to know”.",
+          ],
+        },
+        {
+          h: "Book a family New Year",
+          p: [
+            "Send us a request with your dates, the number of adults and children and their ages. We will call to confirm the booking and suggest the most convenient cottage for your family. New Year dates have their own prices and terms — please check them on the call, and we recommend booking as early as possible.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "new-year-menu-cottage",
+    date: "2026-11-09",
+    cover: "/assets/cottage-5-dining-2.jpg",
+    uk: {
+      title: "Новорічне меню для компанії в котеджі: план на 10–14 людей",
+      excerpt:
+        "Новорічне меню для компанії в котеджі в Карпатах: що приготувати на 10–14 людей, як поділити обов’язки й не провести свято біля плити.",
+      body: [
+        {
+          p: [
+            "Новорічне меню для компанії — мабуть, найбільша організаційна задача свята, особливо коли ви зустрічаєте Новий рік у котеджі в горах. Нагодувати 10–14 людей кілька днів поспіль і при цьому самим відпочити цілком реально, якщо все продумати заздалегідь. Ділимося планом, який допоможе провести новорічні дні в Мигове за великим столом, а не біля плити.",
+          ],
+        },
+        {
+          h: "Почніть з кількості прийомів їжі",
+          p: [
+            "Спершу порахуйте не страви, а прийоми їжі. Якщо ви приїжджаєте 31 грудня і їдете 3 січня, це три сніданки, кілька обідів і три вечері, одна з яких — святкова. Святкова вечеря забирає найбільше сил, а решту днів краще зробити максимально простими.",
+            "Правило, яке рятує: одна велика страва на вечерю замість п’яти маленьких. Казан плову, запечене м’ясо з овочами чи велика каструля супу нагодують усіх і не потребують цілого дня на кухні.",
+          ],
+        },
+        {
+          h: "Поділіть обов’язки ще вдома",
+          p: [
+            "Найкраще працює схема «кожна пара чи сім’я відповідає за один прийом їжі». Одні готують святкову вечерю, інші — сніданок 1 січня, треті — мангал. Так ніхто не стоїть біля плити всі вихідні, а меню виходить різноманітним.",
+            "Створіть спільний список у месенджері: хто що везе, хто купує напої, хто відповідає за десерт і ялинкові прикраси. Це займе десять хвилин, але позбавить від трьох однакових салатів і відсутності хліба.",
+          ],
+        },
+        {
+          h: "Святкова вечеря: що встигнути заздалегідь",
+          p: [
+            "Усе, що можна приготувати вдома, краще приготувати вдома: відварити овочі для салатів, замаринувати м’ясо, спекти торт чи печиво, нарізати сир і ковбаси та скласти в контейнери. На місці залишиться лише заправити, запекти й красиво подати.",
+            "Для святкового столу на 12 людей зазвичай вистачає двох-трьох салатів, однієї гарячої страви, нарізок, закусок і десерту. Не варто готувати «як удома на тиждень»: зранку 1 січня все одно залишиться багато.",
+            "У котеджах хутора повністю обладнана кухня, а в котеджах 05 і 06 у вітальні стоїть стіл на 12 гостей — компанія вміщується за одним столом.",
+          ],
+        },
+        {
+          h: "Мангал узимку: чому це гарна ідея",
+          p: [
+            "Шашлик на морозі — окреме карпатське задоволення. На терасі котеджу є мангал, а в котеджі 04 — ще й окрема мангальна зона. Узимку смажити м’ясо навіть приємніше, ніж улітку: тепло вогню, сніг довкола і чай у термосі.",
+            "Кілька практичних порад: візьміть із собою вугілля й розпалювач, бо в новорічні дні магазини можуть працювати скорочено; подбайте про теплі рукавиці для того, хто біля мангалу; маринуйте м’ясо ще вдома в щільних контейнерах.",
+          ],
+        },
+        {
+          h: "Карпатські акценти на столі",
+          p: [
+            "Додайте до меню щось місцеве: банош із бринзою і шкварками, гриби, домашні сири чи карпатський мед. Частину продуктів можна купити дорогою, у Вижниці чи Чернівцях — заодно це гарний привід зупинитися й прогулятися.",
+            "Великі закупи краще зробити до приїзду: ближче до 31 грудня в магазинах черги, а 1 січня частина з них може не працювати.",
+          ],
+        },
+        {
+          h: "Сніданок 1 січня та легкі дні",
+          p: [
+            "Найпростіший сніданок після святкової ночі — залишки зі столу, яєчня на всіх і велика турка кави. Якщо хочеться чогось особливого, заздалегідь замісіть тісто на млинці або сирники: зранку залишиться тільки посмажити.",
+            "Решту днів тримайтеся простого меню: каша чи гранола на сніданок, суп на обід, мангал або паста на вечерю. Між прийомами їжі — басейн: на хуторі два криті басейни працюють щодня з 08:00 до 22:00, а ввечері можна розтопити чан на дровах. Тільки не поєднуйте гарячу воду з алкоголем — для чану візьміть трав’яний чай.",
+          ],
+        },
+        {
+          h: "Напої та дитяче меню",
+          p: [
+            "Напої — те, що найчастіше закінчується першим. Розраховуйте воду й соки з запасом, особливо якщо в компанії діти, і не забудьте про гарячі напої: глінтвейн, какао й трав’яний чай після прогулянки на морозі смакують найкраще. Спеції для глінтвейну й апельсини зручно привезти з дому.",
+            "Якщо з вами діти, приготуйте для них окремі прості страви, які вони точно їдять: макарони, котлети, млинці. Святковий стіл для дорослих часто буває надто гострим чи жирним для малечі, а голодна дитина — найшвидший спосіб зіпсувати настрій усім. Дитяче шампанське й фрукти на опівнічний тост — маленька деталь, яку діти пам’ятають.",
+          ],
+        },
+        {
+          h: "Гості на вечерю і прибирання",
+          p: [
+            "Якщо до вас на святкову вечерю приїдуть друзі без ночівлі, вони можуть приєднатися за окрему плату, у яку входять басейни й рушники. Врахуйте їх у меню й кількості посуду.",
+            "Прибирання після свята — ще один привід для графіка. Домовтеся, що посуд миє та сім’я, яка не готувала, і заведіть кілька великих пакетів для сміття вже в перший вечір. Тоді 1 січня почнеться з кави на терасі, а не з гори тарілок.",
+          ],
+        },
+        {
+          h: "Забронюйте котедж на новорічні дні",
+          p: [
+            "Залиште заявку: вкажіть дати, кількість гостей і побажання щодо чану. Ми зателефонуємо, підтвердимо бронювання й підкажемо, який котедж найкраще підійде для великої компанії. На новорічні дати діють окремі ціни та умови — уточнюйте їх під час дзвінка. Ще більше порад для великої групи — у статті «Котедж у Карпатах для великої компанії на 10–14 осіб».",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A New Year menu for a group in a cottage: a plan for 10–14",
+      excerpt:
+        "A New Year menu for a group in a Carpathian cottage: what to cook for 10–14 people, how to share the work and avoid a holiday at the stove.",
+      body: [
+        {
+          p: [
+            "A New Year menu for a group is probably the biggest organisational task of the holiday, especially when you celebrate in a mountain cottage. Feeding 10 to 14 people for several days in a row while still getting some rest yourselves is entirely possible if you plan ahead. Here is a plan to help you spend the New Year days in Myhove around a big table rather than at the stove.",
+          ],
+        },
+        {
+          h: "Start by counting the meals",
+          p: [
+            "First count meals, not dishes. If you arrive on 31 December and leave on 3 January, that is three breakfasts, a few lunches and three dinners, one of them festive. The festive dinner takes the most effort, so keep the other days as simple as possible.",
+            "A rule that saves the day: one big dish for dinner instead of five small ones. A pot of pilaf, roast meat with vegetables or a big pan of soup will feed everyone and won’t take the whole day in the kitchen.",
+          ],
+        },
+        {
+          h: "Share out the work before you leave",
+          p: [
+            "The scheme that works best is “each couple or family is responsible for one meal”. One cooks the festive dinner, another does breakfast on 1 January, a third handles the barbecue. That way nobody stands at the stove all weekend, and the menu stays varied.",
+            "Create a shared list in your messenger: who brings what, who buys drinks, who is in charge of dessert and tree decorations. It takes ten minutes but saves you from three identical salads and no bread.",
+          ],
+        },
+        {
+          h: "The festive dinner: what to do in advance",
+          p: [
+            "Whatever can be made at home is best made at home: boil vegetables for salads, marinate the meat, bake a cake or cookies, slice cheese and cured meats and pack everything into containers. On site you only need to dress, bake and serve nicely.",
+            "For a festive table of 12, two or three salads, one hot dish, platters, snacks and a dessert are usually enough. There is no need to cook as if for a week at home: there will be plenty left on the morning of 1 January anyway.",
+            "The farmstead’s cottages have fully equipped kitchens, and cottages 05 and 06 have a table for 12 guests in the living room, so the whole group fits around one table.",
+          ],
+        },
+        {
+          h: "A winter barbecue: why it’s a good idea",
+          p: [
+            "Grilled meat in the frost is a special Carpathian pleasure. The cottage terrace has a barbecue, and cottage 04 also has a separate barbecue area. In winter, grilling is even nicer than in summer: the warmth of the fire, snow all around and tea in a thermos.",
+            "A few practical tips: bring charcoal and firelighters, as shops may have shorter hours over the holidays; give whoever is at the grill warm gloves; marinate the meat at home in sealed containers.",
+          ],
+        },
+        {
+          h: "Carpathian touches on the table",
+          p: [
+            "Add something local to the menu: banosh with bryndza cheese and cracklings, mushrooms, local cheeses or Carpathian honey. You can buy some of it on the way, in Vyzhnytsia or Chernivtsi — a good excuse to stop and stretch your legs.",
+            "Do the big shop before you arrive: close to 31 December the queues are long, and on 1 January some shops may be closed.",
+          ],
+        },
+        {
+          h: "Breakfast on 1 January and easy days",
+          p: [
+            "The simplest breakfast after the festive night is leftovers from the table, scrambled eggs for everyone and a big pot of coffee. If you want something special, mix pancake or syrnyky batter in advance: in the morning you only need to fry them.",
+            "For the other days stick to a simple menu: porridge or granola for breakfast, soup for lunch, barbecue or pasta for dinner. Between meals, the pool: at the farmstead two indoor pools are open daily from 08:00 to 22:00, and in the evening you can heat the wood-fired hot tub. Just don’t combine hot water with alcohol — bring herbal tea for the hot tub.",
+          ],
+        },
+        {
+          h: "Drinks and a children’s menu",
+          p: [
+            "Drinks are what usually runs out first. Plan water and juice with a margin, especially if there are children in the group, and don’t forget hot drinks: mulled wine, cocoa and herbal tea taste best after a walk in the frost. Mulled-wine spices and oranges are easy to bring from home.",
+            "If children are coming, prepare simple separate dishes you know they eat: pasta, meatballs, pancakes. A festive table for adults is often too spicy or rich for little ones, and a hungry child is the quickest way to spoil everyone’s mood. Children’s fizzy drink and fruit for the midnight toast is a small detail kids remember.",
+          ],
+        },
+        {
+          h: "Dinner guests and tidying up",
+          p: [
+            "If friends join you for the festive dinner without staying overnight, they can come for an extra fee, which includes the pools and towels. Count them in the menu and the number of plates.",
+            "Tidying up after the party is another reason for a rota. Agree that the family that didn’t cook does the dishes, and put out a few large rubbish bags on the first evening. Then 1 January starts with coffee on the terrace, not a mountain of plates.",
+          ],
+        },
+        {
+          h: "Book a cottage for the New Year holidays",
+          p: [
+            "Send us a request with your dates, the number of guests and any wishes about the hot tub. We will call to confirm the booking and suggest the cottage that best suits a large group. New Year dates have their own prices and terms — please check them on the call. For more tips for big groups, see “A Carpathian cottage for a large group of 10–14 people”.",
+          ],
+        },
+      ],
+    },
+  },
+  {
     slug: "valentines-day-carpathians",
     date: "2026-11-09",
     cover: "/assets/spa-jacuzzi-1.jpg",
