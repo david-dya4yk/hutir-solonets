@@ -19,6 +19,475 @@ export type BlogPost = {
 
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
+    slug: "valentines-day-carpathians",
+    date: "2026-11-09",
+    cover: "/assets/spa-jacuzzi-1.jpg",
+    uk: {
+      title: "Романтичний відпочинок у Карпатах на День закоханих",
+      excerpt:
+        "Романтичний відпочинок у Карпатах на 14 лютого: чан на дровах під зорями, теплий басейн, зимовий ліс і вечеря вдвох. План вихідних у Мигове.",
+      body: [
+        {
+          p: [
+            "Романтичний відпочинок у Карпатах — мабуть, найкращий подарунок на День закоханих: без поспіху, без натовпу й без нескінченних справ. У 2027 році 14 лютого припадає на неділю, тож можна взяти цілі вихідні з 12 або 13 лютого і поїхати в гори вдвох. Розповідаємо, як спланувати такі дні в Мигове на Буковині, що робити й про що подбати заздалегідь, щоб замість метушні були тиша, тепло й час одне для одного.",
+          ],
+        },
+        {
+          h: "Чому саме Карпати в лютому",
+          p: [
+            "Лютий у горах — це сніг на смереках, рання темрява і довгі вечори, які самі просять камін, ковдру й теплу воду. Туристичний пік новорічних свят уже минув, тож навіть на вихідних спокійніше, ніж у січні. Саме в таку пору найлегше вимкнути «міський режим»: дні короткі, тож планів менше, а часу для розмов більше.",
+            "Мигове лежить у Буковинських Карпатах, приблизно за 60 км від Чернівців. Тут немає шуму великого курорту, зате є все, що потрібно для романтичної поїздки: ліс, гори, невеликий гірськолижний курорт у селі й SPA просто біля будинку. Чим Мигове відрізняється від великих курортів, ми детально розповіли в статті «Мигове чи Буковель: де краще відпочити в Карпатах».",
+          ],
+        },
+        {
+          h: "Чан на дровах під зорями",
+          p: [
+            "Головний романтичний момент таких вихідних — вечір у чані. Гаряча вода, морозне повітря, пара над поверхнею і зорі над лісом: такі хвилини запам’ятовуються надовго. На «Хуторі Солонець» є чан на дровах — домовтеся про нього заздалегідь, щоб вода була готова саме тоді, коли вам зручно.",
+            "Кілька порад: не беріть із собою в чан алкоголь, краще трав’яний чай у термосі; робіть перерви кожні 15–20 хвилин; підготуйте теплі халати й капці, щоб дійти до будинку без поспіху. Детальніше про те, як правильно паритися, читайте в статті «Чан на дровах у Карпатах: що це і як правильно паритися».",
+          ],
+        },
+        {
+          h: "Теплий басейн і джакузі вдень",
+          p: [
+            "Поки чан чекає на вечір, удень можна поплавати. На хуторі два криті басейни, які працюють щодня з 08:00 до 22:00, а також джакузі. Уранці, коли більшість гостей ще снідає, у басейні особливо тихо — гарний час, щоб просто полежати на воді й дивитися на засніжений ліс.",
+            "Якщо погода зіпсується, план від цього не постраждає: SPA працює за будь-якої погоди. Про це ми писали окремо в статті «СПА в будь-яку погоду: басейни, джакузі та чан на дровах».",
+          ],
+        },
+        {
+          h: "Прогулянка засніженим лісом",
+          p: [
+            "Найпростіша романтика — прогулянка вдвох. Ліс починається одразу біля хутора, тож не потрібно нікуди їхати. Узимку обирайте короткі маршрути на годину-дві, виходьте після сніданку й повертайтеся засвітла: у лютому темніє рано.",
+            "Для прогулянки знадобляться непромокальне взуття з протектором, термос і щось перекусити. Кілька коротких маршрутів біля села ми зібрали в статті «Маршрути біля Мигового: короткі походи, нацпарк і водоспади».",
+          ],
+        },
+        {
+          h: "Лижі, ковзанка чи нічого не робити",
+          p: [
+            "Якщо хочеться трохи активності, узимку в селі працює гірськолижний курорт Мигове: траси для новачків, лижна школа, вечірнє катання й ковзанка. Покататися на ковзанах удвох увечері, коли вмикаються ліхтарі, — дуже кінематографічна ідея для 14 лютого.",
+            "А можна й нічого не планувати. Дозвольте собі прокинутися без будильника, довго снідати й не дивитися на годинник. Для багатьох пар саме цього найбільше не вистачає в місті.",
+          ],
+        },
+        {
+          h: "Вечеря вдвох у котеджі",
+          p: [
+            "У кожному котеджі хутора повністю обладнана кухня, обідній стіл і тераса з видом на гори, тож романтичну вечерю можна приготувати самостійно. Візьміть із собою улюблене вино, свічки, сир і фрукти, а продукти для вечері купіть дорогою — у Вижниці чи Чернівцях.",
+            "Ще одна ідея — мангал. Стейк чи овочі на вугіллі під легким снігом смакують інакше, ніж удома. А після вечері — знову тепло будинку: котеджі мають автономне живлення, тож світло й тепло не залежать від графіків відключень.",
+            "Щоб не провести вечір біля плити, обирайте прості страви: паста з грибами, запечені овочі, сирна тарілка й фондю, глінтвейн чи гарячий шоколад на десерт. Усе, що можна, підготуйте ще вдома — нарізати, замаринувати, скласти в контейнери. Тоді на кухні ви будете разом, а не по черзі.",
+          ],
+        },
+        {
+          h: "Що взяти з собою",
+          p: [
+            "Романтичні вихідні тримаються на дрібницях, тож їх варто покласти в сумку заздалегідь. Купальники для басейну й чану, теплі шкарпетки, шапки й рукавиці для вечора надворі, зручні светри для будинку. Для настрою — свічки, плейлист, улюблена настільна гра чи книжка, яку давно хотіли почитати вголос.",
+            "Якщо готуєте сюрприз, продумайте його наперед: маленький подарунок під подушкою, листівка, написана від руки, сніданок, приготований поки інша половинка ще спить. Такі речі не потребують бюджету, але саме їх згадують через роки.",
+            "І ще одне: залиште ноутбук удома, а телефон хоча б на вечір покладіть подалі. Карпати найкраще працюють тоді, коли їм не заважають сповіщення.",
+          ],
+        },
+        {
+          h: "Удвох чи з друзями",
+          p: [
+            "Важливо знати: котеджі на хуторі орендуються повністю, і вони розраховані на компанії — від 8 до 14 гостей. Для пари це означає багато простору й повну приватність: ніяких сусідів за стіною. Орієнтовна вартість — від 14 000 грн за добу за будинок; ціни й умови на святкові дати уточнюйте під час дзвінка.",
+            "Якщо хочеться розділити вихідні з близькими, поїдьте кількома парами. Кожна має свою спальню, вечеряти можна разом, а в чані й басейні вистачить місця всім. Такий формат часто виходить навіть затишнішим, ніж поїздка вдвох.",
+          ],
+        },
+        {
+          h: "Як забронювати вихідні на 14 лютого",
+          p: [
+            "Вихідні навколо Дня закоханих бронюють заздалегідь, тож краще не відкладати. Залиште заявку з датами, кількістю гостей і побажаннями щодо чану чи джакузі — ми зателефонуємо, підтвердимо дати й підкажемо, який будинок підійде найкраще. Якщо хочете зробити сюрприз, запитайте про подарунковий сертифікат: умови уточнимо під час дзвінка.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A romantic Valentine’s Day getaway in the Carpathians",
+      excerpt:
+        "A romantic getaway in the Carpathians for 14 February: a wood-fired hot tub under the stars, warm pools, a snowy forest and dinner for two in Myhove.",
+      body: [
+        {
+          p: [
+            "A romantic getaway in the Carpathians is perhaps the best Valentine’s Day gift: no rush, no crowds and no endless to-do lists. In 2027, 14 February falls on a Sunday, so you can take the whole weekend from 12 or 13 February and head to the mountains together. Here is how to plan those days in Myhove in Bukovyna, what to do and what to arrange in advance, so that instead of fuss you get quiet, warmth and time for each other.",
+          ],
+        },
+        {
+          h: "Why the Carpathians in February",
+          p: [
+            "February in the mountains means snow on the spruces, early dusk and long evenings that call for a blanket and warm water. The New Year peak is over, so even at weekends it is calmer than in January. This is exactly when it is easiest to switch off “city mode”: the days are short, so there are fewer plans and more time to talk.",
+            "Myhove sits in the Bukovynian Carpathians, about 60 km from Chernivtsi. There is none of the noise of a big resort, yet everything you need for a romantic trip is here: forest, mountains, a small ski resort in the village and a spa right next to your house. We compared Myhove with the big resorts in our article “Myhove or Bukovel: where to holiday in the Carpathians”.",
+          ],
+        },
+        {
+          h: "A wood-fired hot tub under the stars",
+          p: [
+            "The most romantic moment of the weekend is an evening in the hot tub. Hot water, frosty air, steam rising and stars above the forest — moments like these stay with you for a long time. Hutir Solonets has a wood-fired hot tub; arrange it in advance so the water is ready exactly when you want it.",
+            "A few tips: skip the alcohol in the tub and bring herbal tea in a thermos instead; take a break every 15–20 minutes; have warm robes and slippers ready so you can walk back to the house slowly. Read more in our article “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it”.",
+          ],
+        },
+        {
+          h: "Warm pools and a jacuzzi by day",
+          p: [
+            "While the hot tub waits for the evening, you can swim during the day. The farmstead has two indoor pools open daily from 08:00 to 22:00, plus a jacuzzi. In the morning, when most guests are still at breakfast, the pool is especially quiet — a lovely time to simply float and look out at the snowy forest.",
+            "If the weather turns, the plan still works: the spa is open whatever the weather. We wrote about that in “Spa in any weather: pools, jacuzzi and a wood-fired hot tub”.",
+          ],
+        },
+        {
+          h: "A walk through the snowy forest",
+          p: [
+            "The simplest romance is a walk for two. The forest begins right by the farmstead, so you don’t need to drive anywhere. In winter, choose short routes of an hour or two, set off after breakfast and come back while it is still light: it gets dark early in February.",
+            "You will need waterproof shoes with a good tread, a thermos and a snack. We collected several short trails near the village in “Trails near Myhove: short hikes, a national park and waterfalls”.",
+          ],
+        },
+        {
+          h: "Skiing, skating or doing nothing",
+          p: [
+            "If you want a little activity, the Myhove ski resort operates in the village in winter, with beginner runs, a ski school, evening skiing and an ice rink. Skating together in the evening, when the lights come on, is a very cinematic idea for 14 February.",
+            "Or plan nothing at all. Let yourselves wake up without an alarm, linger over breakfast and ignore the clock. For many couples this is exactly what city life is missing.",
+          ],
+        },
+        {
+          h: "Dinner for two in the cottage",
+          p: [
+            "Every cottage at the farmstead has a fully equipped kitchen, a dining table and a terrace with a mountain view, so you can cook a romantic dinner yourselves. Bring your favourite wine, candles, cheese and fruit, and pick up groceries on the way — in Vyzhnytsia or Chernivtsi.",
+            "Another idea is the barbecue. Steak or vegetables cooked over charcoal in light snow taste different from those at home. After dinner, it’s back to the warmth of the house: the cottages have backup power, so light and heat do not depend on outage schedules.",
+            "To avoid spending the evening at the stove, choose simple dishes: pasta with mushrooms, roasted vegetables, a cheese board or fondue, mulled wine or hot chocolate for dessert. Prepare whatever you can at home — chop, marinate and pack into containers. Then you will be in the kitchen together rather than taking turns.",
+          ],
+        },
+        {
+          h: "What to bring",
+          p: [
+            "A romantic weekend rests on little things, so pack them in advance. Swimwear for the pool and hot tub, warm socks, hats and gloves for the evening outdoors, comfy jumpers for the house. For the mood: candles, a playlist, a favourite board game or a book you have long wanted to read aloud.",
+            "If you are planning a surprise, think it through ahead of time: a small gift under the pillow, a handwritten card, breakfast made while your partner is still asleep. None of this needs a budget, yet these are the things people remember years later.",
+            "And one more thing: leave the laptop at home and put your phone away, at least for the evening. The Carpathians work best when notifications don’t get in the way.",
+          ],
+        },
+        {
+          h: "Just the two of you or with friends",
+          p: [
+            "It is worth knowing that the farmstead’s cottages are rented as a whole and are designed for groups of 8 to 14 guests. For a couple, that means plenty of space and complete privacy, with no neighbours behind the wall. The approximate price is from 14,000 UAH per night for the house; please check prices and terms for holiday dates when we call.",
+            "If you’d like to share the weekend with close friends, come as several couples. Each has its own bedroom, dinners can be shared, and there is room for everyone in the hot tub and pool. This format often turns out even cosier than a trip for two.",
+          ],
+        },
+        {
+          h: "How to book your Valentine’s weekend",
+          p: [
+            "Weekends around Valentine’s Day are booked early, so it is best not to wait. Send a request with your dates, the number of guests and any wishes about the hot tub or jacuzzi — we will call to confirm the dates and suggest the best house. If you want to make it a surprise, ask about a gift certificate: we will go over the terms on the call.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "march-8-carpathians",
+    date: "2026-11-09",
+    cover: "/assets/cottage-7-living.jpg",
+    uk: {
+      title: "8 Березня в Карпатах: відпочинок у подарунок",
+      excerpt:
+        "Як подарувати на 8 Березня відпочинок у Карпатах: вихідні з басейном і чаном у Мигове для мами, коханої чи подруг. Дати 2027 року й практичні поради.",
+      body: [
+        {
+          p: [
+            "8 Березня в Карпатах — подарунок, який не припаде пилом на полиці. Замість чергового букета можна подарувати кілька днів тиші: теплий басейн, чан на дровах, прогулянки лісом і час, коли нікуди не треба поспішати. Розповідаємо, як організувати відпочинок у подарунок у Мигове на Буковині — для коханої, мами чи компанії подруг, — і про що подумати заздалегідь.",
+          ],
+        },
+        {
+          h: "Коли їхати: дати 2027 року",
+          p: [
+            "У 2027 році 8 березня припадає на понеділок. Найзручніше планувати поїздку на вихідні 6–7 березня з виїздом у неділю або, якщо вдасться взяти вихідний, — до понеділка включно.",
+            "Зважайте: поки діє воєнний стан, святкові дні автоматично не стають вихідними, і графік роботи визначає роботодавець. Тож чи буде 8 березня 2027 року вихідним саме для вас, краще уточнити заздалегідь, а поїздку планувати на вихідні.",
+            "Ще одна порада щодо дат: якщо є можливість, приїжджайте в п’ятницю ввечері або в суботу зранку. Заїзд у котеджі з 14:00, тож навіть після дороги ви встигнете поплавати в басейні до вечері, а повноцінний день у горах залишиться на неділю.",
+          ],
+        },
+        {
+          h: "Кому підійде такий подарунок",
+          p: [
+            "Коханій — як романтичні вихідні вдвох або разом із друзями. Мамі — як нагода нарешті відпочити, поки хтось інший готує сніданок. Подругам — як «дівочий» виїзд: розмови до ночі, SPA вдень і жодних побутових справ.",
+            "Котеджі на хуторі орендуються повністю й розраховані на 8–14 гостей, тому формат «кілька подруг чи вся родина в одному будинку» тут особливо вдалий. У кожного своя спальня, а вечеряти можна за одним великим столом.",
+          ],
+        },
+        {
+          h: "Що чекає на початку березня в горах",
+          p: [
+            "На початку березня в Карпатах ще зима: сніг у лісі, морозні ранки й перші сонячні дні. Гірськолижний курорт Мигове зазвичай працює з грудня до березня, тож якщо сніг тримається, можна встигнути покататися на пологих трасах, сходити на ковзанку чи спуститися на тюбінгу. Стан трас перед поїздкою уточнюйте.",
+            "Якщо снігу вже мало, нічого страшного: березень — гарний час для неспішних прогулянок лісом і теплих вечорів на терасі. А для поїздки знадобиться той самий одяг, що й узимку, — список речей ми зібрали в статті «Що взяти в Карпати взимку: чекліст для сім’ї».",
+          ],
+        },
+        {
+          h: "SPA-день без поспіху",
+          p: [
+            "Головне в такому подарунку — дозволити собі нічого не робити. На хуторі два криті басейни, що працюють щодня з 08:00 до 22:00, відкритий басейн, джакузі та чан на дровах. Ранок у басейні, обід на терасі, вечір у гарячому чані під зорями — ось і весь розклад.",
+            "Чан варто замовити заздалегідь, щоб вода була готова на зручний час. Якщо ви ще не пробували, почитайте нашу статтю «Чан на дровах у Карпатах: що це і як правильно паритися» — там є прості поради для першого разу.",
+          ],
+        },
+        {
+          h: "Святковий сніданок і вечеря",
+          p: [
+            "У котеджах повністю обладнана кухня й мангал, тож святкове меню можна продумати самостійно. Гарна ідея для 8 Березня — сніданок, який готує не та, кого вітають: млинці, ягоди, кава й квіти на столі. Візьміть із собою скатертину чи свічки, і звичайний ранок стане святковим.",
+            "Увечері — велика спільна вечеря. Продукти краще купити дорогою, у Вижниці чи Чернівцях, а розподілити, хто що готує, ще вдома. Так святкова вечеря буде радістю, а не роботою.",
+            "Квіти теж можна привезти з собою або купити дорогою — живий букет на дерев’яному столі серед гір виглядає зовсім інакше, ніж у міській квартирі. А для вечора біля чану чи на терасі прихопіть теплі пледи: на початку березня вечори в горах ще морозні.",
+          ],
+        },
+        {
+          h: "Як оформити сюрприз",
+          p: [
+            "Якщо хочете, щоб поїздка стала сюрпризом, заздалегідь домовтеся про дати з тими, кого везете, — хоча б натякніть, щоб вихідні були вільні. Ідея на згадку: роздрукуйте «запрошення» з датами й фото будинку і вручіть його 8 березня або раніше.",
+            "Ще один варіант — подарунковий сертифікат. Тоді отримувачка сама обере зручні дати. Умови сертифікатів уточнюйте під час дзвінка.",
+          ],
+        },
+        {
+          h: "Якщо їдете з дітьми або батьками",
+          p: [
+            "8 Березня — гарний привід для поїздки кількох поколінь. Діти можуть заздалегідь підготувати листівки чи невеликі подарунки й вручити їх за святковим сніданком, а тато — взяти на себе кухню на всі вихідні. А теплі басейни з м’якою вечірньою підсвіткою подобаються дітям не менше, ніж дорослим.",
+            "Якщо з вами старші батьки, продумайте спокійний ритм: менше переїздів, більше часу в теплі, коротка прогулянка лісом замість довгого маршруту. Великий будинок, де в кожного своя спальня, дозволяє всім відпочивати у власному темпі й не заважати одне одному.",
+            "Ідеї для дітей узимку ми зібрали окремо в статті «Карпати з дітьми взимку: чим зайнятися в Мигове».",
+          ],
+        },
+        {
+          h: "Практичні дрібниці",
+          p: [
+            "Заїзд у котеджі з 14:00, виїзд до 11:00. Постільна білизна, рушники й паркінг уже входять у вартість, тож везти потрібно лише особисті речі, купальники та теплий одяг. Котеджі мають автономне живлення, тож світло й тепло не залежать від графіків відключень.",
+            "Орієнтовна вартість — від 14 000 грн за добу за будинок. Ціни на березневі святкові вихідні можуть відрізнятися, тому уточнюйте їх під час бронювання. Як дістатися до Мигового з різних міст, ми розповіли в статті «Як дістатися до Мигового: з Чернівців, Києва, Львова та Івано-Франківська».",
+          ],
+        },
+        {
+          h: "Забронюйте відпочинок у подарунок",
+          p: [
+            "Залиште заявку: вкажіть дати, скільки буде гостей і чи хочете ви чан або джакузі у певний час. Ми зателефонуємо, підтвердимо бронювання й підкажемо, який котедж підійде для вашої компанії. Найкращий подарунок на 8 Березня — той, після якого хочеться повернутися.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "8 March in the Carpathians: a getaway as a gift",
+      excerpt:
+        "How to give a Carpathian getaway for 8 March: a weekend with pools and a wood-fired hot tub in Myhove for your partner, mum or friends. 2027 dates and tips.",
+      body: [
+        {
+          p: [
+            "Celebrating 8 March in the Carpathians is a gift that will never gather dust on a shelf. Instead of another bouquet, you can give a few days of quiet: a warm pool, a wood-fired hot tub, forest walks and time with nowhere to rush. Here is how to arrange a getaway as a gift in Myhove in Bukovyna — for your partner, your mum or a group of friends — and what to think about in advance.",
+          ],
+        },
+        {
+          h: "When to go: the 2027 dates",
+          p: [
+            "In 2027, 8 March falls on a Monday. The easiest plan is the weekend of 6–7 March, leaving on Sunday, or staying until Monday if you can take the day off.",
+            "Keep in mind that while martial law is in force in Ukraine, public holidays do not automatically become days off, and employers set the work schedule. So check in advance whether 8 March 2027 will be a day off for you, and plan the trip around the weekend.",
+            "One more tip on dates: if you can, arrive on Friday evening or Saturday morning. Check-in is from 14:00, so even after the drive you will have time for a swim before dinner, and Sunday stays free for a full day in the mountains.",
+          ],
+        },
+        {
+          h: "Who this gift suits",
+          p: [
+            "Your partner — as a romantic weekend for two or together with friends. Your mum — as a chance to finally rest while someone else makes breakfast. Your friends — as a girls’ trip: talking late into the night, spa time by day and no chores at all.",
+            "The farmstead’s cottages are rented as a whole and designed for 8 to 14 guests, so a group of friends or the whole family in one house works especially well here. Everyone has a bedroom, and dinner can be shared at one big table.",
+          ],
+        },
+        {
+          h: "What early March is like in the mountains",
+          p: [
+            "In early March it is still winter in the Carpathians: snow in the forest, frosty mornings and the first sunny days. The Myhove ski resort usually runs from December to March, so if the snow holds you can still enjoy the gentle runs, the ice rink or a tubing ride. Check the slope conditions before you go.",
+            "If there is little snow left, that’s fine too: March is a good time for unhurried forest walks and warm evenings on the terrace. You will need the same clothes as in winter — see our list in “What to pack for the Carpathians in winter: a family checklist”.",
+          ],
+        },
+        {
+          h: "A spa day without hurry",
+          p: [
+            "The heart of this gift is permission to do nothing. The farmstead has two indoor pools open daily from 08:00 to 22:00, an outdoor pool, a jacuzzi and a wood-fired hot tub. A morning swim, lunch on the terrace, an evening in the hot tub under the stars — that’s the whole schedule.",
+            "Book the hot tub in advance so the water is ready at the time you want. If you have never tried one, read our article “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it” for simple first-time tips.",
+          ],
+        },
+        {
+          h: "A festive breakfast and dinner",
+          p: [
+            "The cottages have a fully equipped kitchen and a barbecue, so you can plan a festive menu yourselves. A lovely idea for 8 March is a breakfast cooked by someone other than the person being celebrated: pancakes, berries, coffee and flowers on the table. Bring a tablecloth or candles, and an ordinary morning becomes a celebration.",
+            "In the evening, a big shared dinner. Buy groceries on the way, in Vyzhnytsia or Chernivtsi, and agree on who cooks what before you leave home. That way the festive dinner is a pleasure, not a job.",
+            "You can bring flowers with you or buy them on the way — a fresh bouquet on a wooden table in the mountains looks quite different from one in a city flat. And for evenings by the hot tub or on the terrace, pack warm blankets: in early March, mountain evenings are still frosty.",
+          ],
+        },
+        {
+          h: "How to make it a surprise",
+          p: [
+            "If you want the trip to be a surprise, agree on the dates with the people you are taking — at least drop a hint so the weekend stays free. A nice keepsake: print an “invitation” with the dates and a photo of the house and hand it over on 8 March or earlier.",
+            "Another option is a gift certificate, so the recipient can choose convenient dates herself. Please check the certificate terms when we call.",
+          ],
+        },
+        {
+          h: "If you are bringing children or parents",
+          p: [
+            "8 March is a good reason for a trip with several generations. Children can prepare cards or small gifts in advance and hand them over at the festive breakfast, while dad takes over the kitchen for the whole weekend. And the warm pools with soft evening lighting are as popular with children as with adults.",
+            "If older parents are coming, plan a calm rhythm: fewer drives, more time in the warmth, a short forest walk instead of a long route. A large house where everyone has a bedroom lets each person rest at their own pace without disturbing the others.",
+            "We collected ideas for children in winter in “The Carpathians with children in winter: what to do in Myhove”.",
+          ],
+        },
+        {
+          h: "Practical details",
+          p: [
+            "Check-in at the cottages is from 14:00, check-out until 11:00. Bed linen, towels and parking are included in the price, so you only need personal items, swimwear and warm clothes. The cottages have backup power, so light and heat do not depend on outage schedules.",
+            "The approximate price is from 14,000 UAH per night for the house. Prices for the March holiday weekend may differ, so please check them when booking. We explained how to reach Myhove in “How to get to Myhove from Chernivtsi, Kyiv, Lviv and Ivano-Frankivsk”.",
+          ],
+        },
+        {
+          h: "Book a getaway as a gift",
+          p: [
+            "Send us a request with your dates, the number of guests and whether you would like the hot tub or jacuzzi at a particular time. We will call to confirm the booking and suggest the right cottage for your group. The best gift for 8 March is one that makes you want to come back.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "easter-carpathians",
+    date: "2026-11-09",
+    cover: "/assets/home-intro-kitchen.jpg",
+    uk: {
+      title: "Великдень у Карпатах 2027: буковинські традиції",
+      excerpt:
+        "Великдень у Карпатах 2027: коли святкуємо, що кладуть у великодній кошик на Буковині, як писати буковинську писанку й де зустріти свято родиною.",
+      body: [
+        {
+          p: [
+            "Великдень у Карпатах — це свято, яке тут досі живе за давніми правилами: писанки, що їх розписують за два тижні до неділі, кошики з паскою й домашньою ковбасою, ранкове освячення і великий родинний стіл. Розповідаємо, коли святкуватимемо Великдень у 2027 році, які буковинські традиції варто знати і як зустріти свято всією родиною в котеджі в Мигове.",
+          ],
+        },
+        {
+          h: "Коли Великдень у 2027 році",
+          p: [
+            "У 2027 році Православна церква України й Українська греко-католицька церква святкуватимуть Великдень 2 травня. Хоча неперехідні свята з 2023 року перейшли на новоюліанський календар, дату Великодня обчислюють за традиційною пасхалією, тому цього разу свято пізнє. Західні християни зустрінуть Великдень 28 березня, а Трійця в 2027 році припадає на 20 червня.",
+            "Пізній Великдень — це вже справжня весна в горах: зелень на схилах, теплі дні й довгі вечори. А оскільки 1 травня 2027 року — субота, свято збігається з довгими травневими вихідними, тож бронювати житло варто заздалегідь.",
+          ],
+        },
+        {
+          h: "Буковинська писанка: кольори й візерунки",
+          p: [
+            "Писанки на Буковині традиційно розписують протягом двох тижнів перед Великоднем у техніці воскового розпису. Для буковинської писанки характерні темні тла — бордове, коричневе, чорне чи червоне, — а візерунки виконували переважно червоним, жовтим, помаранчевим і зеленим. Синій траплявся рідше, рожевий і фіолетовий — лише як акценти.",
+            "У гірській частині Буковини орнаменти складніші й густіші. Найчастіше це геометричні й рослинні мотиви, а іноді — церкви, тварини чи предмети побуту. Барвники колись робили вдома: жовтий — з кори дикої яблуні, коричневий — з цибулиння, чорний — з дуба, фіолетовий — з кори вільхи чи бузини.",
+          ],
+        },
+        {
+          h: "Як розписати писанку в котеджі",
+          p: [
+            "Писанкарство — гарне заняття для всієї родини у великодні вихідні. Знадобляться свічка, бджолиний віск, писачок, барвники та яйця. Яйце спершу протирають оцтом, щоб знежирити, позначають верх і низ, роблять ескіз олівцем і наносять перший шар воску: те, що під воском, залишиться білим.",
+            "Далі яйце занурюють у найсвітліший барвник, зазвичай жовтий, сушать, наносять новий шар воску й переходять до темніших кольорів. Наприкінці віск обережно розтоплюють біля полум’я свічки — збоку, а не над ним, щоб не закоптити, — і витирають. Краплина олії додасть писанці блиску. У котеджах хутора великий обідній стіл, тож місця вистачить на всю «майстерню».",
+          ],
+        },
+        {
+          h: "Що кладуть у великодній кошик на Буковині",
+          p: [
+            "Головне в кошику — паска. На Буковині печуть і класичну дріжджову паску з родзинками, і сирну без дріжджів, а поруч кладуть бабку — солодку здобу. До кошика також додають ковбасу, домашній будз, масло, яйця й писанки, хрін із буряком і свічку.",
+            "Якщо не хочеться везти все з дому, частину можна купити на місці. Наприклад, навесні 2025 року на Центральному ринку Чернівців велика паска коштувала орієнтовно 150 грн, бабка — від 120 грн, а розписана вручну писанка — близько 70 грн. Ціни на 2027 рік можуть відрізнятися, тож вважайте їх орієнтиром.",
+          ],
+        },
+        {
+          h: "Освячення кошиків і великодній ранок",
+          p: [
+            "Кошики освячують у храмах у ніч на Великдень або зранку в неділю. Розклад богослужінь у конкретному храмі краще уточнити заздалегідь: під час воєнного стану через комендантську годину нічні служби часто переносять на ранок.",
+            "Після освячення родина сідає снідати: першою ділять освячену паску й яйце, а вже потім починається велике святкове застілля. У котеджі для цього є все: повністю обладнана кухня, обідній стіл на всю родину й тераса з видом на гори, де приємно пити каву весняного ранку.",
+          ],
+        },
+        {
+          h: "Чим зайнятися у великодні вихідні",
+          p: [
+            "Травень у Карпатах — час прогулянок. Ліс починається одразу біля хутора, а кілька коротких маршрутів на годину-дві ми зібрали в статті «Маршрути біля Мигового: короткі походи, нацпарк і водоспади». Варто з’їздити й до Вижниці — старовинного містечка поруч, звідки зручно продовжити знайомство з Буковиною.",
+            "Після прогулянки — SPA. На хуторі два криті басейни, що працюють щодня з 08:00 до 22:00, джакузі й чан на дровах, а також відкритий басейн; чи працюватиме він на початку травня, залежить від погоди, тож уточнюйте. Великодній вечір у гарячому чані після святкового обіду — традиція, яку ваша родина може започаткувати сама.",
+          ],
+        },
+        {
+          h: "Що взяти з собою на свято",
+          p: [
+            "Для освячення знадобиться кошик, вишитий рушник чи серветка, щоб його накрити, і свічка. Якщо плануєте розписувати писанки, візьміть віск, писачки й барвники з дому — у селі їх може не бути. На ранкову службу варто вдягнутися тепліше: у травні в горах ранки ще прохолодні.",
+            "Для прогулянок — зручне взуття з протектором і легка куртка від дощу, для SPA — купальники. А святковий одяг і вишиванки зроблять родинні фото на тлі гір особливими.",
+          ],
+        },
+        {
+          h: "Великдень для великої родини",
+          p: [
+            "Великдень — свято, на яке з’їжджаються всі: батьки, діти, онуки, хрещені. Котеджі на хуторі орендуються повністю й вміщують від 8 до 14 гостей, а якщо родина більша, можна забронювати кілька будинків поруч — разом вони розраховані на 72 гостей. Детальніше про те, як обрати будинок для великої компанії, читайте в статті «Котедж у Карпатах для великої компанії на 10–14 осіб».",
+            "Постільна білизна, рушники й паркінг уже входять у вартість, а завдяки автономному живленню світло й тепло не залежать від графіків відключень. Орієнтовна вартість — від 14 000 грн за добу за будинок; ціни й умови на святкові дати уточнюйте під час бронювання.",
+          ],
+        },
+        {
+          h: "Забронюйте Великдень у горах",
+          p: [
+            "Великодні й травневі вихідні в Карпатах розбирають рано, тож краще визначитися з датами вже зараз. Залиште заявку: вкажіть, скільки вас буде, чи є діти і які дні плануєте. Ми зателефонуємо, підтвердимо бронювання й допоможемо обрати котедж для вашої родини.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "Easter in the Carpathians 2027: Bukovynian traditions",
+      excerpt:
+        "Easter in the Carpathians 2027: the date, what goes into a Bukovynian Easter basket, how to paint a pysanka and where to celebrate as a family.",
+      body: [
+        {
+          p: [
+            "Easter in the Carpathians is a holiday that still follows old customs: pysanky, the decorated eggs painted in the two weeks before the feast, baskets with paska bread and homemade sausage, a morning blessing and a big family table. Here is when Easter falls in 2027, which Bukovynian traditions are worth knowing and how to celebrate with the whole family in a cottage in Myhove.",
+          ],
+        },
+        {
+          h: "When is Easter in 2027",
+          p: [
+            "In 2027, the Orthodox Church of Ukraine and the Ukrainian Greek Catholic Church will celebrate Easter on 2 May. Although fixed feasts moved to the Revised Julian calendar in 2023, the date of Easter is still calculated by the traditional paschalion, so this time the holiday is late. Western Christians celebrate Easter on 28 March, and Trinity Sunday in 2027 falls on 20 June.",
+            "A late Easter means true spring in the mountains: green slopes, warm days and long evenings. And since 1 May 2027 is a Saturday, the feast coincides with the long May weekend, so it is wise to book accommodation early.",
+          ],
+        },
+        {
+          h: "The Bukovynian pysanka: colours and patterns",
+          p: [
+            "In Bukovyna, pysanky are traditionally painted during the two weeks before Easter using the wax-resist technique. Bukovynian eggs are known for dark backgrounds — burgundy, brown, black or red — with patterns mostly in red, yellow, orange and green. Blue appeared less often, while pink and violet were used only as accents.",
+            "In mountain Bukovyna the ornaments are more complex and dense. Most are geometric and plant motifs, and sometimes churches, animals or household objects. Dyes were once made at home: yellow from wild apple bark, brown from onion skins, black from oak and violet from alder bark or elderberry.",
+          ],
+        },
+        {
+          h: "How to paint a pysanka in the cottage",
+          p: [
+            "Painting pysanky is a lovely activity for the whole family over the Easter weekend. You will need a candle, beeswax, a stylus called a kistka, dyes and eggs. First wipe the egg with vinegar to remove grease, mark the top and bottom, sketch the design in pencil and apply the first layer of wax: everything under the wax stays white.",
+            "Then dip the egg in the lightest dye, usually yellow, let it dry, add another layer of wax and move on to darker colours. Finally, melt the wax carefully beside the candle flame — to the side, not above it, to avoid soot — and wipe it off. A drop of oil adds shine. The farmstead’s cottages have a large dining table, so there is room for the whole “workshop”.",
+          ],
+        },
+        {
+          h: "What goes into an Easter basket in Bukovyna",
+          p: [
+            "The centrepiece of the basket is paska. In Bukovyna people bake both the classic yeast paska with raisins and a cheese version without yeast, and next to it they place babka, a sweet enriched bread. The basket also holds sausage, homemade budz cheese, butter, eggs and pysanky, horseradish with beetroot and a candle.",
+            "If you don’t want to bring everything from home, you can buy some of it locally. For example, in spring 2025 at the Central Market in Chernivtsi a large paska cost about 150 UAH, a babka from 120 UAH and a hand-painted pysanka around 70 UAH. Prices in 2027 may differ, so treat these as a rough guide.",
+          ],
+        },
+        {
+          h: "Blessing the baskets and Easter morning",
+          p: [
+            "Baskets are blessed in churches during the night before Easter or on Sunday morning. It is best to check the service schedule of a particular church in advance: under martial law, night services are often moved to the morning because of the curfew.",
+            "After the blessing, the family sits down to breakfast: first they share the blessed paska and an egg, and only then does the big festive meal begin. The cottage has everything for it: a fully equipped kitchen, a dining table for the whole family and a terrace with a mountain view, perfect for coffee on a spring morning.",
+          ],
+        },
+        {
+          h: "What to do over the Easter weekend",
+          p: [
+            "May in the Carpathians is the time for walks. The forest starts right by the farmstead, and we collected several short trails of an hour or two in “Trails near Myhove: short hikes, a national park and waterfalls”. It is also worth driving to Vyzhnytsia, an old town nearby and a good starting point for exploring Bukovyna.",
+            "After a walk, there is the spa. The farmstead has two indoor pools open daily from 08:00 to 22:00, a jacuzzi, a wood-fired hot tub and an outdoor pool; whether the outdoor pool is open in early May depends on the weather, so please check. An Easter evening in the hot tub after the festive lunch is a tradition your family can start yourselves.",
+          ],
+        },
+        {
+          h: "What to bring for the holiday",
+          p: [
+            "For the blessing you will need a basket, an embroidered towel or napkin to cover it and a candle. If you plan to paint pysanky, bring wax, styluses and dyes from home, as they may not be available in the village. Dress warmly for the morning service: in May, mountain mornings are still cool.",
+            "For walks, bring comfortable shoes with a good tread and a light rain jacket; for the spa, swimwear. Festive clothes and vyshyvanka shirts will make your family photos against the mountains special.",
+          ],
+        },
+        {
+          h: "Easter for a big family",
+          p: [
+            "Easter is a holiday that brings everyone together: parents, children, grandchildren and godparents. The farmstead’s cottages are rented as a whole and sleep 8 to 14 guests, and if your family is bigger you can book several houses next to each other — together they sleep 72 guests. For tips on choosing a house for a large group, read “A Carpathian cottage for a large group of 10–14 people”.",
+            "Bed linen, towels and parking are included in the price, and thanks to backup power, light and heat do not depend on outage schedules. The approximate price is from 14,000 UAH per night for the house; please check prices and terms for holiday dates when booking.",
+          ],
+        },
+        {
+          h: "Book Easter in the mountains",
+          p: [
+            "Easter and May weekends in the Carpathians are booked early, so it is best to settle on your dates now. Send us a request with the number of guests, whether there are children and which days you have in mind. We will call to confirm the booking and help you choose the right cottage for your family.",
+          ],
+        },
+      ],
+    },
+  },
+  {
     slug: "cottage-for-large-group",
     date: "2026-11-04",
     cover: "/assets/cottage-4-dining.jpg",

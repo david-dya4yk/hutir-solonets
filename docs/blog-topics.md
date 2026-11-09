@@ -27,14 +27,14 @@
 - [x] Котедж у Карпатах для великої компанії на 10–14 осіб — `cottage-for-large-group` (2026-11-04)
 - [x] Вихідні в Карпатах: план на 2–3 дні в Мигове — `weekend-in-carpathians` (2026-11-04)
 - [x] Що взяти в Карпати взимку: чекліст для сім'ї — `carpathians-winter-packing-list` (2026-11-04)
+- [x] Романтичний відпочинок у Карпатах на День закоханих — `valentines-day-carpathians` (2026-11-09)
+- [x] 8 Березня в Карпатах: відпочинок у подарунок — `march-8-carpathians` (2026-11-09)
+- [x] Великдень у Карпатах 2027: буковинські традиції — `easter-carpathians` (2026-11-09)
 
 ## Черга
 
 ### Свята (сезонні, пріоритет)
 
-- [ ] День закоханих у Карпатах: романтика з чаном — запит «романтичний відпочинок карпати» — до 2027-01-15
-- [ ] 8 Березня в Карпатах: відпочинок у подарунок — до 2027-02-01
-- [ ] Великдень у Карпатах і буковинські традиції — до 2027-03-01
 - [ ] Травневі вихідні в Карпатах — до 2027-04-01
 
 ### Відпочинок у Карпатах і Мигове
@@ -67,3 +67,9 @@
 - Вижницький нацпарк: https://karpaty.rocks/en/node/21716
 - Гриби: https://zaxid.net/zbir_gribiv_u_zhovtni_koli_i_de_shukati_kalendar_gribnika_n1647062
 - Водоспади Розтоки: https://karpaty.rocks/en/node/21118
+- Дата Великодня 2027 (2 травня, західний — 28 березня): https://news.telegraf.com.ua/ukr/obshhestvo/5951067-nabagato-piznishe-nizh-torik-koli-v-ukraini-velikden-u-2027-rotsi
+- Свята 2027 і воєнний стан (8 березня, Трійця 20 червня): https://prokadry.com.ua/article/19256-vykhidni-2027
+- Буковинська писанка (кольори, барвники, техніка): https://suspilne.media/chernivtsi/441057-vosmiramenna-zirka-ruza-ak-stvoriti-bukovinsku-pisanku-instrukcia-majstrini/
+- Великодній кошик і ціни на ринку Чернівців (2025): https://suspilne.media/chernivtsi/995001-skilki-vartue-zibrati-velikodnij-kosik-u-cernivcah/
+- Буковинські паски: https://suspilne.media/chernivtsi/1279498-velikden-na-bukovini-tri-recepti-pasok-dla-prigotuvanna-vdoma/
+- Освячення кошиків під час комендантської години: https://suspilne.media/chernivtsi/232054-u-cernivcah-osvatiti-kosiki-prijsli-tisaci-viran-fotoreportaz/
