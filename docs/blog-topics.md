@@ -30,17 +30,20 @@
 - [x] Романтичний відпочинок у Карпатах на День закоханих — `valentines-day-carpathians` (2026-11-09)
 - [x] 8 Березня в Карпатах: відпочинок у подарунок — `march-8-carpathians` (2026-11-09)
 - [x] Великдень у Карпатах 2027: буковинські традиції — `easter-carpathians` (2026-11-09)
+- [x] Травневі вихідні в Карпатах 2027: відпочинок у Мигове — `may-holidays-carpathians` (2026-11-16)
+- [x] Карпати з басейном і чаном: котедж із SPA у Мигове — `carpathians-pool-and-chan` (2026-11-16)
+- [x] День народження в Карпатах: котедж із басейном для свята — `birthday-in-carpathians` (2026-11-16)
 
 ## Черга
 
 ### Свята (сезонні, пріоритет)
 
-- [ ] Травневі вихідні в Карпатах — до 2027-04-01
+- [ ] День Конституції та літні вихідні в Карпатах — до 2027-06-01
 
 ### Відпочинок у Карпатах і Мигове
 
-- [ ] Карпати з басейном і чаном: SPA-відпочинок у горах — запит «карпати басейн котедж»
-- [ ] День народження в Карпатах: котедж з басейном для свята — запит «день народження в карпатах»
+- [ ] Дівич-вечір або парубоцький у Карпатах: котедж для компанії — запит «дівич-вечір у карпатах»
+- [ ] Відпочинок у Карпатах з батьками і бабусями: поїздка кількох поколінь
 
 ### Зима
 
@@ -73,3 +76,6 @@
 - Великодній кошик і ціни на ринку Чернівців (2025): https://suspilne.media/chernivtsi/995001-skilki-vartue-zibrati-velikodnij-kosik-u-cernivcah/
 - Буковинські паски: https://suspilne.media/chernivtsi/1279498-velikden-na-bukovini-tri-recepti-pasok-dla-prigotuvanna-vdoma/
 - Освячення кошиків під час комендантської години: https://suspilne.media/chernivtsi/232054-u-cernivcah-osvatiti-kosiki-prijsli-tisaci-viran-fotoreportaz/
+- Травневі свята 2027 (1 і 8 травня — суботи, без перенесення вихідних під час воєнного стану; Великдень 2 травня): https://prokadry.com.ua/article/19256-vykhidni-2027
+- Сніг у Карпатах у травні (8 травня 2025, Піп Іван −2 °C): https://thepage.ua/ua/lite/pogoda-v-ukrayini-v-karpatah-u-travni-pishov-snig
+- Чан: температура 40–45 °C, до 20–30 хв, протипоказання: https://news.obozrevatel.com/ukr/travel/komu-ne-varto-lizti-v-chavunni-chani-z-mineralnoyu-vodoyu-vidpochivajte-z-koristyu.htm
