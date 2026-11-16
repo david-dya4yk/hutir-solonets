@@ -144,11 +144,21 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
 
       <section className={ui.soft}>
         <div className={ui.section}>
-          <Lines className={`${ui.display} ${styles.planTitle}`} lines={[t("home.planTitle")]} />
-          <PlanMap />
-          <div className={styles.planNote} data-reveal="">
-            <span>{t("home.planLegend")}</span>
-          </div>
+          <PlanMap
+            locale={locale}
+            content={c}
+            head={
+              <Lines
+                className={`${ui.display} ${styles.planTitle}`}
+                lines={[t("home.planTitle")]}
+              />
+            }
+            foot={
+              <div className={styles.planNote} data-reveal="">
+                <span>{t("home.planLegend")}</span>
+              </div>
+            }
+          />
         </div>
       </section>
 
