@@ -67,6 +67,7 @@ export default {
     spaText:
       "Two indoor pools, an outdoor pool, a jacuzzi and a wood-fired hot tub — for slow mornings and warm evenings.",
     planTitle: "Take a walk around",
+    planScroll: "Scroll the map",
     planHint: "Tap a cottage number to learn more",
     planLegend: "Forest · cottages · SPA area · parking",
     planCaption: "Aerial view of the hutir: cottages, the pool and the forest around",
