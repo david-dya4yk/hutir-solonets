@@ -19,6 +19,471 @@ export type BlogPost = {
 
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
+    slug: "may-holidays-carpathians",
+    date: "2026-11-16",
+    cover: "/assets/pool-outdoor-2.jpg",
+    uk: {
+      title: "Травневі вихідні в Карпатах 2027: відпочинок у Мигове",
+      excerpt:
+        "Травневі вихідні в Карпатах 2027: Великдень, День матері, весняний ліс, водоспади на повній воді й SPA. Як спланувати поїздку в Мигове.",
+      body: [
+        {
+          p: [
+            "Травневі вихідні в Карпатах — одна з найкращих нагод вибратися в гори: ліс уже зелений, водоспади повноводні, а літнього натовпу ще немає. У 2027 році травень особливий — на його початок припадає Великдень, а за тиждень українці відзначають День матері. Розповідаємо, коли саме вихідні, яка погода чекає в горах і як провести кілька весняних днів у Мигове на Буковині.",
+          ],
+        },
+        {
+          h: "Коли травневі вихідні у 2027 році",
+          p: [
+            "1 травня 2027 року припадає на суботу, а 2 травня — Великдень. 8 травня, День пам’яті та перемоги над нацизмом у Другій світовій війні, теж субота, а 9 травня, у другу неділю місяця, — День матері. Тож у травні є два «святкові» вікенди поспіль.",
+            "Важливо: поки діє воєнний стан, автоматичного перенесення вихідних не передбачено, тож додаткових вихідних понеділків не буде. Якщо хочеться довшої поїздки, найпростіше взяти один день відпустки — п’ятницю або понеділок — і отримати три дні в горах. Графік роботи на свята в кожній компанії визначає роботодавець, тож уточніть його заздалегідь.",
+          ],
+        },
+        {
+          h: "Яка погода в Карпатах у травні",
+          p: [
+            "Травень у горах мінливий. Удень може бути по-літньому тепло, а вночі — прохолодно. На високих вершинах сніг інколи тримається довше: наприклад, 8 травня 2025 року на Чорногірському хребті випав сніг, а на Піп Івані було −2 °C. Мигове лежить значно нижче, тож тут таке трапляється рідко, але різкі зміни погоди й дощі в травні — звична справа.",
+            "Тому збирайте речі «шарами»: футболки, теплий светр чи фліс, непромокальна куртка і взуття з протектором. Перед кожною прогулянкою дивіться прогноз, а якщо плануєте похід на вершину — виходьте зранку, щоб повернутися до вечора.",
+          ],
+        },
+        {
+          h: "Великдень у горах",
+          p: [
+            "Великдень 2 травня — гарний привід поїхати на Буковину всією родиною. Свячене можна підготувати вдома або купити паски дорогою, а святковий сніданок накрити на кухні котеджу, де є все необхідне. Після сніданку — прогулянка лісом, а ввечері — басейн або чан.",
+            "Про буковинські великодні традиції, писанки та паски ми детально розповіли в статті «Великдень у Карпатах 2027: буковинські традиції». Там же — поради, як спланувати святкові дні, щоб вони не перетворилися на марафон справ.",
+          ],
+        },
+        {
+          h: "Весняний ліс і короткі маршрути",
+          p: [
+            "У травні ліс біля Мигового найгарніший: свіже листя, цвітіння, спів птахів і стежки, які вже просохли після зими. Довкола села є марковані маршрути на годину-дві: «Слідами графа Василька» — найлегший, близько 3,3 км, еко-стежка «Стіжок» — 3,5 км із помірним підйомом, а «До вартових Недеї» — 5,4 км для тих, хто хоче відчути справжній гірський підйом.",
+            "Детальніше про кожен маршрут читайте в статті «Маршрути біля Мигового: короткі походи, нацпарк і водоспади». Після дощу стежки можуть бути слизькими, тож не забудьте про зручне взуття й палиці для ходьби, якщо звикли з ними.",
+          ],
+        },
+        {
+          h: "Водоспади на повній воді",
+          p: [
+            "Весна — найкращий час для водоспадів: після танення снігу й травневих дощів вони найповноводніші. Найближчий до Мигового — Сіручок, приблизно за 16 км. Для поїздки на пів дня варто обрати Розтоки, де поруч розташовані водоспад Сич висотою близько 10 метрів, Середній Гук і каскад Буковинських (Смугарських) водоспадів.",
+            "Біля води завжди прохолодніше, а каміння мокре й слизьке, тож тримайте дітей за руку й не підходьте впритул до потоку. Термос із чаєм і запасні шкарпетки в рюкзаку зроблять таку прогулянку набагато приємнішою.",
+          ],
+        },
+        {
+          h: "Вижницький нацпарк і зубри",
+          p: [
+            "Ще одна ідея для травневого дня — Вижницький національний природний парк. Його офіс розташований у Берегометі, за кілька кілометрів від Мигового, а поруч працює центр відтворення зубрів. Діти зазвичай у захваті від зустрічі з цими велетнями.",
+            "Перед поїздкою обов’язково уточніть години роботи центру: у вихідні й святкові дні вони можуть відрізнятися. Також перевірте, чи немає обмежень на відвідування лісів і заповідних територій у вашому регіоні.",
+          ],
+        },
+        {
+          h: "SPA після прогулянок",
+          p: [
+            "Після дня на свіжому повітрі найприємніше — тепла вода. На «Хуторі Солонець» два криті басейни, які працюють щодня з 08:00 до 22:00, джакузі, сауна і чан на дровах. Прохолодний травневий вечір — ідеальний час для чану: домовтеся про нього заздалегідь, щоб вода була готова, коли ви повернетеся з прогулянки.",
+            "На хуторі є й відкритий басейн, але сезон його роботи залежить від погоди — чи працюватиме він на травневі вихідні, уточнюйте під час бронювання. Як влаштувати собі повноцінний SPA-день, ми розповіли в статті «Карпати з басейном і чаном: котедж із SPA у Мигове».",
+          ],
+        },
+        {
+          h: "Подарунок до Дня матері",
+          p: [
+            "9 травня 2027 року — День матері, і поїздка в гори може стати найкращим подарунком. Замість чергового букета — вихідні без кухонної рутини й побутових справ: ранкова кава на терасі з видом на гори, тепла вода в басейні й вечір у чані, поки хтось інший готує вечерю.",
+            "Котеджі на хуторі орендуються повністю і розраховані на 8–14 гостей, тож можна поїхати кількома поколіннями — з бабусями, дітьми й онуками. Якщо хочеться зробити сюрприз, запитайте про подарунковий сертифікат: умови уточнимо під час дзвінка.",
+          ],
+        },
+        {
+          h: "Як забронювати травневі вихідні",
+          p: [
+            "Травневі свята та Великдень — популярні дати, тож будинки на них бронюють заздалегідь. Орієнтовна вартість — від 14 000 грн за добу за весь котедж; постільна білизна, рушники й паркінг уже входять у вартість, а ціни на святкові дати уточнюйте під час бронювання. Заїзд — з 14:00, виїзд — до 11:00.",
+            "Залиште заявку з датами, кількістю гостей і побажаннями щодо чану чи джакузі. Ми зателефонуємо, підтвердимо дати й підкажемо, який будинок найкраще підійде вашій компанії.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "May holidays in the Carpathians 2027: a getaway to Myhove",
+      excerpt:
+        "May holidays in the Carpathians 2027: Easter, Mother’s Day, a spring forest, waterfalls in full flow and a spa. How to plan a trip to Myhove.",
+      body: [
+        {
+          p: [
+            "The May holidays in the Carpathians are one of the best chances to get away to the mountains: the forest is already green, the waterfalls are in full flow and the summer crowds have not arrived yet. In 2027 May is special — Easter falls at the very start of the month, and a week later Ukraine celebrates Mother’s Day. Here is when the long weekends are, what weather to expect in the mountains and how to spend a few spring days in Myhove in Bukovyna.",
+          ],
+        },
+        {
+          h: "When the May holidays fall in 2027",
+          p: [
+            "1 May 2027 is a Saturday, and 2 May is Easter Sunday. 8 May, the Day of Remembrance and Victory over Nazism in World War II, is also a Saturday, and 9 May, the second Sunday of the month, is Mother’s Day. So May brings two “holiday” weekends in a row.",
+            "Keep in mind: while martial law is in force, holidays that fall on a weekend are not automatically moved, so there will be no extra Mondays off. If you want a longer trip, the easiest option is to take a single day of leave — Friday or Monday — and get three days in the mountains. Every employer sets its own holiday schedule, so check yours in advance.",
+          ],
+        },
+        {
+          h: "What the weather is like in May",
+          p: [
+            "May in the mountains is changeable. Days can feel like summer, while nights stay cool. On the high peaks snow sometimes lingers: on 8 May 2025, for example, snow fell on the Chornohora ridge and it was −2 °C on Pip Ivan. Myhove lies much lower, so this rarely happens here, but sudden changes and rain are perfectly normal in May.",
+            "So pack in layers: T-shirts, a warm jumper or fleece, a waterproof jacket and shoes with a good tread. Check the forecast before every walk, and if you are planning a summit hike, set off in the morning so you are back before evening.",
+          ],
+        },
+        {
+          h: "Easter in the mountains",
+          p: [
+            "Easter on 2 May is a lovely reason to bring the whole family to Bukovyna. You can prepare your Easter basket at home or buy paska on the way, and lay out the festive breakfast in the cottage kitchen, which has everything you need. After breakfast — a walk in the forest, and in the evening — the pool or the hot tub.",
+            "We covered Bukovynian Easter traditions, pysanky and paska in detail in our article “Easter in the Carpathians 2027: Bukovynian traditions”. It also has tips on planning the holiday so it does not turn into a marathon of chores.",
+          ],
+        },
+        {
+          h: "A spring forest and short trails",
+          p: [
+            "In May the forest around Myhove is at its loveliest: fresh leaves, blossom, birdsong and paths that have dried out after the winter. There are waymarked trails of an hour or two around the village: “In the Footsteps of Count Wassilko” is the easiest, about 3.3 km; the Stizhok nature trail is 3.5 km with a moderate climb; and “To the Guardians of Nedeia” is 5.4 km for those who want a proper mountain ascent.",
+            "You will find details on each route in our article “Trails near Myhove: short hikes, a national park and waterfalls”. After rain the paths can be slippery, so bring comfortable footwear and walking poles if you are used to them.",
+          ],
+        },
+        {
+          h: "Waterfalls in full flow",
+          p: [
+            "Spring is the best time for waterfalls: after the snowmelt and the May rains they carry the most water. The closest to Myhove is Siruchok, about 16 km away. For a half-day trip, choose Roztoky, where the Sych waterfall, about 10 metres high, the Middle Huk and the cascade of the Bukovynian (Smuharski) waterfalls are all close together.",
+            "It is always cooler near the water, and the rocks are wet and slippery, so hold children’s hands and do not go right up to the stream. A thermos of tea and spare socks in your backpack will make the walk far more pleasant.",
+          ],
+        },
+        {
+          h: "Vyzhnytsia National Park and the bison",
+          p: [
+            "Another idea for a May day is Vyzhnytsia National Nature Park. Its office is in Berehomet, a few kilometres from Myhove, and next to it is a European bison breeding centre. Children are usually thrilled to meet these giants.",
+            "Be sure to check the centre’s opening hours before you go: they may differ at weekends and on holidays. Also check whether there are any restrictions on visiting forests and protected areas in the region.",
+          ],
+        },
+        {
+          h: "A spa after your walks",
+          p: [
+            "After a day outdoors, nothing beats warm water. Hutir Solonets has two indoor pools open daily from 08:00 to 22:00, a jacuzzi, a sauna and a wood-fired hot tub. A cool May evening is the perfect time for the hot tub: arrange it in advance so the water is ready when you get back from your walk.",
+            "There is also an outdoor pool, but its season depends on the weather — ask when you book whether it will be open for the May holidays. We explained how to plan a full spa day in our article “The Carpathians with a pool and hot tub: a spa cottage in Myhove”.",
+          ],
+        },
+        {
+          h: "A Mother’s Day gift",
+          p: [
+            "9 May 2027 is Mother’s Day, and a trip to the mountains can be the best present. Instead of another bouquet — a weekend without kitchen routine and household chores: morning coffee on a terrace overlooking the mountains, warm water in the pool and an evening in the hot tub while someone else cooks dinner.",
+            "The cottages are rented as a whole and sleep 8–14 guests, so several generations can travel together — grandparents, children and grandchildren. If you want to make it a surprise, ask about a gift certificate: we will go over the terms on the phone.",
+          ],
+        },
+        {
+          h: "How to book the May holidays",
+          p: [
+            "The May holidays and Easter are popular dates, so cottages get booked early. The indicative price is from UAH 14,000 per night for the whole cottage; bed linen, towels and parking are included, and holiday-date prices are confirmed when you book. Check-in is from 14:00, check-out by 11:00.",
+            "Leave a request with your dates, the number of guests and any wishes about the hot tub or jacuzzi. We will call you back, confirm the dates and suggest the cottage that suits your group best.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "carpathians-pool-and-chan",
+    date: "2026-11-16",
+    cover: "/assets/pool-indoor-3.jpg",
+    uk: {
+      title: "Карпати з басейном і чаном: котедж із SPA у Мигове",
+      excerpt:
+        "Котедж у Карпатах з басейном і чаном: криті басейни, відкритий басейн, джакузі, сауна й чан на дровах. Як спланувати SPA-відпочинок у Мигове.",
+      body: [
+        {
+          p: [
+            "Котедж у Карпатах з басейном і чаном — саме те, що шукають, коли хочеться не лише гір, а й справжнього відновлення. Можна вдень гуляти лісом, а ввечері сидіти в гарячій воді під зорями, і для цього не потрібно нікуди їхати. Розповідаємо, що є в SPA-зоні «Хутора Солонець» у Мигове, як поєднувати басейн, джакузі, сауну й чан і про що варто пам’ятати, щоб відпочинок був і приємним, і безпечним.",
+          ],
+        },
+        {
+          h: "Що є в SPA-зоні хутора",
+          p: [
+            "На хуторі два криті басейни, відкритий басейн, джакузі, сауна і чан на дровах. Усе це — за кілька кроків від котеджів, тож не потрібно одягатися й кудись їхати: вийшли з будинку в халаті й за хвилину вже у воді.",
+            "SPA-зона відкрита для гостей комплексу, а погода на неї майже не впливає: коли надворі дощ чи мороз, криті басейни й гаряча вода стають головною розвагою дня. Саме тому такий відпочинок однаково добрий і в січні, і в листопаді, і в травні.",
+          ],
+        },
+        {
+          h: "Криті басейни: плавати навіть у мороз",
+          p: [
+            "Теплі криті басейни працюють щодня з 08:00 до 22:00. Великі вікна дивляться на ліс, тож можна плавати й спостерігати, як за склом падає сніг чи змінюються пори року. Увечері вмикається м’яка підсвітка — дітям це особливо подобається.",
+            "Найспокійніше в басейнах уранці та в будні дні. Якщо хочеться тиші, плануйте запливи до сніданку або ближче до обіду, коли більшість гостей на прогулянках.",
+          ],
+        },
+        {
+          h: "Відкритий басейн улітку",
+          p: [
+            "Влітку головне місце дня — відкритий басейн: шезлонги вздовж дерев’яної тераси, сонце й запах смерек довкола. Котеджі 01 і 02 розташовані поруч, тож до води буквально кілька кроків. Сезон роботи відкритого басейну залежить від погоди, тому, якщо він для вас важливий, уточнюйте це під час бронювання.",
+          ],
+        },
+        {
+          h: "Чан на дровах: головний вечірній ритуал",
+          p: [
+            "Чан — великий металевий казан, у якому воду нагрівають на відкритому вогні. Зазвичай її доводять приблизно до 40–45 °C, і саме в такій воді найкраще відчувається контраст із прохолодним гірським повітрям. Особливо гарно в чані ввечері та в перший сніг, коли над водою піднімається пара.",
+            "Рекомендований час в одному заході — до 20–30 хвилин, а краще робити перерви: вийти, вдихнути свіжого повітря, випити трав’яного чаю — і знову у воду. Про чан на хуторі домовляйтеся заздалегідь, щоб вода була готова до потрібної години. Більше про традицію й правила читайте в статті «Чан на дровах у Карпатах: що це і як правильно паритися».",
+          ],
+        },
+        {
+          h: "Кому варто бути обережними",
+          p: [
+            "Гаряча вода — навантаження на організм. Людям із серцево-судинними захворюваннями, цукровим діабетом, сечокам’яною хворобою, цирозом печінки чи онкологічними захворюваннями перед чаном і сауною варто порадитися з лікарем. Вагітним і тим, хто має проблеми з тиском, теж краще спершу отримати дозвіл лікаря.",
+            "Кілька простих правил для всіх: не поєднуйте чан з алкоголем, заходьте у воду й виходьте з неї без різких рухів, не купайтеся з відкритими ранами й подряпинами. Дітей не залишайте біля води без нагляду — ні в басейні, ні в джакузі, ні біля чану — і стежте, щоб вони не перегрівалися.",
+          ],
+        },
+        {
+          h: "Джакузі та сауна: контрастний вечір",
+          p: [
+            "Після прогулянки лісом приємно почати з джакузі: тепла вода з гідромасажем розслаблює втомлені ноги й спину. Сауна із сухим жаром і запахом дерева добре поєднується з контрастом: кілька хвилин у парній, потім прохолодніша вода чи свіже повітря — і знову в тепло.",
+            "Головне — не поспішати і не намагатися «встигнути все» за один вечір. Два-три кола з відпочинком між ними дадуть набагато більше, ніж година безперервного жару.",
+            "Не забудьте взяти з собою все для води: купальники на кожного, капці, які не ковзають, шапку для чану в мороз і зручний халат, щоб дійти до будинку в теплі. Окуляри для плавання знадобляться тим, хто любить довгі запливи, а для дітей — нарукавники чи жилет, якщо вони ще погано тримаються на воді.",
+          ],
+        },
+        {
+          h: "Як спланувати SPA-день",
+          p: [
+            "Ось простий план, який подобається більшості гостей. Ранок — легкий сніданок і неспішний заплив, поки в басейні тихо. День — прогулянка лісом або поїздка до водоспадів; кілька коротких маршрутів біля села ми зібрали в статті «Маршрути біля Мигового: короткі походи, нацпарк і водоспади». Після обіду — джакузі й відпочинок на терасі.",
+            "Вечір — головна частина: сауна, потім чан на дровах, а після нього — вечеря в котеджі. Пийте достатньо води чи трав’яного чаю протягом дня і не плануйте важку вечерю одразу перед гарячою водою.",
+          ],
+        },
+        {
+          h: "Який котедж обрати",
+          p: [
+            "Усі сім котеджів хутора орендуються повністю і розраховані на компанії — від 8 до 14 гостей. Якщо влітку для вас головне — відкритий басейн, зверніть увагу на котеджі 01 і 02: вони стоять поруч із ним. Для великої родини або двох сімей підійде котедж 04 — найбільший, до 14 гостей, з окремою мангальною зоною.",
+            "Котеджі 05 і 06 мають по п’ять спалень, кожна з власним санвузлом, і велику вітальню зі столом на 12 гостей — зручно, коли після SPA всі збираються на спільну вечерю. Детальніше про вибір читайте в статті «Як обрати котедж на хуторі: короткий путівник».",
+          ],
+        },
+        {
+          h: "Як забронювати відпочинок із SPA",
+          p: [
+            "Орієнтовна вартість — від 14 000 грн за добу за весь котедж; постільна білизна, рушники й паркінг уже входять у вартість, а актуальні ціни на ваші дати уточнюйте під час бронювання. Залиште заявку з датами, кількістю гостей і побажаннями щодо чану чи джакузі — ми зателефонуємо, підтвердимо дати й підкажемо, як найкраще спланувати ваш SPA-відпочинок у горах.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "The Carpathians with a pool and hot tub: a spa cottage in Myhove",
+      excerpt:
+        "A Carpathian cottage with a pool and hot tub: indoor pools, an outdoor pool, a jacuzzi, a sauna and a wood-fired chan. How to plan a spa stay in Myhove.",
+      body: [
+        {
+          p: [
+            "A cottage in the Carpathians with a pool and a hot tub is exactly what people look for when they want more than mountains — they want proper rest. You can walk in the forest by day and sit in hot water under the stars in the evening, without driving anywhere. Here is what the spa area at Hutir Solonets in Myhove offers, how to combine the pool, jacuzzi, sauna and wood-fired hot tub, and what to keep in mind so your break is both enjoyable and safe.",
+          ],
+        },
+        {
+          h: "What the farmstead’s spa area offers",
+          p: [
+            "The farmstead has two indoor pools, an outdoor pool, a jacuzzi, a sauna and a wood-fired hot tub, known locally as a chan. All of it is a few steps from the cottages, so there is no need to get dressed and go anywhere: step out of the house in a robe and a minute later you are in the water.",
+            "The spa area is open to guests of the complex, and the weather hardly affects it: when it rains or freezes outside, the indoor pools and hot water become the main event of the day. That is why this kind of holiday works just as well in January as in November or May.",
+          ],
+        },
+        {
+          h: "Indoor pools: swimming even in a frost",
+          p: [
+            "The warm indoor pools are open daily from 08:00 to 22:00. Large windows look out onto the forest, so you can swim and watch snow falling beyond the glass or the seasons changing. In the evening soft lighting comes on — children love it.",
+            "The pools are quietest in the morning and on weekdays. If you want peace and quiet, plan your swim before breakfast or around lunchtime, when most guests are out walking.",
+          ],
+        },
+        {
+          h: "The outdoor pool in summer",
+          p: [
+            "In summer the outdoor pool is the heart of the day: loungers along the wooden deck, sunshine and the scent of spruce all around. Cottages 01 and 02 stand right next to it, literally a few steps from the water. The outdoor pool’s season depends on the weather, so if it matters to you, ask about it when you book.",
+          ],
+        },
+        {
+          h: "The wood-fired hot tub: the evening ritual",
+          p: [
+            "A chan is a large metal tub in which the water is heated over an open fire. The water is usually brought to about 40–45 °C, and that is when the contrast with the cool mountain air feels best. It is especially lovely in the evening and at the first snow, when steam rises above the water.",
+            "The recommended time for a single soak is up to 20–30 minutes, and it is better to take breaks: step out, breathe fresh air, sip some herbal tea — and back into the water. Arrange the hot tub at the farmstead in advance so the water is ready at the time you want. Read more about the tradition and the rules in our article “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it”.",
+          ],
+        },
+        {
+          h: "Who should be careful",
+          p: [
+            "Hot water puts a strain on the body. People with cardiovascular disease, diabetes, kidney stones, liver cirrhosis or cancer should talk to their doctor before using the hot tub or sauna. Pregnant women and anyone with blood pressure problems should also get their doctor’s approval first.",
+            "A few simple rules for everyone: do not combine the hot tub with alcohol, get in and out of the water without sudden movements, and do not bathe with open wounds or scratches. Never leave children unattended near water — in the pool, the jacuzzi or by the hot tub — and make sure they do not overheat.",
+          ],
+        },
+        {
+          h: "Jacuzzi and sauna: an evening of contrasts",
+          p: [
+            "After a forest walk it is nice to start in the jacuzzi: warm hydromassage water relaxes tired legs and back. The sauna, with its dry heat and smell of wood, pairs well with contrast: a few minutes in the heat, then cooler water or fresh air — and back into the warmth.",
+            "The key is not to rush or try to “do it all” in one evening. Two or three rounds with rest in between will give you far more than an hour of non-stop heat.",
+            "Remember to bring everything you need for the water: swimwear for everyone, non-slip slippers, a hat for the hot tub on frosty nights and a cosy robe to walk back to the house in comfort. Goggles help if you like long swims, and armbands or a swim vest for children who are not yet confident in the water.",
+          ],
+        },
+        {
+          h: "How to plan a spa day",
+          p: [
+            "Here is a simple plan most guests enjoy. Morning — a light breakfast and an unhurried swim while the pool is quiet. Daytime — a forest walk or a trip to the waterfalls; we collected several short routes near the village in our article “Trails near Myhove: short hikes, a national park and waterfalls”. After lunch — the jacuzzi and some rest on the terrace.",
+            "The evening is the main part: the sauna, then the wood-fired hot tub, and dinner in the cottage afterwards. Drink plenty of water or herbal tea throughout the day and avoid a heavy meal right before the hot water.",
+          ],
+        },
+        {
+          h: "Which cottage to choose",
+          p: [
+            "All seven cottages are rented as a whole and are designed for groups of 8 to 14 guests. If the outdoor pool is your summer priority, look at cottages 01 and 02: they stand right next to it. For a large family or two families, cottage 04 is the largest, sleeping up to 14, with its own barbecue area.",
+            "Cottages 05 and 06 each have five bedrooms, every one with its own bathroom, and a large living room with a table for 12 — handy when everyone gathers for dinner after the spa. Read more in our article “How to choose a cottage at the farmstead: a short guide”.",
+          ],
+        },
+        {
+          h: "How to book a spa break",
+          p: [
+            "The indicative price is from UAH 14,000 per night for the whole cottage; bed linen, towels and parking are included, and current prices for your dates are confirmed when you book. Leave a request with your dates, the number of guests and any wishes about the hot tub or jacuzzi — we will call you back, confirm the dates and help you plan your spa break in the mountains.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "birthday-in-carpathians",
+    date: "2026-11-16",
+    cover: "/assets/cottage-5-dining-2.jpg",
+    uk: {
+      title: "День народження в Карпатах: котедж із басейном для свята",
+      excerpt:
+        "День народження в Карпатах: котедж для 8–14 гостей, басейн і чан, вечеря з мангалу та розваги в будь-який сезон. Як організувати свято в Мигове.",
+      body: [
+        {
+          p: [
+            "День народження в Карпатах — це свято, яке запам’ятовується не тостами в ресторані, а цілими вихідними з близькими: ранок у горах, басейн, вечеря за великим столом і чан під зорями. Розповідаємо, як організувати день народження в котеджі в Мигове на Буковині: який будинок обрати, як скласти програму на два дні, що взяти з собою і про що домовитися заздалегідь.",
+          ],
+        },
+        {
+          h: "Чому котедж, а не ресторан",
+          p: [
+            "У ресторані свято триває кілька годин і закінчується, щойно настає час розходитися. У котеджі воно розтягується на вихідні: можна приїхати вдень, спокійно накрити стіл, не стежити за годинником, а наступного ранку снідати всією компанією й згадувати вчорашній вечір.",
+            "Котеджі на «Хуторі Солонець» орендуються повністю, тож поруч не буде чужих людей. Ви самі обираєте музику, меню й темп свята — від тихої родинної вечері до веселої зустрічі друзів.",
+            "Є й практична перевага: нікому не потрібно шукати таксі після вечері чи думати, як дістатися додому. Усі ночують під одним дахом, у кожного своє ліжко, а в будинку тепло й світло незалежно від графіків відключень — котеджі мають автономне живлення. Тож свято можна спокійно продовжити біля мангалу чи в чані.",
+          ],
+        },
+        {
+          h: "Скільки гостей і який будинок",
+          p: [
+            "На хуторі сім котеджів, розрахованих на 8–14 гостей. Для великої компанії підійде котедж 04 — найбільший, до 14 гостей, з окремою мангальною зоною. Котеджі 05 і 06 мають по п’ять спалень, кожна з власним санвузлом, і велику вітальню зі столом на 12 гостей — ідеально для святкової вечері, коли всі хочуть сидіти разом.",
+            "Орієнтовна вартість — від 14 000 грн за добу за весь котедж; постільна білизна, рушники й паркінг уже входять у вартість. Ціни на конкретні дати, особливо святкові, уточнюйте під час бронювання. Якщо компанія більша, ніж уміщує один будинок, запитайте про сусідні котеджі. Більше про вибір — у статті «Котедж у Карпатах для великої компанії на 10–14 осіб».",
+          ],
+        },
+        {
+          h: "Програма на два дні",
+          p: [
+            "Заїзд у котеджі — з 14:00, виїзд — до 11:00, тож найзручніший формат — дві ночі. Перший день: приїзд, заселення, басейн, поки готується стіл, і святкова вечеря. Другий день — головний: неспішний сніданок, прогулянка лісом чи активність за сезоном, а ввечері — чан і торт.",
+            "Третій ранок — без поспіху: кава на терасі, останній заплив і дорога додому. Якщо хочеться більше ідей, як розподілити час, подивіться статтю «Вихідні в Карпатах: план на 2–3 дні в Мигове».",
+          ],
+        },
+        {
+          h: "Святкова вечеря: кухня і мангал",
+          p: [
+            "У кожному котеджі повністю обладнана кухня, обідній стіл і мангал, тож меню можна продумати самостійно. Найпростіше розподілити обов’язки між гостями: хтось відповідає за салати, хтось — за м’ясо на вугіллі, хтось — за десерти й напої. Що можна, приготуйте вдома: замаринуйте м’ясо, наріжте овочі, складіть усе в контейнери.",
+            "Торт краще замовити заздалегідь у Чернівцях або Вижниці й забрати дорогою — і не забудьте свічки та запальничку. Великі закупи теж зручніше зробити в місті: у селі вибір продуктів скромніший.",
+            "Порахуйте заздалегідь, скільки потрібно вугілля, напоїв і посуду для сервірування, щоб не їхати по них увечері. Якщо в компанії є вегетаріанці чи діти, додайте в меню овочі на грилі, сирну тарілку й прості закуски. А останній тост залиште для тераси: вечірні гори в тиші — найкращий фон для побажань іменинникові.",
+          ],
+        },
+        {
+          h: "Басейн і чан для іменинника",
+          p: [
+            "Найкращий подарунок після святкової вечері — тепла вода. Криті басейни працюють щодня з 08:00 до 22:00, а ще є джакузі, сауна й чан на дровах. Чан для свята домовляйтеся заздалегідь, щоб вода була готова саме на ваш вечір.",
+            "Одне важливе правило: алкоголь і гаряча вода не поєднуються. Краще спершу чан, а потім келих за іменинника, ніж навпаки. А як правильно паритися, читайте в статті «Чан на дровах у Карпатах: що це і як правильно паритися».",
+          ],
+        },
+        {
+          h: "Розваги залежно від сезону",
+          p: [
+            "Узимку в селі працює гірськолижний курорт Мигове з пологими трасами, лижною школою, вечірнім катанням і ковзанкою — чудова розвага для іменинника й гостей, навіть якщо хтось стає на лижі вперше. Ціни на скіпаси на новий сезон уточнюйте на курорті; торік денний скіпас коштував від 850 грн у будні.",
+            "Навесні, влітку й восени — короткі марковані маршрути біля села, водоспади Буковини й Вижницький національний парк із центром зубрів у Берегометі. Улітку працює ще й відкритий басейн на хуторі; сезон його роботи залежить від погоди, тож уточнюйте під час бронювання.",
+          ],
+        },
+        {
+          h: "Декор, подарунки й сюрпризи",
+          p: [
+            "Святкову атмосферу легко створити власними руками: кульки, гірлянда, банер з іменем, свічки на стіл і плейлист, складений гостями заздалегідь. Якщо плануєте щось масштабніше — феєрверки, гучну музику допізна чи особливе оформлення, — обов’язково узгодьте це під час бронювання, щоб уникнути незручностей для інших гостей.",
+            "Ще одна ідея — подарувати саму поїздку. Якщо хочете зробити сюрприз іменинникові, запитайте про подарунковий сертифікат: умови уточнимо під час дзвінка.",
+          ],
+        },
+        {
+          h: "Якщо свято з дітьми",
+          p: [
+            "Дитячий день народження в горах — це квест, прогулянка лісом і басейн замість аніматорів у торговому центрі. Продумайте кілька простих ігор на свіжому повітрі, візьміть настільні ігри на вечір і пам’ятайте, що біля води діти мають бути під наглядом дорослих.",
+            "Що покласти у валізу для всієї родини, ми зібрали в статті «Що взяти в Карпати взимку: чекліст для сім’ї». А якщо з вами приїде невеликий улюбленець, попередьте нас про нього під час бронювання.",
+          ],
+        },
+        {
+          h: "Як забронювати котедж для свята",
+          p: [
+            "Вихідні — найпопулярніші дати, тож котедж для дня народження краще бронювати заздалегідь. Залиште заявку з датами, кількістю гостей і побажаннями щодо чану чи джакузі, а в коментарі вкажіть, що це день народження. Ми зателефонуємо, підтвердимо дати й допоможемо обрати будинок, у якому вашій компанії буде найзручніше святкувати.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A birthday in the Carpathians: a cottage with a pool",
+      excerpt:
+        "A birthday in the Carpathians: a cottage for 8–14 guests, pools and a hot tub, a barbecue dinner and fun in any season. How to plan a party in Myhove.",
+      body: [
+        {
+          p: [
+            "A birthday in the Carpathians is a celebration remembered not for toasts in a restaurant but for a whole weekend with the people you love: a morning in the mountains, the pool, dinner at a big table and a hot tub under the stars. Here is how to plan a birthday in a cottage in Myhove in Bukovyna: which house to choose, how to put together a two-day programme, what to bring and what to agree on in advance.",
+          ],
+        },
+        {
+          h: "Why a cottage rather than a restaurant",
+          p: [
+            "In a restaurant a party lasts a few hours and ends as soon as it is time to go home. In a cottage it stretches over the weekend: you can arrive in the afternoon, lay the table at your own pace, forget about the clock, and the next morning have breakfast together and relive the evening.",
+            "The cottages at Hutir Solonets are rented as a whole, so there are no strangers around. You choose the music, the menu and the pace — from a quiet family dinner to a lively get-together with friends.",
+            "There is a practical advantage too: nobody has to look for a taxi after dinner or work out how to get home. Everyone sleeps under one roof, each in their own bed, and the house stays warm and lit regardless of power-cut schedules — the cottages have their own backup power. So the party can carry on by the barbecue or in the hot tub.",
+          ],
+        },
+        {
+          h: "How many guests and which house",
+          p: [
+            "The farmstead has seven cottages for 8–14 guests. For a large group, cottage 04 is the largest, sleeping up to 14, with its own barbecue area. Cottages 05 and 06 each have five bedrooms, every one with its own bathroom, and a large living room with a table for 12 — perfect for a birthday dinner when everyone wants to sit together.",
+            "The indicative price is from UAH 14,000 per night for the whole cottage; bed linen, towels and parking are included. Prices for specific dates, especially holidays, are confirmed when you book. If your group is bigger than one house, ask about neighbouring cottages. More on choosing in our article “A Carpathian cottage for a large group of 10–14 people”.",
+          ],
+        },
+        {
+          h: "A two-day programme",
+          p: [
+            "Check-in is from 14:00 and check-out by 11:00, so two nights is the most comfortable format. Day one: arrival, settling in, a swim while the table is being laid, and the birthday dinner. Day two is the main one: a leisurely breakfast, a forest walk or a seasonal activity, and in the evening the hot tub and the cake.",
+            "The third morning is unhurried: coffee on the terrace, a last swim and the drive home. For more ideas on how to split your time, see our article “A weekend in the Carpathians: a 2–3 day plan for Myhove”.",
+          ],
+        },
+        {
+          h: "The birthday dinner: kitchen and barbecue",
+          p: [
+            "Every cottage has a fully equipped kitchen, a dining table and a barbecue, so you can plan the menu yourselves. The easiest approach is to share the tasks among guests: someone takes the salads, someone the grilled meat, someone desserts and drinks. Prepare what you can at home: marinate the meat, chop the vegetables and pack everything into containers.",
+            "It is best to order the cake in advance in Chernivtsi or Vyzhnytsia and pick it up on the way — and do not forget candles and a lighter. Big grocery runs are also easier in town: the choice in the village is more modest.",
+            "Work out in advance how much charcoal, drinks and tableware you need, so nobody has to drive out for them in the evening. If there are vegetarians or children in the group, add grilled vegetables, a cheese board and simple snacks to the menu. And save the last toast for the terrace: the mountains in the evening quiet are the best backdrop for birthday wishes.",
+          ],
+        },
+        {
+          h: "The pool and hot tub for the birthday star",
+          p: [
+            "The best present after a birthday dinner is warm water. The indoor pools are open daily from 08:00 to 22:00, and there is also a jacuzzi, a sauna and a wood-fired hot tub. Arrange the hot tub in advance so the water is ready for your evening.",
+            "One important rule: alcohol and hot water do not mix. Better the hot tub first and a toast to the birthday star afterwards, not the other way round. Read how to enjoy it properly in our article “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it”.",
+          ],
+        },
+        {
+          h: "Activities by season",
+          p: [
+            "In winter the village has the Myhove ski resort with gentle slopes, a ski school, evening skiing and an ice rink — great fun for the birthday star and guests, even if someone is putting on skis for the first time. Check ski pass prices for the new season with the resort; last season a day pass cost from UAH 850 on weekdays.",
+            "In spring, summer and autumn there are short waymarked trails near the village, the waterfalls of Bukovyna and Vyzhnytsia National Park with its European bison centre in Berehomet. In summer the farmstead’s outdoor pool is open too; its season depends on the weather, so ask when you book.",
+          ],
+        },
+        {
+          h: "Decorations, gifts and surprises",
+          p: [
+            "A festive atmosphere is easy to create yourself: balloons, a garland, a banner with the name, candles on the table and a playlist the guests put together in advance. If you are planning something bigger — fireworks, loud music late into the night or special decorations — be sure to agree on it when you book, so other guests are not disturbed.",
+            "Another idea is to give the trip itself as the gift. If you want to surprise the birthday star, ask about a gift certificate: we will go over the terms on the phone.",
+          ],
+        },
+        {
+          h: "If the party includes children",
+          p: [
+            "A child’s birthday in the mountains means a treasure hunt, a forest walk and a pool instead of entertainers at a shopping centre. Plan a few simple outdoor games, bring board games for the evening and remember that children must be supervised by adults near water.",
+            "We put together what to pack for the whole family in our article “What to pack for the Carpathians in winter: a family checklist”. And if a small pet is coming with you, let us know when you book.",
+          ],
+        },
+        {
+          h: "How to book a cottage for the party",
+          p: [
+            "Weekends are the most popular dates, so it is best to book a birthday cottage early. Leave a request with your dates, the number of guests and any wishes about the hot tub or jacuzzi, and mention in the comment that it is a birthday. We will call you back, confirm the dates and help you choose the house where your group will be most comfortable celebrating.",
+          ],
+        },
+      ],
+    },
+  },
+  {
     slug: "valentines-day-carpathians",
     date: "2026-11-09",
     cover: "/assets/spa-jacuzzi-1.jpg",
