@@ -122,6 +122,12 @@ export const GOOGLE_PLACE_ID = "ChIJWZ1xnFKfNkcRFrbqxyx6lzg";
 export const REVIEW_HREF = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
 export const GOOGLE_RATING = { value: 4.3, count: 244 } as const;
 export const PRICE_PER_NIGHT = 14000;
+export const NEW_YEAR = {
+  pricePerNight: PRICE_PER_NIGHT * 2,
+  minNights: 3,
+  cottages: [1, 2, 3, 5, 6, 7] as readonly number[],
+  cover: "/assets/hero.jpg",
+} as const;
 
 export const pad = (n: number): string => String(n).padStart(2, "0");
 
@@ -292,22 +298,22 @@ export const REVIEW_SOURCES: readonly ReviewSource[] = [
 ];
 
 export const PLAN_AMENITY_SPOTS: readonly (readonly [string, string])[] = [
-  ["44%", "47%"],
-  ["58%", "58%"],
-  ["71%", "50%"],
-  ["83%", "62%"],
-  ["27%", "54%"],
-  ["36%", "72%"],
-  ["14%", "85%"],
-  ["62%", "82%"],
+  ["27%", "47%"],
+  ["44%", "51%"],
+  ["80%", "66%"],
+  ["25%", "69%"],
+  ["39%", "64%"],
+  ["23%", "57%"],
+  ["57%", "47%"],
+  ["93%", "80%"],
+  ["9%", "53%"],
 ];
 
-export const PLAN_COTTAGES: readonly (readonly [string, string])[] = [
-  ["22%", "30%"],
-  ["36%", "22%"],
-  ["52%", "28%"],
-  ["66%", "20%"],
-  ["80%", "30%"],
-  ["20%", "68%"],
-  ["88%", "78%"],
-];
+export const PLAN_COTTAGES: Readonly<Partial<Record<number, readonly [string, string]>>> = {
+  1: ["77%", "44%"],
+  2: ["89%", "54%"],
+  3: ["75%", "29%"],
+  5: ["28%", "18%"],
+  6: ["14%", "27%"],
+  7: ["27%", "33.5%"],
+};

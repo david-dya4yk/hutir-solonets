@@ -12,10 +12,15 @@ const PATHS: readonly string[] = [
   "/spa",
   ...(OFFERS_ENABLED ? ["/offers"] : []),
   "/contacts",
+  "/new-year",
   blogPath(),
   ...BLOG_POSTS.map((p) => blogPath(p.slug)),
   ...LEGAL_ORDER.map((k) => `/${k}`),
 ];
+
+const MODIFIED: Readonly<Partial<Record<string, string>>> = Object.fromEntries(
+  BLOG_POSTS.map((p) => [blogPath(p.slug), p.date]),
+);
 
 const absolute = (path: string): string => `${SITE_URL}${path === "/" ? "" : path}`;
 
@@ -23,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return PATHS.flatMap((path) =>
     LOCALES.map((locale) => ({
       url: absolute(localePath(locale, path)),
+      ...(MODIFIED[path] === undefined ? {} : { lastModified: MODIFIED[path] }),
       alternates: {
         languages: Object.fromEntries(
           Object.entries(languages(path)).map(([l, p]) => [l, absolute(p)]),
