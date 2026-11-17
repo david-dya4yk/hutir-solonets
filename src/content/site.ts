@@ -122,6 +122,12 @@ export const GOOGLE_PLACE_ID = "ChIJWZ1xnFKfNkcRFrbqxyx6lzg";
 export const REVIEW_HREF = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
 export const GOOGLE_RATING = { value: 4.3, count: 244 } as const;
 export const PRICE_PER_NIGHT = 14000;
+export const NEW_YEAR = {
+  pricePerNight: PRICE_PER_NIGHT * 2,
+  minNights: 3,
+  cottages: [1, 2, 3, 5, 6, 7] as readonly number[],
+  cover: "/assets/hero.jpg",
+} as const;
 
 export const pad = (n: number): string => String(n).padStart(2, "0");
 

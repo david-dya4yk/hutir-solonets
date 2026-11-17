@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 import { BookButton } from "@/components/booking/BookButton";
 import { OtherCottages } from "@/components/cottage/OtherCottages";
 import { RoomTabs } from "@/components/cottage/RoomTabs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { Lines } from "@/components/ui/Lines";
 import { Slides } from "@/components/ui/Slides";
 import { findCottage, getContent } from "@/content";
 import { COTTAGE_SPECS, cottageHref, pad, PRICE_PER_NIGHT } from "@/content/site";
+import { breadcrumbSchema } from "@/lib/schema";
 import { alternates } from "@/lib/seo";
 import { formatPrice, LOCALES, localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
@@ -33,8 +35,13 @@ export async function generateMetadata(
   return c === undefined
     ? {}
     : {
-        title: t("common.cottage", { n: pad(c.n) }),
-        description: c.desc,
+        title: t("meta.cottageTitle", { guests: c.guests, n: pad(c.n) }),
+        description: t("meta.cottageDescription", {
+          area: c.area,
+          guests: c.guests,
+          beds: c.beds,
+          desc: c.desc,
+        }),
         alternates: alternates(locale, cottageHref(c)),
       };
 }
@@ -95,6 +102,13 @@ export default async function CottagePage(
 
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          [t("nav.home"), localePath(locale, "/")],
+          [t("nav.cottages"), localePath(locale, "/cottages")],
+          [t("common.cottage", { n: pad(cur.n) }), localePath(locale, cottageHref(cur))],
+        ])}
+      />
       <section className={styles.hero}>
         <Slides
           key={cur.n}
