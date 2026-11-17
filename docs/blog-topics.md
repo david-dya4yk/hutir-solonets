@@ -30,6 +30,9 @@
 - [x] Романтичний відпочинок у Карпатах на День закоханих — `valentines-day-carpathians` (2026-11-09)
 - [x] 8 Березня в Карпатах: відпочинок у подарунок — `march-8-carpathians` (2026-11-09)
 - [x] Великдень у Карпатах 2027: буковинські традиції — `easter-carpathians` (2026-11-09)
+- [x] Котедж на Новий рік з басейном і чаном у Карпатах — `new-year-cottage-with-pool` (2026-11-09, на прохання власника)
+- [x] Новий рік у Карпатах з дітьми: свято в котеджі — `new-year-with-kids-carpathians` (2026-11-09, на прохання власника)
+- [x] Новорічне меню для компанії в котеджі: план на 10–14 людей — `new-year-menu-cottage` (2026-11-09, на прохання власника)
 - [x] Травневі вихідні в Карпатах 2027: відпочинок у Мигове — `may-holidays-carpathians` (2026-11-16)
 - [x] Карпати з басейном і чаном: котедж із SPA у Мигове — `carpathians-pool-and-chan` (2026-11-16)
 - [x] День народження в Карпатах: котедж із басейном для свята — `birthday-in-carpathians` (2026-11-16)
@@ -76,6 +79,10 @@
 - Великодній кошик і ціни на ринку Чернівців (2025): https://suspilne.media/chernivtsi/995001-skilki-vartue-zibrati-velikodnij-kosik-u-cernivcah/
 - Буковинські паски: https://suspilne.media/chernivtsi/1279498-velikden-na-bukovini-tri-recepti-pasok-dla-prigotuvanna-vdoma/
 - Освячення кошиків під час комендантської години: https://suspilne.media/chernivtsi/232054-u-cernivcah-osvatiti-kosiki-prijsli-tisaci-viran-fotoreportaz/
+- Заборона феєрверків під час воєнного стану (хлопавки й бенгальські вогні дозволені, станом на НР 2026): https://www.slovoidilo.ua/2025/12/31/novyna/suspilstvo/feyerverky-zaboronoyu-ukrayincyam-nahadaly-pro-obmezhennya-novorichnu-nich
+- Комендантська година в новорічну ніч (НР 2025): https://news.liga.net/ua/politics/news/yak-diiatyme-komendantska-hodyna-u-novorichnu-nich-i-shcho-bude-z-porushnykamy
+- Святкові дні 2027 і воєнний стан (Різдво 25 грудня): https://buhplatforma.com.ua/article/19312-sviatkovi-dni-2027-roku-v-ukraini
+- Курорт Мигове (витяги, траси, денний скіпас 950/475 грн): https://www.skiresort.com/en/ski-resort/mygovo/
 - Травневі свята 2027 (1 і 8 травня — суботи, без перенесення вихідних під час воєнного стану; Великдень 2 травня): https://prokadry.com.ua/article/19256-vykhidni-2027
 - Сніг у Карпатах у травні (8 травня 2025, Піп Іван −2 °C): https://thepage.ua/ua/lite/pogoda-v-ukrayini-v-karpatah-u-travni-pishov-snig
 - Чан: температура 40–45 °C, до 20–30 хв, протипоказання: https://news.obozrevatel.com/ukr/travel/komu-ne-varto-lizti-v-chavunni-chani-z-mineralnoyu-vodoyu-vidpochivajte-z-koristyu.htm
