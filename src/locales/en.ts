@@ -2,14 +2,18 @@ import type { Messages } from "./types";
 
 export default {
   meta: {
-    title: "Hutir Solonets — cottages and SPA in the Carpathians",
+    title: "Hutir Solonets — cottages and SPA in the Carpathians, Myhove",
     template: "%s · Hutir Solonets",
     description:
       "Cottages for 8–14 guests, pools, a jacuzzi and a wood-fired hot tub in the forest near Myhove, Bukovynian Carpathians.",
-    cottagesTitle: "Cottages",
-    cottagesDescription: "Seven cottages for 8–14 guests in the forest in Myhove.",
-    spaTitle: "SPA & pools",
-    spaDescription: "Two indoor pools, an outdoor pool, a jacuzzi and a wood-fired hot tub.",
+    cottagesTitle: "Cottages in the Carpathians for 8–14 guests",
+    cottagesDescription:
+      "Cottages in the Carpathians for 8–14 guests in the forest in Myhove: kitchen, terrace, barbecue, pools and a hot tub on site. Prices, photos and booking.",
+    cottageTitle: "Carpathian cottage for {guests} guests — No. {n}",
+    cottageDescription: "{area} m² · up to {guests} guests · bedrooms: {beds}. {desc}",
+    spaTitle: "SPA, pools and hot tub in the Carpathians",
+    spaDescription:
+      "Two indoor pools, an outdoor pool, a jacuzzi, a sauna and a wood-fired hot tub at Hutir Solonets, Myhove. A Carpathian break in any weather.",
     offersTitle: "Offers",
     offersDescription: "Deals, seasonal offers and gift certificates.",
     contactsTitle: "Contacts",
@@ -248,6 +252,30 @@ export default {
     read: "Read",
     back: "All articles",
     cta: "Book your stay",
+  },
+  newYear: {
+    metaTitle: "New Year in the Carpathians — cottages in Myhove",
+    metaDescription:
+      "Celebrate New Year in a forest cottage in Myhove: 8–12 guests, pools, a jacuzzi and a hot tub. Minimum stay 3 nights, {price} per night.",
+    eyebrow: "New Year holidays",
+    title: "New Year in the Carpathians",
+    lead: "Celebrate New Year in your own cottage in the forest in Myhove: a big group around one table, warm pools, a wood-fired hot tub under the stars and the quiet of the Bukovynian Carpathians all around.",
+    priceLabel: "Price per night",
+    minLabel: "Minimum stay",
+    minValue: "3 nights",
+    totalLabel: "Price for 3 nights",
+    totalValue: "from {price}",
+    note: "A double rate applies over the New Year holidays: the price of each night is multiplied by 2.",
+    whyTitle: "Why here",
+    why1: "The whole cottage is yours: a fully equipped kitchen, a set table, a terrace and a barbecue — easy to cook a festive dinner for the whole group.",
+    why2: "Indoor pools, a jacuzzi and a wood-fired hot tub a few steps from the house, so the celebration goes on in snow and frost.",
+    why3: "Several cottages on one site — come with several families or a large group of friends.",
+    why4: "A quiet part of Myhove village, about 60 km from Chernivtsi: winter forest, mountains and no city noise.",
+    cottagesTitle: "Cottages for the holidays",
+    cottageRow: "up to {guests} guests · {area} m²",
+    bookTitle: "How to book",
+    book: "New Year dates go first. Send us a request with your dates and number of guests — we will check which cottages are free and confirm the booking by phone.",
+    cta: "Book New Year",
   },
   notFound: {
     title: "Page not found.",

@@ -2,8 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { BookButton } from "@/components/booking/BookButton";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { LazyImage } from "@/components/ui/LazyImage";
 import { BLOG_POSTS, blogPath, findPost } from "@/content/blog";
+import { breadcrumbSchema, postSchema } from "@/lib/schema";
 import { alternates } from "@/lib/seo";
 import { intlLocale, LOCALES, localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
@@ -13,6 +15,8 @@ import type { ReactNode } from "react";
 
 import styles from "@/components/blog/Blog.module.css";
 import ui from "@/components/ui/ui.module.css";
+
+const TITLE_MAX = 65;
 
 export function generateStaticParams(): { locale: string; slug: string }[] {
   return LOCALES.flatMap((locale) => BLOG_POSTS.map((p) => ({ locale, slug: p.slug })));
@@ -27,9 +31,11 @@ export async function generateMetadata(
   if (post === undefined) {
     return {};
   }
+  const t = await getI18n();
   const { title, excerpt } = post[locale];
+  const full = t("meta.template").replace("%s", title);
   return {
-    title,
+    title: full.length > TITLE_MAX ? { absolute: title } : title,
     description: excerpt,
     alternates: alternates(locale, blogPath(slug)),
     openGraph: {
@@ -54,8 +60,17 @@ export default async function BlogPostPage(
   }
   const text = post[locale];
   const date = new Intl.DateTimeFormat(intlLocale(locale), { dateStyle: "long" });
+  const path = localePath(locale, blogPath(slug));
   return (
     <article className={styles.article}>
+      <JsonLd data={postSchema(locale, post, path)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          [t("nav.home"), localePath(locale, "/")],
+          [t("blog.title"), localePath(locale, blogPath())],
+          [text.title, path],
+        ])}
+      />
       <Link href={localePath(locale, blogPath())} className={styles.back}>
         ← {t("blog.back")}
       </Link>

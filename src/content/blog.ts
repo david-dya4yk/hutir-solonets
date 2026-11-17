@@ -1532,7 +1532,7 @@ export const BLOG_POSTS: readonly BlogPost[] = [
   {
     slug: "corporate-carpathians",
     date: "2026-10-28",
-    cover: "/assets/home-territory.jpg",
+    cover: "/assets/territory-map.jpg",
     uk: {
       title: "Корпоратив у Карпатах: як організувати виїзд команди в Мигове",
       excerpt:

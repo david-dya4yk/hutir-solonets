@@ -8,12 +8,14 @@ import { FocusTiles } from "@/components/home/FocusTiles";
 import { HeroVideo } from "@/components/home/HeroVideo";
 import { PlanMap } from "@/components/home/PlanMap";
 import { Reviews } from "@/components/home/Reviews";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { FeatureDots } from "@/components/ui/FeatureDots";
 import { LazyImage } from "@/components/ui/LazyImage";
 import { Lines } from "@/components/ui/Lines";
 import { Media } from "@/components/ui/Media";
 import { getContent } from "@/content";
 import { OFFERS_ENABLED } from "@/content/site";
+import { homeSchema } from "@/lib/schema";
 import { alternates } from "@/lib/seo";
 import { localePath } from "@/locales/config";
 import { getI18n, initLocale } from "@/locales/server";
@@ -35,6 +37,7 @@ export default async function HomePage(props: PageProps<"/[locale]">): Promise<R
   const c = getContent(locale);
   return (
     <>
+      <JsonLd data={homeSchema(locale)} />
       <section className={styles.hero}>
         <div className={ui.parallax} data-parallax="0.3">
           <div className={`${ui.parallaxDeep} ${styles.heroPhoto}`}>
