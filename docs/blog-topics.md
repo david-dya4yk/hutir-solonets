@@ -36,17 +36,17 @@
 - [x] Травневі вихідні в Карпатах 2027: відпочинок у Мигове — `may-holidays-carpathians` (2026-11-16)
 - [x] Карпати з басейном і чаном: котедж із SPA у Мигове — `carpathians-pool-and-chan` (2026-11-16)
 - [x] День народження в Карпатах: котедж із басейном для свята — `birthday-in-carpathians` (2026-11-16)
+- [x] День Конституції в Карпатах 2027: літні вихідні в Мигове — `constitution-day-summer-carpathians` (2026-11-23)
+- [x] Дівич-вечір у Карпатах: котедж із басейном для подруг — `hen-party-carpathians` (2026-11-23)
+- [x] Відпочинок у Карпатах з батьками: поїздка трьох поколінь — `multigenerational-holiday-carpathians` (2026-11-23)
 
 ## Черга
 
 ### Свята (сезонні, пріоритет)
 
-- [ ] День Конституції та літні вихідні в Карпатах — до 2027-06-01
+- Наразі немає — додайте нові сезонні теми.
 
 ### Відпочинок у Карпатах і Мигове
-
-- [ ] Дівич-вечір або парубоцький у Карпатах: котедж для компанії — запит «дівич-вечір у карпатах»
-- [ ] Відпочинок у Карпатах з батьками і бабусями: поїздка кількох поколінь
 
 ### Зима
 
@@ -86,3 +86,8 @@
 - Травневі свята 2027 (1 і 8 травня — суботи, без перенесення вихідних під час воєнного стану; Великдень 2 травня): https://prokadry.com.ua/article/19256-vykhidni-2027
 - Сніг у Карпатах у травні (8 травня 2025, Піп Іван −2 °C): https://thepage.ua/ua/lite/pogoda-v-ukrayini-v-karpatah-u-travni-pishov-snig
 - Чан: температура 40–45 °C, до 20–30 хв, протипоказання: https://news.obozrevatel.com/ukr/travel/komu-ne-varto-lizti-v-chavunni-chani-z-mineralnoyu-vodoyu-vidpochivajte-z-koristyu.htm
+- День Конституції під час воєнного стану (ст. 73 КЗпП не застосовується, без додаткового вихідного у 2026): https://fakty.com.ua/ua/ukraine/20260626-den-konstytutsiyi-ukrayiny-chy-bude-dodatkovyj-vyhidnyj-pislya-svyata-u-2026-rotsi/
+- 28 червня 2027 — понеділок: https://www.officeholidays.com/holidays/ukraine/ukraine-constitution-day
+- Воєнний стан продовжено до 29 січня 2027: https://vikna.tv/dlia-tebe/vijna-v-ukrayini/voyennyj-stan-v-ukrayini-prodovzhyly-do-29-sichnia-2027-roku/
+- Мигове влітку (мотузковий парк, скеледром, квадроцикли, ролердром, кінний клуб; висота курорту ~500 м; 63 км від обласного центру; стежка «Стіжок» — набір 329 м): https://karpaty.rocks/en/migove
+- Центр відтворення зубрів у Берегометі (вольєр 1,6 га, пн–пт 9:00–18:00, вихідні за домовленістю, квитки 10/5 грн; дані можуть бути застарілі): https://karpaty.rocks/en/node/21674

@@ -19,6 +19,429 @@ export type BlogPost = {
 
 export const BLOG_POSTS: readonly BlogPost[] = [
   {
+    slug: "constitution-day-summer-carpathians",
+    date: "2026-11-23",
+    cover: "/assets/pool-outdoor-1.jpg",
+    uk: {
+      title: "День Конституції в Карпатах 2027: літні вихідні в Мигове",
+      excerpt:
+        "День Конституції в Карпатах 2027: чи буде вихідний 28 червня, як скласти довгий вікенд і чим зайнятися влітку в Мигове — басейн, стежки, водоспади.",
+      body: [
+        {
+          p: [
+            "День Конституції в Карпатах — гарний привід відкрити літній сезон у горах. У 2027 році 28 червня припадає на понеділок, тож разом із суботою й неділею може вийти три дні відпочинку. Розповідаємо, чи буде цей день вихідним, як спланувати червневі вікенди і чим зайнятися влітку в Мигове на Буковині, щоб і діти, і дорослі повернулися відпочилими.",
+          ],
+        },
+        {
+          h: "Чи буде вихідний 28 червня 2027 року",
+          p: [
+            "28 червня 2027 року — понеділок. У мирний час це був би святковий вихідний, і вікенд автоматично розтягнувся б до трьох днів. Але поки діє воєнний стан, стаття 73 Кодексу законів про працю, яка визначає святкові вихідні, не застосовується: так було й у 2026 році, коли додаткового вихідного після 28 червня не дали.",
+            "Наразі воєнний стан продовжено до 29 січня 2027 року. Якщо його продовжуватимуть і далі, День Конституції, найімовірніше, буде звичайним робочим днем. Тому найнадійніший спосіб отримати три дні в горах — заздалегідь узяти один день відпустки. Графік роботи в кожній компанії визначає роботодавець, тож уточніть його ближче до дати.",
+          ],
+        },
+        {
+          h: "Як скласти довгі червневі вихідні",
+          p: [
+            "Червень у 2027 році взагалі зручний для коротких поїздок. 20 червня — Трійця, вона припадає на неділю, тож вихідні 19–20 червня теж мають святковий настрій. А вікенд 26–28 червня з одним днем відпустки дає повноцінні три ночі в горах.",
+            "Ще один варіант — поїхати посеред тижня. Влітку в будні на стежках і біля води помітно тихіше, а дорога займає менше часу. Якщо їдете з дітьми, зручно виїхати в п’ятницю зранку: дорогою можна зупинитися пообідати, а заселитися — з 14:00, саме коли малеча вже втомиться від машини. Як доїхати з різних міст, ми розповіли в статті «Як дістатися до Мигового: з Чернівців, Києва, Львова та Івано-Франківська».",
+          ],
+        },
+        {
+          h: "Відкритий басейн і SPA влітку",
+          p: [
+            "Влітку головне місце на «Хуторі Солонець» — відкритий басейн із шезлонгами, сонцем і запахом смерек довкола. Сезон його роботи залежить від погоди, тож чи працюватиме він саме на ваші дати, уточнюйте під час бронювання.",
+            "Якщо погода зіпсується, відпочинок не зірветься: два криті басейни працюють щодня з 08:00 до 22:00, а ще є джакузі, сауна і чан на дровах. Літній чан — це окреме задоволення: пізно ввечері, коли спадає спека і над лісом з’являються зорі. Як правильно паритися і скільки часу проводити в гарячій воді, читайте в статті «Чан на дровах у Карпатах: що це і як правильно паритися».",
+          ],
+        },
+        {
+          h: "Чим зайнятися в Мигове влітку",
+          p: [
+            "Мигове відоме як гірськолижний курорт, але влітку тут не менш цікаво. На курорті працюють мотузковий парк і скеледром, популярні волейбол, гірські велосипеди та поїздки на квадроциклах, а ковзанка влітку перетворюється на ролердром. Для найменших є дитячий майданчик.",
+            "Поблизу є місця, де можна покататися верхи, зокрема кінний клуб у Мигове. Розклад, ціни й вікові обмеження для таких розваг щосезону змінюються, тож уточнюйте їх напряму в організаторів перед поїздкою. На території хутора теж є дитячий і спортивний майданчики, тож для активного дня не обов’язково кудись їхати.",
+          ],
+        },
+        {
+          h: "Стежки й водоспади поруч",
+          p: [
+            "Довкола Мигового є короткі марковані маршрути, які легко вписати в літній день. «Слідами графа Василька» — найлегший, близько 3,3 км і приблизно годину ходьби. Еко-стежка «Стіжок» — 3,5 км із набором висоти близько 329 метрів, на неї варто закласти півтори години. «До вартових Недеї» — 5,4 км для тих, хто хоче відчути справжній підйом.",
+            "Влітку краще виходити зранку, поки не спекотно, а в рюкзак класти воду, головні убори й засіб від комах. Після обіду в горах нерідко збираються грози, тож дивіться прогноз і не залишайтеся на відкритих вершинах, якщо небо темніє. Для прохолодної прогулянки підійдуть водоспади: найближчий, Сіручок, — приблизно за 16 км, а в Розтоках поруч розташовані Сич висотою близько 10 метрів, Середній Гук і каскад Буковинських водоспадів. Детальніше — у статті «Маршрути біля Мигового: короткі походи, нацпарк і водоспади».",
+          ],
+        },
+        {
+          h: "Зубри в Берегометі",
+          p: [
+            "За кілька кілометрів від Мигового, у Берегометі, працює центр відтворення зубрів Вижницького національного природного парку. Тварини живуть у вольєрі площею 1,6 гектара, і для дітей це зазвичай одна з найяскравіших подій поїздки.",
+            "За даними путівника karpaty.rocks, центр приймає відвідувачів у будні з 9:00 до 18:00, а у вихідні екскурсії — за попередньою домовленістю; квитки коштували символічні 10 грн для дорослих і 5 грн для дітей. Ці дані могли змінитися, тож перед поїздкою обов’язково уточніть розклад і умови відвідування.",
+          ],
+        },
+        {
+          h: "План на три дні",
+          p: [
+            "День перший: дорога, заселення з 14:00, прогулянка територією і вечір у критому басейні або в джакузі. Вечерю зручно приготувати на мангалі біля будинку — гриль-вечір на терасі одразу задає ритм відпустки.",
+            "День другий: ранок на стежці «Слідами графа Василька» або «Стіжок», обід у котеджі, після обіду — відкритий басейн чи мотузковий парк, а ввечері — чан під зорями. День третій: неспішний сніданок на терасі, поїздка до зубрів чи водоспаду і виїзд. Якщо ви залишаєтеся до понеділка 28 червня, пам’ятайте, що виїзд — до 11:00, тож останню прогулянку краще запланувати на ранок.",
+          ],
+        },
+        {
+          h: "Як забронювати літні вихідні",
+          p: [
+            "Котеджі на хуторі орендуються повністю і розраховані на 8–14 гостей. Орієнтовна вартість — від 14 000 грн за добу за весь будинок; постільна білизна, рушники й паркінг уже входять у вартість. Ціни на літній сезон і святкові дати уточнюйте під час бронювання.",
+            "Червневі вікенди бронюють заздалегідь, особливо великими компаніями. Залиште заявку з датами, кількістю гостей і побажаннями щодо чану — ми зателефонуємо, перевіримо вільні будинки й допоможемо обрати той, що найкраще підійде вашій родині чи друзям.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "Constitution Day 2027 in the Carpathians: summer in Myhove",
+      excerpt:
+        "Constitution Day in the Carpathians 2027: is 28 June a day off, how to plan a long weekend and what to do in Myhove in summer — pool, trails, waterfalls.",
+      body: [
+        {
+          p: [
+            "Constitution Day in the Carpathians is a lovely way to open the summer season in the mountains. In 2027, 28 June falls on a Monday, so together with Saturday and Sunday it can make three days away. Here is whether the day will be a holiday, how to plan your June weekends and what to do in summer in Myhove in Bukovyna, so that both children and adults come home rested.",
+          ],
+        },
+        {
+          h: "Is 28 June 2027 a day off",
+          p: [
+            "28 June 2027 is a Monday. In peacetime it would be a public holiday and the weekend would automatically stretch to three days. But while martial law is in force, Article 73 of the Labour Code, which sets public holidays as days off, does not apply: that was the case in 2026 too, when no extra day off was given after 28 June.",
+            "Martial law has currently been extended until 29 January 2027. If it keeps being extended, Constitution Day will most likely be an ordinary working day. So the most reliable way to get three days in the mountains is to book a day of leave in advance. Every employer sets its own schedule, so check yours closer to the date.",
+          ],
+        },
+        {
+          h: "How to plan long June weekends",
+          p: [
+            "June 2027 is convenient for short trips in general. 20 June is Trinity Sunday, so the weekend of 19–20 June also has a festive feel. And the weekend of 26–28 June plus one day of leave gives you three full nights in the mountains.",
+            "Another option is to travel midweek. In summer the trails and waterside spots are noticeably quieter on weekdays, and the drive takes less time. If you are travelling with children, it works well to leave on Friday morning: you can stop for lunch on the way and check in from 14:00, just as the little ones are tired of the car. We explained how to get here from different cities in our article “How to get to Myhove from Chernivtsi, Kyiv, Lviv and Ivano-Frankivsk”.",
+          ],
+        },
+        {
+          h: "The outdoor pool and spa in summer",
+          p: [
+            "In summer the heart of Hutir Solonets is the outdoor pool, with sun loungers, sunshine and the scent of spruce all around. Its season depends on the weather, so ask when you book whether it will be open on your dates.",
+            "If the weather turns, your holiday will not be spoiled: two indoor pools are open daily from 08:00 to 22:00, and there is also a jacuzzi, a sauna and a wood-fired hot tub. A summer hot tub is a treat of its own — late in the evening, when the heat fades and stars appear over the forest. Read how to enjoy it properly and how long to stay in the hot water in our article “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it”.",
+          ],
+        },
+        {
+          h: "What to do in Myhove in summer",
+          p: [
+            "Myhove is known as a ski resort, but summer here is just as interesting. The resort has a rope park and a climbing wall; volleyball, mountain biking and quad bike rides are popular, and the ice rink turns into a roller park in summer. There is a playground for the youngest guests.",
+            "There are places nearby to go horse riding, including an equestrian club in Myhove. Schedules, prices and age limits for these activities change every season, so check them directly with the organisers before your trip. The farmstead itself has a playground and a sports ground, so you do not have to go anywhere for an active day.",
+          ],
+        },
+        {
+          h: "Trails and waterfalls nearby",
+          p: [
+            "Around Myhove there are short waymarked trails that fit easily into a summer day. “In the Footsteps of Count Wassilko” is the easiest, about 3.3 km and roughly an hour’s walk. The Stizhok nature trail is 3.5 km with about 329 metres of ascent; allow an hour and a half. “To the Guardians of Nedeia” is 5.4 km for those who want a proper climb.",
+            "In summer it is best to set off in the morning before the heat, with water, hats and insect repellent in your backpack. Afternoon thunderstorms are common in the mountains, so check the forecast and do not stay on open summits if the sky darkens. For a cool walk, choose a waterfall: the nearest, Siruchok, is about 16 km away, while in Roztoky the Sych waterfall, about 10 metres high, the Middle Huk and the cascade of the Bukovynian waterfalls are close together. More in our article “Trails near Myhove: short hikes, a national park and waterfalls”.",
+          ],
+        },
+        {
+          h: "The bison in Berehomet",
+          p: [
+            "A few kilometres from Myhove, in Berehomet, is the European bison breeding centre of Vyzhnytsia National Nature Park. The animals live in a 1.6-hectare enclosure, and for children this is usually one of the highlights of the trip.",
+            "According to the karpaty.rocks guide, the centre welcomes visitors on weekdays from 9:00 to 18:00, with weekend tours by prior arrangement; tickets cost a symbolic UAH 10 for adults and UAH 5 for children. This information may have changed, so be sure to check the opening hours and visiting terms before you go.",
+          ],
+        },
+        {
+          h: "A three-day plan",
+          p: [
+            "Day one: the drive, check-in from 14:00, a stroll around the grounds and an evening in the indoor pool or jacuzzi. Dinner is easy on the barbecue next to the cottage — a grill night on the terrace sets the holiday rhythm straight away.",
+            "Day two: a morning on the Count Wassilko or Stizhok trail, lunch at the cottage, the outdoor pool or the rope park in the afternoon, and the hot tub under the stars in the evening. Day three: an unhurried breakfast on the terrace, a trip to the bison or a waterfall, and departure. If you are staying until Monday 28 June, remember that check-out is by 11:00, so plan your last walk for the morning.",
+          ],
+        },
+        {
+          h: "How to book a summer weekend",
+          p: [
+            "The cottages are rented as a whole and sleep 8–14 guests. The indicative price is from UAH 14,000 per night for the whole cottage; bed linen, towels and parking are included. Please confirm summer and holiday-date prices when you book.",
+            "June weekends get booked early, especially by large groups. Leave a request with your dates, the number of guests and any wishes about the hot tub — we will call you back, check which cottages are free and help you choose the one that suits your family or friends best.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "hen-party-carpathians",
+    date: "2026-11-23",
+    cover: "/assets/pool-indoor-4.jpg",
+    uk: {
+      title: "Дівич-вечір у Карпатах: котедж із басейном для подруг",
+      excerpt:
+        "Дівич-вечір у Карпатах: як обрати котедж для компанії, спланувати SPA-день, вечерю й розваги, що врахувати в правилах і як розділити бюджет.",
+      body: [
+        {
+          p: [
+            "Дівич-вечір у Карпатах — це не одна гучна ніч, а кілька днів із подругами: басейн, чан на дровах, довгі розмови на терасі й ранкова кава з видом на ліс. Котедж, який повністю належить вашій компанії, дає свободу, якої немає в ресторані. Розповідаємо, як обрати будинок, скласти програму, не забути про правила і чесно розділити бюджет. І так, усе це так само працює для парубоцького.",
+          ],
+        },
+        {
+          h: "Чому котедж, а не ресторан",
+          p: [
+            "У ресторані свято закінчується, щойно приносять рахунок. У котеджі воно триває стільки, скільки вам хочеться: можна прикрасити вітальню, увімкнути свій плейлист, організувати фотозону і не перейматися, що хтось за сусіднім столиком дивиться косо.",
+            "До того ж не потрібно домовлятися, хто кого везе додому. Усі ночують під одним дахом, а зранку спільний сніданок плавно переходить у басейн. На «Хуторі Солонець» котедж орендується повністю, тож будинок, тераса й мангал біля нього — тільки ваші.",
+          ],
+        },
+        {
+          h: "Як обрати будинок під компанію",
+          p: [
+            "Котеджі на хуторі розраховані на 8–14 гостей, тож почніть із точної кількості людей. Для компанії до 8 подруг підійде затишний будинок на три-чотири спальні, для 10–12 — просторіший. У котеджах 5 і 6 велика вітальня площею 51 м² зі столом на 12 гостей, а кожна спальня має власний санвузол — вранці ніхто не стоїть у черзі до душу.",
+            "Якщо хочеться більше тиші й приватності, зверніть увагу на котедж 3: він розташований у найвищій точці комплексу, майже серед лісу. Котедж 7 — з панорамним краєвидом на гори і єдиний з однорівневим плануванням, а критий басейн розташований просто на першому поверсі тієї ж будівлі. Більше порад — у статті «Як обрати котедж на хуторі: короткий путівник».",
+          ],
+        },
+        {
+          h: "SPA-день для подруг",
+          p: [
+            "Найкраще, що можна подарувати нареченій перед весіллям, — день без поспіху. Два криті басейни працюють щодня з 08:00 до 22:00, а ще є джакузі, сауна і чан на дровах. Влітку до цього додається відкритий басейн, але його сезон залежить від погоди — уточнюйте під час бронювання.",
+            "Чан варто замовити заздалегідь, щоб вода була готова саме тоді, коли ви плануєте. Найгарніше в ньому ввечері: пара над водою, темний ліс довкола і келих чогось легкого. Тільки не зловживайте алкоголем у гарячій воді й не сидіть у чані довше 20–30 хвилин поспіль — так задоволення не перетвориться на запаморочення.",
+          ],
+        },
+        {
+          h: "Вечеря, тераса і мангал",
+          p: [
+            "Святкову вечерю зручно готувати разом: у котеджах обладнані кухні з великим столом, за яким уміщається вся компанія, а біля будинків є мангал. Розподіліть обов’язки заздалегідь — хтось відповідає за м’ясо чи овочі на грилі, хтось за салати й десерти, хтось за декор.",
+            "Корисна ідея — скласти спільний список покупок у месенджері й закупитися в місті дорогою. Не забудьте про лід, запас питної води й щось на сніданок наступного дня: після свята ніхто не захоче їхати до магазину. Як спланувати меню на велику компанію, ми розповідали в статті «Новорічне меню для компанії в котеджі: план на 10–14 людей» — більшість порад підходить і для дівич-вечора.",
+          ],
+        },
+        {
+          h: "Правила, про які варто знати заздалегідь",
+          p: [
+            "Щоб свято не зіпсувало відпочинок іншим гостям, на хуторі діє тиха година з 23:00 до 08:00. Це не означає, що вечір має закінчитися о 23:00 — просто далі гучну музику краще вимкнути, а розмови перенести в будинок. Паління в будинках заборонене.",
+            "Поки діє воєнний стан, запускати феєрверки заборонено; бенгальські вогні та хлопавки для фото зазвичай дозволені, але використовуйте їх просто неба і подалі від дерев. Якщо частина подруг приїде лише на вечір без ночівлі, перебування кожного додаткового гостя коштує 800 грн незалежно від тривалості візиту — у вартість входять басейни й рушники. А якщо хтось хоче взяти з собою маленького улюбленця, попередьте нас заздалегідь.",
+          ],
+        },
+        {
+          h: "Якщо це парубоцький",
+          p: [
+            "Для чоловічої компанії програма зазвичай активніша. Влітку в Мигове можна покататися на квадроциклах, гірських велосипедах чи верхи, пройти мотузковий парк, а взимку — стати на лижі або сноуборд на місцевому курорті. Розклад і ціни цих розваг уточнюйте в організаторів перед поїздкою.",
+            "Увечері — мангал, сауна і чан, а для тих, хто прокинеться найраніше, — коротка стежка «Слідами графа Василька» довжиною близько 3,3 км. Ідеї на кожен день є у статті «Вихідні в Карпатах: план на 2–3 дні в Мигове».",
+          ],
+        },
+        {
+          h: "Як розділити бюджет",
+          p: [
+            "Орієнтовна вартість котеджу — від 14 000 грн за добу за весь будинок; постільна білизна, рушники й паркінг уже входять у ціну. Для компанії з 12 людей це приблизно від 1 170 грн з кожної за ніч — часто дешевше, ніж окремий номер у готелі. Ціни на конкретні та святкові дати уточнюйте під час бронювання.",
+            "Бронювання підтверджується передоплатою 2000 грн за кожну добу. Зручно, коли одна людина збирає гроші й вносить передоплату, а витрати на продукти й декор ведуться в спільній таблиці. Важливо знати й умови скасування: за 14 і більше днів до заїзду повертається 90% передоплати, за 7–13 днів — 50%, менш ніж за 7 днів передоплата не повертається.",
+          ],
+        },
+        {
+          h: "Як забронювати дівич-вечір",
+          p: [
+            "Почніть із дат: дівич-вечір зазвичай планують за кілька тижнів до весілля, а популярні вихідні бронюють заздалегідь. Якщо хочете зробити нареченій сюрприз, запитайте про подарунковий сертифікат — умови уточнимо під час дзвінка.",
+            "Залиште заявку з датами, кількістю гостей і побажаннями щодо чану чи джакузі. Ми зателефонуємо, підтвердимо вільні будинки й підкажемо, який котедж найкраще підійде вашій компанії. Заїзд — з 14:00, виїзд — до 11:00.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A hen party in the Carpathians: a cottage with a pool",
+      excerpt:
+        "A hen party in the Carpathians: how to choose a cottage for your group, plan a spa day, dinner and fun, the house rules and how to split costs.",
+      body: [
+        {
+          p: [
+            "A hen party in the Carpathians is not one loud night but a few days with your friends: the pool, a wood-fired hot tub, long talks on the terrace and morning coffee overlooking the forest. A cottage that belongs entirely to your group gives you a freedom no restaurant can. Here is how to choose a house, build a programme, keep the rules in mind and split the budget fairly. And yes, all of it works just as well for a stag do.",
+          ],
+        },
+        {
+          h: "Why a cottage rather than a restaurant",
+          p: [
+            "In a restaurant the party ends as soon as the bill arrives. In a cottage it lasts as long as you like: you can decorate the living room, play your own playlist, set up a photo corner and not worry about the people at the next table.",
+            "Besides, nobody has to work out who drives whom home. Everyone sleeps under one roof, and in the morning a shared breakfast flows straight into the pool. At Hutir Solonets the cottage is rented as a whole, so the house, the terrace and the barbecue next to it are yours alone.",
+          ],
+        },
+        {
+          h: "How to choose a cottage for your group",
+          p: [
+            "The cottages sleep 8–14 guests, so start with an exact headcount. For up to 8 friends a cosy house with three or four bedrooms works well; for 10–12 you will want more space. Cottages 5 and 6 have a large 51 m² living room with a table for 12, and every bedroom has its own bathroom — nobody queues for the shower in the morning.",
+            "If you want more quiet and privacy, look at cottage 3: it stands at the highest point of the grounds, almost in the forest. Cottage 7 has panoramic mountain views and is the only one on a single level, with an indoor pool right on the ground floor of the same building. More tips in our article “How to choose a cottage at the farmstead: a short guide”.",
+          ],
+        },
+        {
+          h: "A spa day for the girls",
+          p: [
+            "The best gift for a bride-to-be is a day without rushing. Two indoor pools are open daily from 08:00 to 22:00, and there is also a jacuzzi, a sauna and a wood-fired hot tub. In summer the outdoor pool joins them, but its season depends on the weather — please ask when you book.",
+            "Book the hot tub in advance so the water is ready exactly when you want it. It is loveliest in the evening: steam over the water, the dark forest all around and a glass of something light. Just go easy on alcohol in the hot water and do not stay in for more than 20–30 minutes at a time, so the pleasure does not turn into dizziness.",
+          ],
+        },
+        {
+          h: "Dinner, the terrace and the barbecue",
+          p: [
+            "The party dinner is easy to cook together: the cottages have equipped kitchens with a big table that seats the whole group, and there is a barbecue next to the houses. Share out the jobs in advance — someone is in charge of meat or vegetables on the grill, someone of salads and desserts, someone of the decorations.",
+            "A useful trick is to keep a shared shopping list in your group chat and stock up in town on the way. Do not forget ice, plenty of drinking water and something for the next morning’s breakfast: after the party nobody will want to drive to the shop. We covered menu planning for a large group in our article “A New Year menu for a group in a cottage: a plan for 10–14” — most of the tips work for a hen party too.",
+          ],
+        },
+        {
+          h: "House rules worth knowing in advance",
+          p: [
+            "So that your celebration does not spoil other guests’ rest, quiet hours at the farmstead are from 23:00 to 08:00. That does not mean the evening has to end at 23:00 — just turn the loud music off and move the conversation indoors. Smoking inside the cottages is not allowed.",
+            "While martial law is in force, fireworks are banned; sparklers and party poppers for photos are generally allowed, but use them outdoors and away from trees. If some friends are coming just for the evening without staying overnight, each extra guest costs UAH 800 regardless of how long they stay — this includes the pools and towels. And if someone wants to bring a small pet, let us know in advance.",
+          ],
+        },
+        {
+          h: "If it is a stag do",
+          p: [
+            "For a group of men the programme is usually more active. In summer Myhove offers quad bikes, mountain bikes, horse riding and a rope park, and in winter you can ski or snowboard at the local resort. Check schedules and prices for these activities with the organisers before your trip.",
+            "In the evening — the barbecue, the sauna and the hot tub, and for the early risers a short walk on the “In the Footsteps of Count Wassilko” trail, about 3.3 km long. You will find ideas for every day in our article “A weekend in the Carpathians: a 2–3 day plan for Myhove”.",
+          ],
+        },
+        {
+          h: "How to split the budget",
+          p: [
+            "The indicative price of a cottage is from UAH 14,000 per night for the whole house; bed linen, towels and parking are included. For a group of 12 that is roughly from UAH 1,170 per person per night — often cheaper than a separate hotel room. Please confirm prices for specific and holiday dates when you book.",
+            "A booking is confirmed with a prepayment of UAH 2,000 per night. It helps when one person collects the money and makes the prepayment, while spending on food and decorations is tracked in a shared spreadsheet. It is also worth knowing the cancellation terms: 14 or more days before arrival, 90% of the prepayment is refunded; 7–13 days before, 50%; less than 7 days before, the prepayment is not refunded.",
+          ],
+        },
+        {
+          h: "How to book your hen party",
+          p: [
+            "Start with the dates: hen parties are usually planned a few weeks before the wedding, and popular weekends get booked early. If you want to surprise the bride, ask about a gift certificate — we will go over the terms on the phone.",
+            "Leave a request with your dates, the number of guests and any wishes about the hot tub or jacuzzi. We will call you back, confirm which cottages are free and suggest the one that suits your group best. Check-in is from 14:00, check-out by 11:00.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "multigenerational-holiday-carpathians",
+    date: "2026-11-23",
+    cover: "/assets/cottage-4-terrace.jpg",
+    uk: {
+      title: "Відпочинок у Карпатах з батьками: поїздка трьох поколінь",
+      excerpt:
+        "Відпочинок у Карпатах з батьками й бабусями: як обрати котедж зі зручними спальнями, спланувати дорогу, прогулянки, SPA і розпорядок для всіх поколінь.",
+      body: [
+        {
+          p: [
+            "Відпочинок у Карпатах з батьками, бабусями й дітьми — рідкісна нагода побути разом довше, ніж за святковим обідом. Але три покоління мають різний темп: онуки хочуть у басейн, дорослі — на стежку, а старшим важливі тиша, зручне ліжко й ванна поруч зі спальнею. Розповідаємо, як спланувати таку поїздку в Мигове, щоб кожен отримав свій відпочинок і ніхто не втомився від інших.",
+          ],
+        },
+        {
+          h: "Чому котедж зручний для кількох поколінь",
+          p: [
+            "У готелі велика родина розходиться по окремих номерах і збирається хіба що в ресторані. У котеджі є спільна вітальня, кухня й тераса, де можна снідати всім разом, і водночас окремі спальні, куди кожен може піти відпочити.",
+            "На «Хуторі Солонець» будинки орендуються повністю й розраховані на 8–14 гостей, тож бабусі й дідусі, батьки та онуки поміщаються під одним дахом. Котедж 4 так і задуманий — для великої родини чи двох сімей, а поруч із ним окрема мангальна зона. Якщо ж вас більше, можна взяти два сусідні будинки на одній території.",
+          ],
+        },
+        {
+          h: "Як обрати будинок: спальні й сходи",
+          p: [
+            "Для старших найважливіше — щоб не доводилося часто ходити сходами і щоб санвузол був поруч. Більшість котеджів на хуторі двоповерхові. У котеджах 5 і 6 одна зі спалень розташована на першому поверсі й має власний санвузол — це найзручніший варіант для бабусі чи дідуся. До того ж там кожна спальня зі своєю ванною кімнатою, а за великим столом у вітальні вміщується 12 людей.",
+            "Котедж 7 — єдиний з однорівневим плануванням, без сходів усередині, але сам він розташований на другому поверсі будівлі з окремим входом. Якщо для когось у родині сходи — проблема, скажіть про це під час бронювання: ми підкажемо, який будинок буде найзручнішим саме для вас.",
+          ],
+        },
+        {
+          h: "Дорога без зайвої втоми",
+          p: [
+            "Мигове розташоване приблизно за 60 км від Чернівців, тож із обласного центру дорога займає небагато часу. Якщо їдете здалеку, розбийте шлях на частини: зупинка кожні дві години, обід дорогою і виїзд так, щоб приїхати до заселення з 14:00 і не поспішати.",
+            "Для старших зручніше їхати на передньому сидінні й мати під рукою воду, ліки та теплу кофту. Варіанти маршрутів із різних міст ми зібрали в статті «Як дістатися до Мигового: з Чернівців, Києва, Львова та Івано-Франківська». А паркінг на хуторі безкоштовний і розташований біля будинків, тож валізи не доведеться нести далеко.",
+          ],
+        },
+        {
+          h: "Вода для всіх поколінь",
+          p: [
+            "Басейни — те, що об’єднує родину незалежно від віку. Два криті басейни працюють щодня з 08:00 до 22:00, тож старші можуть спокійно поплавати зранку, поки діти ще сплять, а онуки — вдосталь нахлюпатися після обіду. Є також джакузі, сауна, а влітку — відкритий басейн, сезон якого залежить від погоди.",
+            "З чаном на дровах для літніх людей варто бути обережнішими. Вода в ньому зазвичай має 40–45 °C, і навіть здоровим людям не радять сидіти довше 20–30 хвилин. Людям із серцево-судинними захворюваннями, гіпертонією чи іншими хронічними хворобами перед таким відпочинком краще порадитися з лікарем. Детальніше — у статті «Чан на дровах у Карпатах: що це і як правильно паритися».",
+          ],
+        },
+        {
+          h: "Прогулянки на будь-які сили",
+          p: [
+            "Курорт Мигове лежить на висоті близько 500 метрів над рівнем моря, тож гори тут м’які й не виснажують. Найлегший маршрут поруч — «Слідами графа Василька»: близько 3,3 км і приблизно година ходьби. Для активніших членів родини є еко-стежка «Стіжок» із підйомом близько 329 метрів і «До вартових Недеї» довжиною 5,4 км.",
+            "Хороша ідея — розділитися: молодші йдуть на стежку, а старші з онуками неспішно гуляють територією чи їдуть подивитися на зубрів у Берегомет, приблизно за 4 км. За даними путівника karpaty.rocks, центр приймає відвідувачів у будні з 9:00 до 18:00, а у вихідні — за домовленістю; перед поїздкою обов’язково уточніть розклад. Більше маршрутів — у статті «Маршрути біля Мигового: короткі походи, нацпарк і водоспади».",
+          ],
+        },
+        {
+          h: "Спільна кухня і довгий стіл",
+          p: [
+            "Найтепліші моменти таких поїздок зазвичай трапляються за столом. Кухні в котеджах обладнані всім необхідним, тож можна разом зліпити вареники за бабусиним рецептом, а ввечері засмажити щось на мангалі біля будинку.",
+            "Щоб господарські справи не лягли на одну людину, домовтеся про черговість: один день готують старші, інший — молодші, а діти накривають на стіл. Постільна білизна й рушники вже входять у вартість, тож прання й прибирання не забиратимуть ваш час відпочинку.",
+          ],
+        },
+        {
+          h: "Розпорядок, щоб усім було добре",
+          p: [
+            "Старші зазвичай прокидаються рано, діти — лягають спати пізно, тож заздалегідь обговоріть, коли в будинку тихо. На хуторі діє тиха година з 23:00 до 08:00, і це зручна точка відліку для всієї родини. Для онуків на території є дитячий і спортивний майданчики, тож у дорослих буде час на каву на терасі.",
+            "Якщо хтось із рідних не може залишитися на ночівлю, але хоче приїхати на день, перебування кожного додаткового гостя коштує 800 грн незалежно від тривалості візиту — у вартість входять басейни й рушники. Беручи з собою домашнього улюбленця вагою до 5 кг, врахуйте доплату 300 грн; деталі — у статті «Відпочинок із домашнім улюбленцем: що варто знати». Ще один плюс для старших: у котеджах автономне живлення, тож світло й тепло не залежать від графіків відключень.",
+          ],
+        },
+        {
+          h: "Як забронювати відпочинок для всієї родини",
+          p: [
+            "Орієнтовна вартість — від 14 000 грн за добу за весь котедж; постільна білизна, рушники й паркінг уже входять у вартість. Ціни на конкретні та святкові дати уточнюйте під час бронювання. Заїзд — з 14:00, виїзд — до 11:00.",
+            "Залиште заявку з датами, кількістю гостей і коротким коментарем: скільки дітей, чи є в родині люди, яким складно підніматися сходами, і чи потрібен чан. Ми зателефонуємо, підтвердимо дати й підкажемо будинок, у якому зручно буде і найменшим, і найстаршим.",
+          ],
+        },
+      ],
+    },
+    en: {
+      title: "A Carpathian holiday with parents: a three-generation trip",
+      excerpt:
+        "A Carpathian holiday with your parents and grandparents: choosing a cottage with handy bedrooms, planning the drive, walks, spa and a routine for everyone.",
+      body: [
+        {
+          p: [
+            "A holiday in the Carpathians with your parents, grandparents and children is a rare chance to spend more time together than a festive lunch allows. But three generations move at different speeds: the grandchildren want the pool, the adults want a trail, and the eldest care about quiet, a comfortable bed and a bathroom next to the bedroom. Here is how to plan such a trip to Myhove so that everyone gets their own kind of rest and nobody gets tired of the others.",
+          ],
+        },
+        {
+          h: "Why a cottage suits several generations",
+          p: [
+            "In a hotel a big family scatters into separate rooms and meets only in the restaurant. A cottage has a shared living room, kitchen and terrace where everyone can have breakfast together, and at the same time separate bedrooms where anyone can retreat for a rest.",
+            "At Hutir Solonets the houses are rented as a whole and sleep 8–14 guests, so grandparents, parents and grandchildren all fit under one roof. Cottage 4 is designed exactly for this — for a large family or two families — with its own barbecue area next to it. If there are more of you, you can take two neighbouring houses on the same grounds.",
+          ],
+        },
+        {
+          h: "Choosing a cottage: bedrooms and stairs",
+          p: [
+            "For older relatives the key things are not having to climb stairs often and having a bathroom close by. Most cottages at the farmstead have two floors. In cottages 5 and 6 one of the bedrooms is on the ground floor and has its own bathroom — the most convenient option for a grandparent. What is more, every bedroom there has an en-suite, and the big living-room table seats 12.",
+            "Cottage 7 is the only one on a single level, with no stairs inside, but the cottage itself is on the first floor of the building, with a separate entrance. If stairs are a problem for someone in your family, mention it when you book: we will suggest the house that will be most comfortable for you.",
+          ],
+        },
+        {
+          h: "A drive without the fatigue",
+          p: [
+            "Myhove is about 60 km from Chernivtsi, so the drive from the regional centre is short. If you are coming from further away, break the journey up: a stop every two hours, lunch on the way, and timing that gets you there for the 14:00 check-in without rushing.",
+            "Older passengers are usually more comfortable in the front seat with water, medicines and a warm cardigan to hand. We collected routes from different cities in our article “How to get to Myhove from Chernivtsi, Kyiv, Lviv and Ivano-Frankivsk”. Parking at the farmstead is free and right by the houses, so nobody has to carry suitcases far.",
+          ],
+        },
+        {
+          h: "Water for every generation",
+          p: [
+            "Pools bring a family together whatever their age. Two indoor pools are open daily from 08:00 to 22:00, so the eldest can swim in peace in the morning while the children are still asleep, and the grandchildren can splash to their heart’s content after lunch. There is also a jacuzzi, a sauna and, in summer, an outdoor pool whose season depends on the weather.",
+            "Older people should take more care with the wood-fired hot tub. The water is usually 40–45 °C, and even healthy people are advised not to stay in for more than 20–30 minutes. Anyone with heart or circulation problems, high blood pressure or other chronic conditions should check with a doctor first. More in our article “A wood-fired hot tub in the Carpathians: what it is and how to enjoy it”.",
+          ],
+        },
+        {
+          h: "Walks for every fitness level",
+          p: [
+            "The Myhove resort lies at about 500 metres above sea level, so the mountains here are gentle rather than exhausting. The easiest trail nearby is “In the Footsteps of Count Wassilko”: about 3.3 km and roughly an hour’s walk. For the more active family members there is the Stizhok nature trail with about 329 metres of ascent and “To the Guardians of Nedeia”, 5.4 km long.",
+            "A good idea is to split up: the younger ones head for a trail while the elders and grandchildren stroll around the grounds or drive to see the bison in Berehomet, about 4 km away. According to the karpaty.rocks guide, the centre welcomes visitors on weekdays from 9:00 to 18:00 and at weekends by arrangement; be sure to check the schedule before you go. More routes in our article “Trails near Myhove: short hikes, a national park and waterfalls”.",
+          ],
+        },
+        {
+          h: "A shared kitchen and a long table",
+          p: [
+            "The warmest moments of trips like this usually happen at the table. The cottage kitchens have everything you need, so you can make varenyky together from grandma’s recipe and grill something on the barbecue by the house in the evening.",
+            "So that the chores do not fall on one person, agree on a rota: one day the elders cook, the next the younger adults, and the children lay the table. Bed linen and towels are included, so laundry and tidying will not eat into your holiday.",
+          ],
+        },
+        {
+          h: "A routine that works for everyone",
+          p: [
+            "Older relatives tend to wake early and children go to bed late, so agree in advance when the house should be quiet. Quiet hours at the farmstead are from 23:00 to 08:00, which is a handy reference point for the whole family. The grandchildren have a playground and a sports ground on site, so the adults get time for coffee on the terrace.",
+            "If a relative cannot stay overnight but wants to come for the day, each extra guest costs UAH 800 regardless of how long they stay — this includes the pools and towels. If you bring a pet weighing up to 5 kg, there is a UAH 300 supplement; details in our article “Holidays with a pet: what you should know”. One more plus for the elders: the cottages have an independent power supply, so light and heating do not depend on outage schedules.",
+          ],
+        },
+        {
+          h: "How to book a holiday for the whole family",
+          p: [
+            "The indicative price is from UAH 14,000 per night for the whole cottage; bed linen, towels and parking are included. Please confirm prices for specific and holiday dates when you book. Check-in is from 14:00, check-out by 11:00.",
+            "Leave a request with your dates, the number of guests and a short note: how many children, whether anyone in the family finds stairs difficult, and whether you would like the hot tub. We will call you back, confirm the dates and suggest a house that will suit both the youngest and the eldest.",
+          ],
+        },
+      ],
+    },
+  },
+  {
     slug: "may-holidays-carpathians",
     date: "2026-11-16",
     cover: "/assets/pool-outdoor-2.jpg",
